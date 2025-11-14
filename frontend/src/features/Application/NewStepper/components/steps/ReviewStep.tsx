@@ -273,7 +273,7 @@ const ReviewStep: React.FC = observer(() => {
                   variant="text"
                   size="small"
                   startIcon={<Edit />}
-                  onClick={() => rootStore.setStep(0)}
+                  onClick={() => rootStore.setCurrentStep(0)}
                 >
                   {t('common:edit')}
                 </Button>
@@ -320,7 +320,7 @@ const ReviewStep: React.FC = observer(() => {
                   variant="text"
                   size="small"
                   startIcon={<Edit />}
-                  onClick={() => rootStore.setStep(1)}
+                  onClick={() => rootStore.setCurrentStep(1)}
                 >
                   {t('common:edit')}
                 </Button>
@@ -402,7 +402,7 @@ const ReviewStep: React.FC = observer(() => {
                   variant="text"
                   size="small"
                   startIcon={<Edit />}
-                  onClick={() => rootStore.setStep(0)}
+                  onClick={() => rootStore.setCurrentStep(0)}
                 >
                   {t('common:edit')}
                 </Button>
@@ -457,7 +457,7 @@ const ReviewStep: React.FC = observer(() => {
                   variant="text"
                   size="small"
                   startIcon={<Edit />}
-                  onClick={() => rootStore.setStep(2)}
+                  onClick={() => rootStore.setCurrentStep(2)}
                 >
                   {t('common:edit')}
                 </Button>

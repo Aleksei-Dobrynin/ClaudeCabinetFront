@@ -1,3 +1,5 @@
+// src/constants/ApplicationApi.ts
+
 export type Service = {
   id: number;
   name: string;
@@ -23,7 +25,6 @@ export interface ObjectTag {
   code: string;
 }
 
-
 export interface ApplicationData {
   id: number;
   serviceId: number | null;
@@ -45,12 +46,6 @@ export interface ParticipantData {
 }
 
 export interface ApiResponse<T> {
-  success: boolean;
-  data?: T;
-  message?: string;
-}
-
-export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   message?: string;

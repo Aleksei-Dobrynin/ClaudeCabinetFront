@@ -1,7 +1,6 @@
 // stores/PrintStore.ts
 
 import { makeAutoObservable, runInAction } from 'mobx';
-import ApiService from '../services/ApiService';
 import { RootStore } from './RootStore';
 import i18n from 'i18next';
 
@@ -84,26 +83,33 @@ export class PrintStore {
   }
   
   async generateDocuments(): Promise<boolean> {
-    this.isGenerating = true;
+    runInAction(() => {
+      this.isGenerating = true;
+    });
+    
     try {
-      const applicationId = this.rootStore.applicationId || 'temp-id';
-      const result = await ApiService.generatePrintDocuments(applicationId);
+      // Имитация генерации документов
+      // В реальном приложении здесь будет API запрос
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
-      if (result.success && result.data) {
-        runInAction(() => {
-          // this.generatedDocuments = result.data.documents;
-          // // Update print documents with URLs
-          // this.generatedDocuments.forEach(genDoc => {
-          //   const printDoc = this.printDocuments.find(d => d.id === genDoc.id);
-          //   if (printDoc) {
-          //     printDoc.url = genDoc.url;
-          //   }
-          // });
+      runInAction(() => {
+        this.generatedDocuments = this.printDocuments.map(doc => ({
+          id: doc.id,
+          name: doc.name,
+          url: `/api/documents/print/${this.rootStore.applicationId}/${doc.id}`
+        }));
+        
+        // Обновляем URL в printDocuments
+        this.generatedDocuments.forEach(genDoc => {
+          const printDoc = this.printDocuments.find(d => d.id === genDoc.id);
+          if (printDoc) {
+            printDoc.url = genDoc.url;
+          }
         });
-        this.rootStore.showSnackbar(i18n.t('prints.success.documentsReady'), 'success');
-        return true;
-      }
-      return false;
+      });
+      
+      this.rootStore.showSnackbar(i18n.t('prints.success.documentsReady'), 'success');
+      return true;
     } catch (error) {
       this.rootStore.showSnackbar(i18n.t('prints.error.generateDocumentsError'), 'error');
       console.error('Generate documents error:', error);
@@ -120,12 +126,14 @@ export class PrintStore {
     if (!doc) return;
     
     // Record print history
-    this.printHistory.push({
-      documentId,
-      printedAt: new Date()
+    runInAction(() => {
+      this.printHistory.push({
+        documentId,
+        printedAt: new Date()
+      });
     });
     
-    // In real application, this would open the document URL or trigger print dialog
+    // В реальном приложении здесь будет открытие документа или диалог печати
     if (doc.url) {
       window.open(doc.url, '_blank');
     } else {
@@ -136,17 +144,17 @@ export class PrintStore {
   }
   
   async printAll() {
-    // Generate documents if not already generated
+    // Генерируем документы если они ещё не сгенерированы
     if (this.generatedDocuments.length === 0) {
       const success = await this.generateDocuments();
       if (!success) return;
     }
     
-    // Print all documents
-    this.printDocuments.forEach(doc => {
+    // Печатаем все документы
+    this.printDocuments.forEach((doc, index) => {
       setTimeout(() => {
         this.printDocument(doc.id);
-      }, 500); // Small delay between prints
+      }, index * 500); // Небольшая задержка между печатью
     });
     
     this.rootStore.showSnackbar(i18n.t('prints.success.allDocumentsPrinted'), 'info');
@@ -156,7 +164,7 @@ export class PrintStore {
     const doc = this.printDocuments.find(d => d.id === documentId);
     if (!doc) return;
     
-    // In real application, this would show a preview modal or open in new tab
+    // В реальном приложении здесь будет показ превью или открытие в новой вкладке
     this.rootStore.showSnackbar(i18n.t('prints.success.documentPreview', { name: doc.name }), 'info');
   }
   
@@ -178,18 +186,20 @@ export class PrintStore {
   }
   
   reset() {
-    this.checklist = {
-      allPrinted: false,
-      applicantSigned: false,
-      receiptGiven: false,
-      registrarSigned: false
-    };
-    this.generatedDocuments = [];
-    this.printHistory = [];
-    
-    // Reset URLs in print documents
-    this.printDocuments.forEach(doc => {
-      delete doc.url;
+    runInAction(() => {
+      this.checklist = {
+        allPrinted: false,
+        applicantSigned: false,
+        receiptGiven: false,
+        registrarSigned: false
+      };
+      this.generatedDocuments = [];
+      this.printHistory = [];
+      
+      // Сбрасываем URLs в printDocuments
+      this.printDocuments.forEach(doc => {
+        delete doc.url;
+      });
     });
   }
   

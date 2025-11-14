@@ -1,7 +1,7 @@
 // stores/ObjectStore.ts
 
 import { makeAutoObservable, runInAction } from "mobx";
-import ApiService, { Service, ObjectTag } from "../services/ApiService";
+import { Service, ObjectTag } from "constants/ApplicationApi";
 import { RootStore } from "./RootStore";
 import { getServices } from "api/Service";
 import {
@@ -512,19 +512,25 @@ export class ObjectStore {
 
   debounceTimeoutRef: NodeJS.Timeout | null = null;
 
-  updateObject<K extends keyof ArchObject>(objectId: number, field: K, value: ArchObject[K]) {
+updateObject<K extends keyof ArchObject>(objectId: number, field: K, value: ArchObject[K]) {
     const object = this.objects.find((obj) => obj.id === objectId);
     if (object) {
       object[field] = value;
 
-      if (field === 'address_street') {
+      // Запускаем поиск только если:
+      // 1. Это поле address_street
+      // 2. Включен ручной ввод (is_manual === true)
+      // 3. Значение не пустое
+      if (field === 'address_street' && object.is_manual && typeof value === 'string' && value.trim().length > 0) {
         if (this.debounceTimeoutRef) {
           clearTimeout(this.debounceTimeoutRef);
         }
+        
         this.debounceTimeoutRef = setTimeout(() => {
           this.searchBuildings(value as string);
         }, 500);
       }
+
       // Clear error for this field
       if (this.errors[objectId]?.[field]) {
         delete this.errors[objectId][field];
@@ -619,13 +625,16 @@ export class ObjectStore {
     this.isListOpen = val;
   };
 
-  searchBuildings = async (query: string) => {
-    if (!query) {
+searchBuildings = async (query: string) => {
+    if (!query || query.trim().length < 3) {
       this.setSearchResults([]);
+      this.setIsListOpen(false);
       return;
     }
 
     try {
+      console.log('🔍 Searching for:', query); // Для отладки
+      
       const response = await axios.get('https://catalog.api.2gis.com/3.0/items', {
         params: {
           q: query,
@@ -636,11 +645,15 @@ export class ObjectStore {
         },
       });
 
+      console.log('✅ Search results:', response.data); // Для отладки
+
       const results = response.data.result.items.filter(i => i.address_name != null) || [];
       this.setSearchResults(results);
-      this.setIsListOpen(true);
+      this.setIsListOpen(results.length > 0);
     } catch (error) {
-      console.error(i18n.t("object.error.searchError"), error);
+      console.error('❌ Search error:', error);
+      this.setSearchResults([]);
+      this.setIsListOpen(false);
     }
   };
 
@@ -674,41 +687,102 @@ export class ObjectStore {
     }
   }
 
-  validate(): boolean {
+validate(): boolean {
+    console.log('🔍 Starting validation...');
     const errors: Record<string, any> = {};
 
     // Validate service and work type
     if (!this.selectedServiceId) {
+      console.log('❌ No service selected');
       errors.serviceId = i18n.t("object.validation.selectService");
+    } else {
+      console.log('✅ Service selected:', this.selectedServiceId);
     }
 
     if (!this.workType.trim()) {
+      console.log('❌ No work type');
       errors.workType = i18n.t("object.validation.enterWorkType");
+    } else {
+      console.log('✅ Work type:', this.workType);
     }
 
     // Validate each object
+    console.log('🏠 Validating objects, count:', this.objects.length);
     this.objects.forEach((object, index) => {
+      console.log(`\n🏠 Object ${index + 1}:`, {
+        id: object.id,
+        is_manual: object.is_manual,
+        address_street: object.address_street,
+        tunduk_district_id: object.tunduk_district_id,
+        tunduk_street_id: object.tunduk_street_id,
+        tunduk_building_id: object.tunduk_building_id
+      });
+      
       const objectErrors: Record<string, string> = {};
 
+      if (object.is_manual) {
+        console.log('  📝 Manual input mode');
+        if (!object.address_street || object.address_street.trim() === '') {
+          console.log('  ❌ Address street is empty');
+          objectErrors.address_street = i18n.t("object.validation.enterAddress");
+        } else {
+          console.log('  ✅ Address street OK:', object.address_street);
+        }
+      } else {
+        console.log('  🤖 Registry mode');
+        
+        if (!object.tunduk_district_id || object.tunduk_district_id === 0) {
+          console.log('  ❌ District not selected');
+          objectErrors.tunduk_district_id = i18n.t("object.validation.selectDistrict");
+        } else {
+          console.log('  ✅ District OK:', object.tunduk_district_id);
+        }
+
+        if (!object.tunduk_street_id || object.tunduk_street_id === 0) {
+          console.log('  ❌ Street not selected');
+          objectErrors.tunduk_street_id = i18n.t("object.validation.selectStreet");
+        } else {
+          console.log('  ✅ Street OK:', object.tunduk_street_id);
+        }
+
+        if (!object.tunduk_building_id || object.tunduk_building_id === 0) {
+          console.log('  ❌ Building not selected');
+          objectErrors.tunduk_building_id = i18n.t("object.validation.selectBuilding");
+        } else {
+          console.log('  ✅ Building OK:', object.tunduk_building_id);
+        }
+      }
+
       if (Object.keys(objectErrors).length > 0) {
+        console.log('  ❌ Object has errors:', objectErrors);
         errors[object.id!] = objectErrors;
+      } else {
+        console.log('  ✅ Object validation passed');
       }
     });
 
     this.errors = errors;
+    console.log('\n📊 Final validation errors:', errors);
 
     if (Object.keys(errors).length > 0) {
-      // Show first error
       if (errors.serviceId) {
         this.rootStore.showSnackbar(errors.serviceId, "error");
       } else if (errors.workType) {
         this.rootStore.showSnackbar(errors.workType, "error");
       } else {
-        this.rootStore.showSnackbar(i18n.t("object.validation.fillRequiredFields"), "error");
+        const firstObjectId = Object.keys(errors).find(key => key !== 'serviceId' && key !== 'workType');
+        if (firstObjectId && errors[firstObjectId]) {
+          const firstError = Object.values(errors[firstObjectId])[0];
+          this.rootStore.showSnackbar(firstError as string, "error");
+        } else {
+          this.rootStore.showSnackbar(i18n.t("object.validation.fillRequiredFields"), "error");
+        }
       }
     }
 
-    return Object.keys(errors).length === 0;
+    const isValid = Object.keys(errors).length === 0;
+    console.log('🎯 Validation result:', isValid);
+    return isValid;
   }
 
   getServiceName(): string {
@@ -717,10 +791,10 @@ export class ObjectStore {
   }
 
   getDistrictName(districtId: number): string {
-    if(districtId === 0 || districtId === null) return i18n.t("object.address.notSpecified");
+    if (districtId === 0 || districtId === null) return i18n.t("object.address.notSpecified");
     if (!this.districts || this.districts.length === 0) return "";
     const district = this.districts.find((d) => d.id == districtId);
-    return district?.name ;
+    return district?.name;
   }
 
   getObjectAddress(object: ArchObject): string {

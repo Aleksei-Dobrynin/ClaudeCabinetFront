@@ -11,6 +11,7 @@ import dayjs, { Dayjs } from "dayjs";
 import MainStore from "MainStore";
 import i18n from "i18next";
 import { downloadFile, downloadFileBga } from "api/MainBackAPI";
+import { Service, ObjectTag, ApiResponse } from "constants/ApplicationApi";
 
 
 export type UploadedApplicationDocument = {

@@ -5,7 +5,6 @@ import { ParticipantsStore } from "./ParticipantsStore";
 import { ObjectStore } from "./ObjectStore";
 import { DocumentsStore } from "./DocumentsStore";
 import { PrintStore } from "./PrintStore";
-import ApiService from "../services/ApiService";
 import { ApplicationCreateModel } from "constants/Application";
 import {
   createApplication,
@@ -98,7 +97,9 @@ export class RootStore {
       const response = await getDogovorTemplate(this.applicationId, lang);
 
       if ((response?.status === 200 || response?.status === 201) && response.data) {
-        this.dogovorTemplate = response.data;
+        runInAction(() => {
+          this.dogovorTemplate = response.data;
+        });
       }
     } catch (error) {
       console.error("Error loading template:", error);
@@ -111,7 +112,9 @@ export class RootStore {
       const response = await getApplicationDataAgreementText();
 
       if ((response?.status === 200 || response?.status === 201) && response.data) {
-        this.personalDataAgreementText = response.data;
+        runInAction(() => {
+          this.personalDataAgreementText = response.data;
+        });
       }
     } catch (error) {
       console.error("Error loading agreement text:", error);
@@ -125,28 +128,37 @@ export class RootStore {
       const response = await getApplication(id);
 
       if ((response?.status === 200 || response?.status === 201) && response.data) {
+        const appData = response.data;
+
         runInAction(() => {
-          this.applicationId = response.data.id;
-          this.applicationNumber = response.data.number;
-          this.applicationStatus = response.data.status;
-          this.companyId = response.data.companyId;
-          this.appCabinetUuid = response.data.appCabinetUuid;
-          this.deadline = response.data.deadline;
-          this.registrationDate = response.data.registrationDate;
-          this.statusId = response.data.statusId;
-          this.statusName = response.data.statusName;
-
-          // Load data into stores
-          this.objectStore.loadFromApplication(response.data);
-          this.participantsStore.loadFromApplication(response.data);
-
-          this.showSnackbar(i18n.t("rootStore.success.applicationLoaded"), "success");
+          this.applicationId = appData.id;
+          this.statusId = appData.statusId;
+          this.companyId = appData.companyId;
+          this.appCabinetUuid = appData.appCabinetUuid;
+          this.registrationDate = appData.registrationDate;
+          this.deadline = appData.deadline;
+          this.number = appData.number;
+          this.comment = appData.comment;
         });
-      } else {
-        this.showSnackbar(response.message || i18n.t("rootStore.error.loadingApplication"), "error");
-        // Redirect to new application
-        window.history.replaceState(null, "", "/user/stepper?id=0");
-        this.applicationId = 0;
+
+        // Load data into sub-stores
+        this.objectStore.workType = appData.workDescription || "";
+        this.objectStore.selectedServiceId = appData.rServiceId;
+        this.objectStore.selectedServiceName = appData.rServiceName || "";
+
+        if (appData.archObjects && appData.archObjects.length > 0) {
+          runInAction(() => {
+            this.objectStore.objects = appData.archObjects;
+          });
+        }
+
+        await this.objectStore.reloadDependentData();
+
+        // Load participant data
+        this.participantsStore.loadFromApplication(appData);
+
+        // Load documents
+        await this.documentsStore.loadUploadedDocuments();
       }
     } catch (error) {
       console.error("Error loading application:", error);
@@ -158,106 +170,46 @@ export class RootStore {
     }
   }
 
-  setCurrentStep(step: number) {
-    if (step >= 0 && step < this.steps.length) {
-      this.currentStep = step;
-    }
-  }
+  async saveApplication(): Promise<boolean> {
+    console.log('💾 saveApplication started');
 
-  setDigitalSignature(signed: boolean) {
-    this.isDigitallySigned = signed;
-    this.digitalSignatureDate = signed ? new Date() : null;
-
-    if (signed) {
-      this.showSnackbar(i18n.t("rootStore.success.documentsSignedEDS"), "success");
-    }
-  }
-
-  async nextStep() {
-    // Validate current step before proceeding
-    let canProceed = true;
-
-    switch (this.currentStep) {
-      case 0: // Objects
-        canProceed = this.objectStore.validate();
-        if (canProceed) {
-          // Save application after first step
-          canProceed = await this.saveApplication();
-        }
-        break;
-
-      case 1: // Participants
-        canProceed = await this.participantsStore.save();
-        if (canProceed) {
-          // Update application with participant data
-          canProceed = await this.setCompanyIdToApplication();
-        }
-        break;
-
-      case 2: // Documents
-        // Allow to proceed even if not all documents are uploaded (as draft)
-        if (!this.documentsStore.isAllRequiredUploaded) {
-          this.showSnackbar(i18n.t("rootStore.warning.notAllDocumentsUploaded"), "warning");
-        }
-        break;
-
-      case 3: // Review
-        // Check if digital signature is required and completed
-        if (!this.isDigitallySigned) {
-          this.showSnackbar(i18n.t("rootStore.warning.signRequiredFirst"), "warning");
-          canProceed = false;
-        } else {
-          // Finalize application
-          await this.finalizeApplication();
-        }
-        break;
+    if (!this.objectStore.validate()) {
+      console.log('❌ Validation failed in saveApplication');
+      return false;
     }
 
-    if (canProceed && this.currentStep < this.steps.length - 1) {
-      this.currentStep++;
-      window.history.replaceState(
-        null,
-        "",
-        `/user/stepper?id=${this.applicationId}&tab=${this.currentStep}`
-      );
-      window.scrollTo(0, 0); // Scroll to top when changing steps
-    }
-  }
+    // ⭐⭐⭐ УДАЛИТЕ ЭТИ СТРОКИ ⭐⭐⭐
+    // if (!this.participantsStore.validate()) {
+    //   console.log('❌ Participants validation failed in saveApplication');
+    //   return false;
+    // }
 
-  previousStep() {
-    if (this.currentStep > 0) {
-      this.currentStep--;
-      window.history.replaceState(
-        null,
-        "",
-        `/user/stepper?id=${this.applicationId}&tab=${this.currentStep}`
-      );
-      window.scrollTo(0, 0);
-    }
-  }
-
-  setStep(stepIndex: number) {
-    if (stepIndex >= 0) {
-      this.currentStep = stepIndex;
-      window.history.replaceState(
-        null,
-        "",
-        `/user/stepper?id=${this.applicationId}&tab=${this.currentStep}`
-      );
-      window.scrollTo(0, 0);
-    }
-  }
-
-  async saveApplication() {
     this.isLoading = true;
+    console.log('⏳ Loading started');
+
     try {
+      // Save customer first ТОЛЬКО если есть данные участника
+      if (this.participantsStore.selectedRole) {
+        console.log('👤 Saving customer...');
+        const customerSaved = await this.participantsStore.save();
+        console.log('👤 Customer save result:', customerSaved);
+
+        if (!customerSaved) {
+          console.log('❌ Customer save failed');
+          return false;
+        }
+      } else {
+        console.log('⏭️ Skipping customer save - not yet configured');
+      }
+
+      // Prepare application data
+      console.log('📦 Preparing application data...');
       const data: ApplicationCreateModel = {
-        id: this.applicationId - 0,
+        id: this.applicationId,
         workDescription: this.objectStore.workType,
-        archObjectId: null,
-        statusId: this.statusId - 0,
-        companyId: this.companyId - 0 === 0 ? null : this.companyId - 0,
-        rServiceId: this.objectStore.selectedServiceId - 0,
+        statusId: this.statusId,
+        companyId: this.companyId,
+        rServiceId: this.objectStore.selectedServiceId!,
         rServiceName: this.objectStore.selectedServiceName,
         uniqueCode: "",
         registrationDate: this.registrationDate,
@@ -265,151 +217,170 @@ export class RootStore {
         number: this.number,
         comment: this.comment,
         archObjects: this.objectStore.objects,
-        appCabinetUuid: this.appCabinetUuid,
+        appCabinetUuid: this.appCabinetUuid
       };
 
-      this.objectStore.objects.forEach((x) => {
-        x.address = this.objectStore.getObjectAddress(x);
-      });
-      data.archObjects.forEach((x) => {
+      console.log('📦 Application data prepared:', JSON.stringify(data, null, 2));
+
+      data.archObjects.forEach(x => {
         x.applicationId = this.applicationId;
+        x.address = this.objectStore.getObjectAddress(x); // Добавьте это если нужно
       });
 
+      // Create or update application
+      let response;
       if (this.applicationId === 0) {
-        // Create new application
-        const response = await createApplication(data);
-
-        if ((response?.status === 200 || response?.status === 201) && response.data) {
-          runInAction(() => {
-            this.applicationId = response.data.id;
-            this.showSnackbar(i18n.t("rootStore.success.applicationCreatedAndSaved"), "success");
-          });
-          return true;
-        }
+        console.log('🆕 Creating new application...');
+        response = await createApplication(data);
       } else {
-        // Update existing application
-        const response = await updateApplication(data);
-
-        if ((response?.status === 200 || response?.status === 201) && response.data) {
-          runInAction(() => {
-            this.showSnackbar(i18n.t("rootStore.success.applicationSaved"), "success");
-          });
-          return true;
-        }
+        console.log('📝 Updating existing application...');
+        response = await updateApplication(data);
       }
 
-      return false;
-    } catch (error) {
-      this.showSnackbar(i18n.t("rootStore.error.savingApplication"), "error");
-      console.error("Save application error:", error);
-      return false;
-    } finally {
-      runInAction(() => {
-        this.isLoading = false;
-      });
-    }
-  }
+      console.log('📡 API Response:', response);
 
-  async setCompanyIdToApplication() {
-    this.isLoading = true;
-    try {
-      const response = await setCustomerToApplication(this.applicationId, this.companyId);
+      if ((response?.status === 200 || response?.status === 201) && response.data) {
+        runInAction(() => {
+          if (this.applicationId === 0) {
+            this.applicationId = response.data.id;
+            this.appCabinetUuid = response.data.appCabinetUuid;
+            console.log('✅ Application created, ID:', this.applicationId);
+          } else {
+            console.log('✅ Application updated');
+          }
+        });
 
-      if (response?.status === 200 || response?.status === 201) {
+        // Link customer to application ТОЛЬКО если есть companyId
+        if (this.companyId && this.applicationId) {
+          console.log('🔗 Linking customer to application...');
+          await setCustomerToApplication(this.applicationId, this.companyId);
+        }
+
+        this.showSnackbar(i18n.t("rootStore.success.applicationSaved"), "success");
+        console.log('✅ Save completed successfully');
         return true;
       }
 
+      console.log('❌ Invalid response from API');
+      this.showSnackbar(i18n.t("rootStore.error.savingApplication"), "error");
       return false;
     } catch (error) {
-      this.showSnackbar(i18n.t("rootStore.error.updatingApplication"), "error");
+      console.error('❌ Save error:', error);
+      this.showSnackbar(i18n.t("rootStore.error.savingApplication"), "error");
       return false;
     } finally {
       runInAction(() => {
         this.isLoading = false;
+        console.log('⏳ Loading finished');
       });
     }
   }
 
-  async sendToBga() {
-    // First check application validity
-    const validation = await this.validateApplicationBeforeSend();
-    if (!validation.isValid) {
-      this.showSnackbar(validation.message || i18n.t("rootStore.error.applicationValidationFailed"));
+  async nextStep() {
+    console.log('🚀 nextStep called, currentStep:', this.currentStep);
+
+    let isValid = false;
+
+    switch (this.currentStep) {
+      case 0: // Objects step
+        console.log('📝 Validating objects step...');
+        isValid = this.objectStore.validate();
+        console.log('✅ Validation result:', isValid);
+
+        if (!isValid) {
+          console.log('❌ Validation failed, stopping');
+          return;
+        }
+        break;
+
+      case 1: // Participants step
+        console.log('📝 Validating participants step...');
+        isValid = this.participantsStore.validate();
+        console.log('✅ Validation result:', isValid);
+
+        if (!isValid) {
+          this.showSnackbar(i18n.t("participants.error.fillRequiredFields"), "error");
+          return;
+        }
+        break;
+
+      case 2: // Documents step
+        console.log('📝 Validating documents step...');
+        isValid = this.documentsStore.isAllRequiredUploaded;
+        console.log('✅ All documents uploaded:', isValid);
+
+        if (!isValid) {
+          this.showSnackbar(i18n.t("rootStore.validation.uploadAllDocuments"), "warning");
+        }
+        // Позволяем перейти дальше даже если не все документы загружены
+        break;
+
+      case 3: // Review step
+        isValid = true;
+        break;
+
+      default:
+        isValid = true;
+    }
+
+    // Save application before moving to next step
+    if (this.currentStep < 3) {
+      console.log('💾 Saving application...');
+      const saved = await this.saveApplication();
+      console.log('💾 Save result:', saved);
+
+      if (!saved) {
+        console.log('❌ Save failed, stopping');
+        return;
+      }
+    }
+
+    console.log('✅ Moving to next step');
+    runInAction(() => {
+      this.currentStep = Math.min(this.currentStep + 1, this.steps.length - 1);
+      console.log('📍 New step:', this.currentStep);
+    });
+  }
+
+  previousStep() {
+    runInAction(() => {
+      this.currentStep = Math.max(this.currentStep - 1, 0);
+    });
+  }
+
+  setCurrentStep(step: number) {
+    runInAction(() => {
+      this.currentStep = step;
+    });
+  }
+
+  // Alias для обратной совместимости
+  setStep(step: number) {
+    this.setCurrentStep(step);
+  }
+
+  async sendToBga(): Promise<boolean> {
+    if (!this.isDigitallySigned) {
+      this.showSnackbar(i18n.t("rootStore.validation.signatureRequired"), "warning");
       return false;
     }
 
     this.isLoading = true;
+
     try {
-      const response = await sendToBga(this.applicationId, rootStore.dogovorTemplate);
+      const validateResponse = await validateCheckApplication(this.applicationId);
+
+      if (validateResponse?.status !== 200 && validateResponse?.status !== 201) {
+        this.showSnackbar(i18n.t("rootStore.error.validationFailed"), "error");
+        return false;
+      }
+
+      const response = await sendToBga(this.applicationId, this.dogovorTemplate);
 
       if ((response?.status === 200 || response?.status === 201) && response.data) {
         runInAction(() => {
-          const pattern = /ЗАЯВЛЕНИЕ №<span class="placeholder">(\d+)<\/span>/; //TODO
-
-          const match = rootStore.dogovorTemplate.match(pattern);
-          if (match) {
-              rootStore.applicationNumber = match[1];
-          }
-
-          rootStore.showSnackbar(i18n.t('rootStore.success.applicationSubmitted'), 'success');
-          rootStore.nextStep();
-        });
-      } else {
-        throw new Error();
-      }
-    } catch (error) {
-      this.showSnackbar(i18n.t("rootStore.error.loadingApplication"), "error");
-    } finally {
-      runInAction(() => {
-        this.isLoading = false;
-      });
-      return true;
-    }
-  }
-
-  async validateApplicationBeforeSend(): Promise<{ isValid: boolean; message?: string }> {
-    let validationResult = { isValid: true, message: "" };
-
-    this.isLoading = true;
-    try {
-      const response = await validateCheckApplication(this.applicationId);
-
-      if ((response?.status === 200 || response?.status === 201) && response.data) {
-        runInAction(() => {
-          validationResult.isValid = true;
-        });
-      } else {
-        validationResult = {
-          isValid: false,
-          message: response?.data?.message || i18n.t("rootStore.error.applicationValidationFailed"),
-        };
-      }
-    } catch (error) {
-      // Error handled in finally block
-    } finally {
-      runInAction(() => {
-        this.isLoading = false;
-      });
-    }
-    return validationResult;
-  }
-
-  async finalizeApplication() {
-    if (this.applicationId === 0) return false;
-
-    this.isLoading = true;
-    try {
-      const data = {
-        status: "submitted",
-        digitalSignatureDate: this.digitalSignatureDate,
-        isDigitallySigned: this.isDigitallySigned
-      };
-
-      const result = await ApiService.updateApplication(this.applicationId, data);
-
-      if (result.success) {
-        runInAction(() => {
-          this.applicationStatus = "submitted";
+          this.applicationNumber = response.data.number || "";
+          this.currentStep = this.steps.length - 1; // Go to completion step
           this.showSnackbar(i18n.t("rootStore.success.applicationSubmitted"), "success");
         });
         return true;
@@ -439,6 +410,10 @@ export class RootStore {
     this.snackbar.open = false;
   }
 
+
+
+
+
   reset() {
     // Reset all sub-stores
     this.objectStore.reset();
@@ -447,12 +422,17 @@ export class RootStore {
     this.printStore.reset();
 
     // Reset root store state
-    this.currentStep = 0;
-    this.applicationId = 0;
-    this.applicationStatus = null;
-    this.isLoading = false;
-    this.isDigitallySigned = false;
-    this.digitalSignatureDate = null;
+    runInAction(() => {
+      this.currentStep = 0;
+      this.applicationId = 0;
+      this.applicationStatus = null;
+      this.isLoading = false;
+      this.isDigitallySigned = false;
+      this.digitalSignatureDate = null;
+      this.companyId = 0;
+      this.appCabinetUuid = "";
+      this.applicationNumber = "";
+    });
   }
 
   startNewApplication() {
@@ -462,12 +442,10 @@ export class RootStore {
   }
 
   get canNavigateNext(): boolean {
-    // Disable next button during loading or on last step
     return !this.isLoading && this.currentStep < this.steps.length - 1;
   }
 
   get canNavigateBack(): boolean {
-    // Disable back button during loading or on first step
     return !this.isLoading && this.currentStep > 0;
   }
 

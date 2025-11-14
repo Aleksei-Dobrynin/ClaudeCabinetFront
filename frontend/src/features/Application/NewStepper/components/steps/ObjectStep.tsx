@@ -664,59 +664,74 @@ const ObjectStep: React.FC = observer(() => {
                                 fullWidth
                                 label={t('label:steps.object.address')}
                                 value={object.address_street || ''}
-                                disabled={!object.is_manual}
+                                disabled={!object.is_manual} // ⭐ Важно: отключено когда НЕ ручной ввод
                                 onChange={(e) => {
                                   objectStore.updateObject(object.id!, "address_street", e.target.value);
                                   objectStore.setActiveObjectId(object.id!);
                                 }}
-                                onFocus={() => objectStore.setActiveObjectId(object.id!)}
+                                onFocus={() => {
+                                  if (object.is_manual) { // ⭐ Открываем список только при ручном вводе
+                                    objectStore.setActiveObjectId(object.id!);
+                                  }
+                                }}
                                 error={!!objectStore.errors[object.id!]?.address_street}
                                 helperText={objectStore.errors[object.id!]?.address_street}
                                 required
                                 size={"small"}
                               />
-                              {objectStore.isListOpen && objectStore.activeObjectId === object.id && objectStore.searchResults.length > 0 && (
-                                <Paper
-                                  elevation={3}
-                                  sx={{
-                                    position: "absolute",
-                                    top: "50px",
-                                    left: 0,
-                                    zIndex: 1000,
-                                    padding: 1,
-                                    borderRadius: 1,
-                                    maxHeight: "200px",
-                                    overflowY: "auto",
-                                    width: "100%"
-                                  }}
-                                >
-                                  <List>
-                                    {objectStore.searchResults.map((result: any, index: number) => (
-                                      <ListItem
-                                        button
-                                        key={index}
-                                        onClick={() => objectStore.handleItemClick(object.id!, result)}
-                                      >
-                                        <ListItemText
-                                          primary={result.name || t('label:steps.object.noName')}
-                                          secondary={
-                                            result.address_name
-                                              ? `${result.address_name} ${result.adm_div?.find((d: any) => d.type === "district")?.name || ""}`
-                                              : t('label:steps.object.noAddress')
-                                          }
-                                        />
-                                      </ListItem>
-                                    ))}
-                                  </List>
-                                </Paper>
-                              )}
+                              {objectStore.isListOpen &&
+                                objectStore.activeObjectId === object.id &&
+                                objectStore.searchResults.length > 0 &&
+                                object.is_manual && ( // ⭐ Показываем только при ручном вводе
+                                  <Paper
+                                    elevation={3}
+                                    sx={{
+                                      position: "absolute",
+                                      top: "50px",
+                                      left: 0,
+                                      zIndex: 1000,
+                                      padding: 1,
+                                      borderRadius: 1,
+                                      maxHeight: "200px",
+                                      overflowY: "auto",
+                                      width: "100%"
+                                    }}
+                                  >
+                                    <List>
+                                      {objectStore.searchResults.map((result: any, index: number) => (
+                                        <ListItem
+                                          button
+                                          key={index}
+                                          onClick={() => objectStore.handleItemClick(object.id!, result)}
+                                        >
+                                          <ListItemText
+                                            primary={result.name || t('label:steps.object.noName')}
+                                            secondary={
+                                              result.address_name
+                                                ? `${result.address_name} ${result.adm_div?.find((d: any) => d.type === "district")?.name || ""}`
+                                                : t('label:steps.object.noAddress')
+                                            }
+                                          />
+                                        </ListItem>
+                                      ))}
+                                    </List>
+                                  </Paper>
+                                )}
                             </div>
                           </Grid>
+
                           <Grid item md={12} xs={12}>
                             <CustomCheckbox
                               value={object.is_manual}
                               onChange={(event) => {
-                                objectStore.updateObject(object.id!, 'is_manual', event.target.value);
+                                const newValue = event.target.value;
+                                objectStore.updateObject(object.id!, 'is_manual', newValue);
+
+                                // При переключении режима очищаем список результатов поиска
+                                if (!newValue) {
+                                  objectStore.setSearchResults([]);
+                                  objectStore.setIsListOpen(false);
+                                }
                               }}
                               name="id_f_is_manual"
                               label={"Ручной ввод"}

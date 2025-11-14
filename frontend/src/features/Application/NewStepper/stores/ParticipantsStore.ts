@@ -8,6 +8,7 @@ import { CustomerCreateModel } from "constants/Customer";
 import dayjs, { Dayjs } from "dayjs";
 import * as yup from 'yup';
 import i18n from "i18next";
+import { ParticipantData, ApiResponse } from "constants/ApplicationApi";
 
 export interface CustomerData {
   id: number | null;

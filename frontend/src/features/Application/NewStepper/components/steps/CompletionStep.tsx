@@ -88,7 +88,7 @@ const CompletionStep: React.FC = observer(() => {
           {t('label:steps.completion.applicationNumber')}
         </Typography>
         <Box display="flex" alignItems="center" gap={2} justifyContent="center">
-          <Typography variant="h4" fontWeight="bold" color="success.dark">
+          <Typography variant="h4" fontWeight="bold">
             {applicationNumber}
           </Typography>
           <IconButton onClick={copyToClipboard} color="primary">
