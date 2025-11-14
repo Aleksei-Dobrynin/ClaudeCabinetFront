@@ -1,0 +1,92 @@
+# Общие системные файлы и папки
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock
+*.pid
+*.seed
+*.vs/
+
+# Файлы конфигурации IDE
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core (C#)
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.app/
+*.appsettings.local.json
+
+# React (Node.js)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+dist/
+build/
+coverage/
+
+# PostgreSQL
+*.pgsql
+*.psql_history
+pgdata/
+pg_dump.sql
+*.db
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+/secrets/
+
+# Логи и временные файлы
+logs/
+*.log
+*.out
+*.err
+*.pid
+*.seed
+*.swp
+*.swo
+
+# Файлы тестирования
+/coverage/
+jest.config.js
+/karma.conf.js
+/pytest_cache/
+*.spec.js
+*.test.js
+*.spec.ts
+*.test.ts
+
+# CI/CD
+/.github/workflows/*.log
+/.gitlab-ci.yml
+
+# Кэш и зависимости
+**/__pycache__/
+**/.cache/
+*.py[cod]
+
+# Дополнительно
+!.gitkeep
+*.iml
+*.class
+
+# Игнорирование .env, но возможность отслеживать шаблон
+!.env.example

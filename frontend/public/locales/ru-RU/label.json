@@ -1,0 +1,2039 @@
+{
+  "dashboard": {
+    "title": "Дашборд заявителя",
+    "welcome": "Добро пожаловать",
+    "organization": "Организация:",
+    "statistics": {
+      "title": "Статистика заявок",
+      "total": "Всего заявок",
+      "requiresAction": "Требуют действий",
+      "inProgress": "В работе",
+      "completed": "Завершено",
+      "goToApplications": "Перейти к заявкам"
+    },
+    "applications": {
+      "title": "Требуют вашего внимания",
+      "description": "Для быстрого перехода нажмите на карточку",
+      "showAll": "Показать все заявки, требующие внимания",
+      "viewAll": "Просмотреть все",
+      "application": "Заявка",
+      "days": "дней",
+      "progress": "Прогресс",
+      "goTo": "Перейти"
+    },
+    "actions": {
+      "uploadDocuments": "Загрузить документы",
+      "signContract": "Подписать контракт",
+      "payService": "Оплатить услугу",
+      "getResult": "Получить результат",
+      "urgent": "Срочно",
+      "ecp": "ЭЦП",
+      "payment": "Оплата",
+      "ready": "Готово"
+    },
+    "actionDescriptions": {
+      "uploadDocuments": "Необходимо загрузить исправленное АПЗ с учетом замечаний технического совета",
+      "signContract": "Контракт готов к подписанию. Используйте электронную цифровую подпись",
+      "payService": "Необходимо оплатить государственную пошлину в размере 5000 сом",
+      "getResult": "Документы готовы к получению. Разрешение на ввод в эксплуатацию оформлено"
+    },
+    "quickActions": {
+      "title": "Быстрые действия",
+      "submitApplication": "Подать новую заявку",
+      "templates": "Шаблоны документов",
+      "payment": "Оплата услуг",
+      "support": "Техподдержка"
+    },
+    "calendar": {
+      "title": "Календарь событий",
+      "noEvents": "Нет запланированных мероприятий",
+      "addReminder": "Добавить напоминание",
+      "months": {
+        "january": "Январь",
+        "february": "Февраль",
+        "march": "Март",
+        "april": "Апрель",
+        "may": "Май",
+        "june": "Июнь",
+        "july": "Июль",
+        "august": "Август",
+        "september": "Сентябрь",
+        "october": "Октябрь",
+        "november": "Ноябрь",
+        "december": "Декабрь"
+      }
+    },
+    "reference": {
+      "title": "Справочная информация",
+      "description": "Нормативные документы, инструкции и требования к документам",
+      "documentRequirements": "Требования к документам",
+      "fillingSamples": "Образцы заполнения",
+      "regulatoryBase": "Нормативная база",
+      "technicalSupport": "Техническая поддержка",
+      "supportDescription": "Получите помощь по вопросам работы с системой",
+      "contactSupport": "Написать в поддержку"
+    },
+    "common": {
+      "loading": "Загрузка...",
+      "error": "Произошла ошибка",
+      "retry": "Повторить",
+      "noData": "Нет данных",
+      "refresh": "Обновить",
+      "close": "Закрыть",
+      "save": "Сохранить",
+      "cancel": "Отмена"
+    },
+    "errors": {
+      "loadingFailed": "Не удалось загрузить данные",
+      "updateFailed": "Не удалось обновить данные",
+      "networkError": "Ошибка сети. Проверьте подключение к интернету",
+      "unknownError": "Произошла неизвестная ошибка"
+    }
+  },
+  "authorization": {
+    "login": "Логин",
+    "myprofile": "Мой профиль",
+    "profileSettings": "Настройки учетной записи",
+    "title": "Бишкекглавархитектура",
+    "email": "Адрес электронной почты",
+    "password": "Пароль",
+    "code": "Одноразовый код",
+    "signIn": "Войти",
+    "forgotPassword": "Забыли пароль?",
+    "loginVia": "Войти через",
+    "loginAndPassword": "Логин и пароль",
+    "loginPasswordDescription": "Логин(ИНН) и пароль",
+    "rutoken": "Рутокен",
+    "rutokenDescription": "Электронная подпись на USB носителе",
+    "registration": "Регистрация",
+    "register": "Зарегистрироваться",
+    "registrationDescription": "Регистрация в кабинете",
+    "applicantCabinet": "Кабинет заявителя",
+    "loginViaCredentials": "Вход через Логин и пароль",
+    "loginViaToken": "Вход через Рутокен",
+    "passwordRecovery": "Восстановление доступа",
+    "rememberMe": "Запомнить меня",
+    "noAccount": "У вас ещё нет аккаунта?",
+    "registerNow": "Зарегистрируйтесь",
+    "tokenPin": "PIN-код USB-токена",
+    "recoverPassword": "Восстановить",
+    "help": "Помощь",
+    "technicalSupport": "Техническая поддержка"
+  },
+  "tour": {
+    "back": "Назад",
+    "close": "Закрыть",
+    "last": "Завершить",
+    "next": "Далее",
+    "skip": "Пропустить обучение",
+    "steps": {
+      "welcome": "Добро пожаловать в личный кабинет АИС БГА! Для начала работы необходимо заполнить ваши личные данные. Нажмите на значок профиля в правом верхнем углу.",
+      "archive": "Здесь вы можете посмотреть архив бумажных заявок.",
+      "inProgress": "Заявки, которые сейчас в работе.",
+      "history": "История всех изменений по вашим заявкам."
+    }
+  },
+  "ServiceListView": {
+    "Service": "Услуги",
+    "entityTitle": "Услуги",
+    "name": "Название",
+    "short_name": "Короткое название",
+    "code": "Код",
+    "description": "Описание",
+    "day_count": "Количество дней",
+    "price": "Цена услуги",
+    "workflow_name": "Рабочий процесс"
+  },
+  "ServiceAddEditView": {
+    "entityTitle": "Услуги",
+    "name": "Название",
+    "short_name": "Короткое название",
+    "code": "Код",
+    "description": "Описание",
+    "day_count": "Количество дней",
+    "price": "Цена услуги",
+    "workflow_id": "Рабочий процесс"
+  },
+  "RepresentativeAddEditView": {
+    "entityTitle": "Представитель(доверенное лицо)",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "pin": "ИНН",
+    "companyId": "Заказчик",
+    "hasAccess": "Есть доступ",
+    "email": "Почта",
+    "phone": "Номер телефона",
+    "typeId": "Тип",
+    "lastName": "Фамилия",
+    "validation": {
+      "firstNameMaxLength": "Не больше 50 символов",
+      "secondNameMaxLength": "Не больше 50 символов",
+      "lastNameMaxLength": "Не больше 50 символов",
+      "nameFormat": "Можно использовать только буквы кириллицы или латиницы, пробелы, дефис и апостроф.",
+      "emailFormat": "Некорректный формат email"
+    }
+  },
+  "RepresentativeListView": {
+    "Representative": "Представитель(доверенное лицо)",
+    "entityTitle": "Представитель(доверенное лицо)",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "pin": "ИНН",
+    "companyId": "Заказчик",
+    "hasAccess": "Есть доступ",
+    "typeId": "Тип",
+    "email": "Почта",
+    "phone": "Номер телефона",
+    "hasAccount": "Есть логин",
+    "lastName": "Фамилия",
+    "last_name": "Фамилия",
+    "first_name": "Имя",
+    "has_access": "Есть доступ",
+    "second_name": "Отчество",
+    "customer_name": "Компания",
+    "representative_type_name": "Тип",
+    "sendInvite": "Отправить приглашение",
+    "created_at": "Дата создания",
+    "updated_at": "Дата изменения",
+    "created_by": "Создал",
+    "updated_by": "Изменил",
+    "company_id": "Компания",
+    "type_id": "Тип"
+  },
+  "fileDownload": {
+    "downloadTooltip": "Скачать",
+    "errorOpenNewWindow": "Не удалось открыть новое окно. Возможно, оно было заблокировано."
+  },
+  "uploadedApplicationDocument": {
+    "validation": {
+      "fileRequired": "Загрузите файл"
+    }
+  },
+  "RepresentativeTypeAddEditView": {
+    "entityTitle": "RepresentativeType",
+    "description": "description",
+    "name": "name",
+    "code": "code"
+  },
+  "RepresentativeTypeListView": {
+    "RepresentativeType": "RepresentativeType",
+    "entityTitle": "RepresentativeType",
+    "description": "description",
+    "name": "name",
+    "code": "code"
+  },
+  "RepresentativeContactAddEditView": {
+    "entityTitle": "RepresentativeContact",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "rTypeId": "rTypeId",
+    "representativeId": "representativeId"
+  },
+  "RepresentativeContactListView": {
+    "RepresentativeContact": "RepresentativeContact",
+    "entityTitle": "RepresentativeContact",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "rTypeId": "rTypeId",
+    "representativeId": "representativeId"
+  },
+  "CustomerRequisiteAddEditView": {
+    "entityTitle": "Реквизиты",
+    "paymentAccount": "Счет",
+    "bank": "Банк",
+    "bik": "БИК",
+    "organizationId": "Заказчик"
+  },
+  "CustomerRequisiteListView": {
+    "entityTitle": "Реквизиты",
+    "paymentAccount": "Счет",
+    "bank": "Банк",
+    "bik": "БИК",
+    "organizationId": "Заказчик",
+    "customer_name": "Заказчик",
+    "payment_account": "Счет"
+  },
+  "CustomerAddEditView": {
+    "entityTitle": "Заявитель",
+    "pin": "ИНН",
+    "okpo": "ОКПО",
+    "postalCode": "Почтовый индекс",
+    "imTheCustomer": "Я являюсь заявителем",
+    "ugns": "УГНС",
+    "regNumber": "Регистрационный номер",
+    "organizationTypeId": "Тип организации",
+    "name": "Название",
+    "address": "Адрес",
+    "director": "Директор",
+    "nomer": "Номер",
+    "phone1": "Номер телефона 1",
+    "phone2": "Номер телефона 2",
+    "email": "Адрес электронной почты",
+    "email_2": "Адрес электронной почты 2",
+    "is_foreign_company": "Иностранная организация",
+    "is_foreign_citezen": "Иностранный гражданин",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "identity_document_type_id": "Тип документа",
+    "passport_series": "Серия документа",
+    "passport_issued_date": "Дата выдачи",
+    "passport_whom_issued": "Кем выдан",
+    "allowNotification": "Разрешить уведомления",
+    "validation": {
+      "required": "Обязательное поле",
+      "pinFormat": "ИНН должен содержать только цифры и быть длиной 14 символов.",
+      "maxLength100": "Не больше 100 символов",
+      "emailFormat": "Введите правильную почту!"
+    }
+  },
+  "CustomerListView": {
+    "entityTitle": "Заявитель",
+    "pin": "ИНН",
+    "okpo": "ОКПО",
+    "postalCode": "Почтовый индекс",
+    "ugns": "УГНС",
+    "regNumber": "Регистрационный номер",
+    "organizationTypeId": "Тип организации",
+    "name": "Название",
+    "address": "Адрес",
+    "director": "Директор",
+    "nomer": "Номер",
+    "reg_number": "Регистрационный номер",
+    "postal_code": "Почтовый индекс",
+    "organization_type_name": "Тип организации"
+  },
+  "OrganizationTypeAddEditView": {
+    "entityTitle": "OrganizationType",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "nameKg": "nameKg"
+  },
+  "OrganizationTypeListView": {
+    "OrganizationType": "OrganizationType",
+    "entityTitle": "OrganizationType",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "nameKg": "nameKg"
+  },
+  "CustomerContactAddEditView": {
+    "entityTitle": "CustomerContact",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "rTypeId": "rTypeId",
+    "organizationId": "organizationId"
+  },
+  "CustomerContactListView": {
+    "CustomerContact": "CustomerContact",
+    "entityTitle": "CustomerContact",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "rTypeId": "rTypeId",
+    "organizationId": "organizationId"
+  },
+  "UploadedApplicationDocumentAddEditView": {
+    "entityTitle": "Загруженный Документ Заявки",
+    "hashCode": "Хэш-код",
+    "hashCodeDate": "Дата хэш-кода",
+    "serviceDocumentId": "ID сервисного документа",
+    "fileId": "ID файла",
+    "name": "Название",
+    "applicationId": "ID заявки",
+    "statusId": "ID статуса"
+  },
+  "UploadedApplicationDocumentListView": {
+    "entityTitle": "Загруженный документ заявки",
+    "name": "Название",
+    "file_id": "Идентификатор файла",
+    "service_document_id": "Идентификатор сервисного документа",
+    "is_outcome": "Входящий",
+    "document_number": "Номер документа",
+    "file_name": "Имя файла",
+    "application_document_id": "Идентификатор документа заявки",
+    "application_document_name": "Название документа заявки",
+    "status_name": "Статус"
+  },
+  "DocumentStatusAddEditView": {
+    "entityTitle": "DocumentStatus",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "nameKg": "nameKg"
+  },
+  "DocumentStatusListView": {
+    "DocumentStatus": "DocumentStatus",
+    "entityTitle": "DocumentStatus",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "nameKg": "nameKg"
+  },
+  "ArchObjectAddEditView": {
+    "entityTitle": "Объект",
+    "districtId": "Район",
+    "address": "Адрес",
+    "xCoord": "Широта",
+    "yCoord": "Долгота",
+    "name": "Название",
+    "identifier": "Идентификатор",
+    "description": "Описание",
+    "tags": "Теги",
+    "tunduk_district_id": "Район",
+    "tunduk_residential_area_id": "Жилмассив",
+    "tunduk_street_id": "Улица",
+    "tunduk_building_id": "Выбор адреса"
+  },
+  "ArchObjectListView": {
+    "entityTitle": "Объект",
+    "districtId": "Район",
+    "address": "Адрес",
+    "name": "Название",
+    "identifier": "Идентификатор",
+    "description": "Описание",
+    "x_coord": "Широта",
+    "y_coord": "Долгота",
+    "district_name": "Район"
+  },
+  "ApplicationPayerRequisiteAddEditView": {
+    "entityTitle": "ApplicationPayerRequisite",
+    "paymentAccount": "paymentAccount",
+    "bank": "bank",
+    "bik": "bik",
+    "applicationPayerId": "applicationPayerId"
+  },
+  "ApplicationPayerRequisiteListView": {
+    "ApplicationPayerRequisite": "ApplicationPayerRequisite",
+    "entityTitle": "ApplicationPayerRequisite",
+    "paymentAccount": "paymentAccount",
+    "bank": "bank",
+    "bik": "bik",
+    "applicationPayerId": "applicationPayerId"
+  },
+  "PayerRequisiteAddEditView": {
+    "entityTitle": "PayerRequisite",
+    "paymentAccount": "paymentAccount",
+    "bank": "bank",
+    "bik": "bik",
+    "payerId": "payerId"
+  },
+  "PayerRequisiteListView": {
+    "PayerRequisite": "PayerRequisite",
+    "entityTitle": "PayerRequisite",
+    "paymentAccount": "paymentAccount",
+    "bank": "bank",
+    "bik": "bik",
+    "payerId": "payerId"
+  },
+  "DocumentStatusHistoryAddEditView": {
+    "entityTitle": "DocumentStatusHistory",
+    "documentId": "documentId",
+    "statusId": "statusId",
+    "description": "description",
+    "oldStatusId": "oldStatusId"
+  },
+  "DocumentStatusHistoryListView": {
+    "DocumentStatusHistory": "DocumentStatusHistory",
+    "entityTitle": "DocumentStatusHistory",
+    "documentId": "documentId",
+    "statusId": "statusId",
+    "description": "description",
+    "oldStatusId": "oldStatusId"
+  },
+  "PayerContactAddEditView": {
+    "entityTitle": "PayerContact",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "rTypeId": "rTypeId",
+    "payerId": "payerId"
+  },
+  "PayerContactListView": {
+    "PayerContact": "PayerContact",
+    "entityTitle": "PayerContact",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "rTypeId": "rTypeId",
+    "payerId": "payerId"
+  },
+  "ApplicationStatusHistoryAddEditView": {
+    "entityTitle": "ApplicationStatusHistory",
+    "statusId": "statusId",
+    "oldStatusId": "oldStatusId",
+    "applicationId": "applicationId"
+  },
+  "ApplicationStatusHistoryListView": {
+    "ApplicationStatusHistory": "ApplicationStatusHistory",
+    "entityTitle": "ApplicationStatusHistory",
+    "statusId": "statusId",
+    "oldStatusId": "oldStatusId",
+    "applicationId": "applicationId"
+  },
+  "UserAuthMethodsAddEditView": {
+    "entityTitle": "UserAuthMethods",
+    "authTypeId": "authTypeId",
+    "userId": "userId",
+    "authData": "authData"
+  },
+  "UserAuthMethodsListView": {
+    "UserAuthMethods": "UserAuthMethods",
+    "entityTitle": "UserAuthMethods",
+    "authTypeId": "authTypeId",
+    "userId": "userId",
+    "authData": "authData"
+  },
+  "ArchObjectTagAddEditView": {
+    "entityTitle": "ArchObjectTag",
+    "idObject": "idObject",
+    "rTagId": "rTagId"
+  },
+  "ArchObjectTagListView": {
+    "ArchObjectTag": "ArchObjectTag",
+    "entityTitle": "ArchObjectTag",
+    "idObject": "idObject",
+    "rTagId": "rTagId"
+  },
+  "UserContactAddEditView": {
+    "entityTitle": "UserContact",
+    "rTypeId": "rTypeId",
+    "rTypeName": "rTypeName",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "customerId": "customerId",
+    "userId": "userId"
+  },
+  "UserContactListView": {
+    "UserContact": "UserContact",
+    "entityTitle": "UserContact",
+    "rTypeId": "rTypeId",
+    "rTypeName": "rTypeName",
+    "value": "value",
+    "allowNotification": "allowNotification",
+    "customerId": "customerId",
+    "userId": "userId"
+  },
+  "NotificationLogAddEditView": {
+    "entityTitle": "NotificationLog",
+    "text": "text",
+    "title": "title",
+    "applicationId": "applicationId",
+    "contact": "contact",
+    "dateSend": "dateSend",
+    "rContactTypeId": "rContactTypeId"
+  },
+  "NotificationLogListView": {
+    "NotificationLog": "NotificationLog",
+    "entityTitle": "NotificationLog",
+    "text": "text",
+    "title": "title",
+    "applicationId": "applicationId",
+    "contact": "contact",
+    "dateSend": "dateSend",
+    "rContactTypeId": "rContactTypeId"
+  },
+  "UserLoginHistoryAddEditView": {
+    "entityTitle": "UserLoginHistory",
+    "startTime": "startTime",
+    "endTime": "endTime",
+    "authTypeId": "authTypeId",
+    "userId": "userId",
+    "ipAddress": "ipAddress",
+    "device": "device",
+    "browser": "browser",
+    "os": "os"
+  },
+  "UserLoginHistoryListView": {
+    "UserLoginHistory": "UserLoginHistory",
+    "entityTitle": "UserLoginHistory",
+    "startTime": "startTime",
+    "endTime": "endTime",
+    "authTypeId": "authTypeId",
+    "userId": "userId",
+    "ipAddress": "ipAddress",
+    "device": "device",
+    "browser": "browser",
+    "os": "os"
+  },
+  "ApplicationAddEditView": {
+    "entityTitle": "Заявка",
+    "workDescription": "Описание требуемых работ",
+    "archObjectId": "Объект",
+    "statusId": "Статус",
+    "companyId": "Заказчик",
+    "rServiceId": "Услуга",
+    "rServiceName": "Название услуги",
+    "uniqueCode": "Код",
+    "registrationDate": "Время регистрации",
+    "deadline": "Срок",
+    "number": "Номер",
+    "comment": "Комментарии",
+    "validation": {
+      "dateInvalid": "Пожалуйста, введите корректную дату"
+    }
+  },
+  "ApplicationAddEdit": {
+    "documents": {
+      "title": "Документы заявки",
+      "uploading": "Загрузка документа...",
+      "uploadProgress": "Прогресс загрузки: {{progress}}%",
+      "tableAriaLabel": "Таблица документов заявки",
+      "noDocuments": "Документы не загружены",
+      "required": "Обязательный",
+      "signed": "Подписан",
+      "signSelected": "Подписать выбранные документы",
+      "noComment": "Комментарий отсутствует",
+      "showComment": "Показать комментарий",
+      "showCommentFor": "Показать комментарий к документу {{name}}",
+      "download": "Скачать документ",
+      "downloadDocument": "Скачать документ {{name}}",
+      "view": "Просмотр документа",
+      "viewDocument": "Просмотр документа {{name}}",
+      "upload": "Загрузить",
+      "replace": "Заменить",
+      "uploadCorrected": "Загрузить исправленную версию документа {{name}}",
+      "columns": {
+        "name": "Наименование",
+        "signature": "Подпись",
+        "status": "Статус",
+        "actions": "Действия"
+      },
+      "status": {
+        "approved": "Одобрен",
+        "rejected": "Отклонен",
+        "pending": "На рассмотрении",
+        "uploaded": "Загружен",
+        "notUploaded": "Не загружен"
+      },
+      "commentDialog": {
+        "title": "Комментарий к документу"
+      }
+    },
+    "outcomeDocuments": {
+      "title": "Документы",
+      "uploading": "Загрузка документа...",
+      "uploadProgress": "Прогресс загрузки: {{progress}}%",
+      "tableAriaLabel": "Таблица документов заявки",
+      "noDocuments": "Документы не загружены",
+      "required": "Обязательный",
+      "signed": "Подписан",
+      "signSelected": "Подписать выбранные документы",
+      "noComment": "Комментарий отсутствует",
+      "download": "Скачать документ",
+      "downloadDocument": "Скачать документ {{name}}",
+      "view": "Просмотр документа",
+      "viewDocument": "Просмотр документа {{name}}",
+      "columns": {
+        "name": "Наименование",
+        "signature": "Подпись",
+        "actions": "Действия",
+        "status": "Статус"
+      },
+      "status": {
+        "approved": "Одобрен",
+        "rejected": "Отклонен",
+        "pending": "На рассмотрении",
+        "uploaded": "Загружен",
+        "notUploaded": "Не загружен"
+      },
+      "commentDialog": {
+        "title": "Комментарий к документу"
+      }
+    },
+    "finalDocuments": {
+      "notAvailable": "Выходные документы пока не доступны",
+      "notAvailableDescription": "Документы будут доступны после завершения всех этапов обработки заявки",
+      "completionAct": "Акт выполненных работ",
+      "actSigned": "Акт подписан и работы приняты без замечаний",
+      "signedDate": "Подписан",
+      "signRequiredForAccess": "Для получения доступа к документам необходимо подписать акт выполненных работ",
+      "signWarning": "После подписания акта все работы считаются принятыми без замечаний. Документы станут доступны для скачивания.",
+      "viewAct": "Просмотреть акт",
+      "signWithEDS": "Подписать ЭЦП",
+      "outputDocuments": "Выходные документы",
+      "downloadAll": "Скачать все",
+      "issued": "Выдан",
+      "validUntil": "Действителен до",
+      "view": "Просмотреть",
+      "download": "Скачать",
+      "status": {
+        "issued": "Выдан",
+        "draft": "Черновик"
+      },
+      "preparingDocuments": "Документы в процессе подготовки",
+      "preparingDocumentsDescription": "Выходные документы будут доступны после завершения всех процедур оформления.",
+      "documentsInfo": "Информация о документах",
+      "documentsInfoDescription": "Все документы имеют юридическую силу и могут быть использованы по назначению. Рекомендуем сохранить копии документов для вашего архива.",
+      "supportContact": "При возникновении вопросов обращайтесь в службу поддержки БГА.",
+      "signActDialog": {
+        "title": "Подписание акта выполненных работ",
+        "description": "Подписывая акт выполненных работ, вы подтверждаете, что все услуги оказаны в полном объеме и претензий к качеству выполненных работ не имеете.",
+        "warning": "Внимание! После подписания акта отменить данное действие будет невозможно."
+      }
+    },
+    "payment": {
+      "title": "История оплат",
+      "currency": "сом",
+      "noPayments": "Оплаты не найдены",
+      "noPaymentsDescription": "История оплат по данной заявке пока отсутствует. После проведения оплаты информация появится в этом разделе.",
+      "columns": {
+        "dateTime": "Дата и время",
+        "amount": "Сумма",
+        "paymentId": "Идентификатор платежа"
+      },
+      "instructionDialog": {
+        "title": "Инструкция по оплате",
+        "methods": "Способы оплаты:",
+        "bankTransfer": {
+          "title": "1. Банковский перевод",
+          "description": "• Используйте реквизиты, указанные в счете\n• В назначении платежа укажите номер счета и номер заявки\n• После оплаты сохраните квитанцию/чек"
+        },
+        "onlinePayment": {
+          "title": "2. Онлайн-оплата",
+          "description": "• Используйте мобильное приложение вашего банка\n• Выберите раздел \"Платежи\" или \"Переводы\"\n• Введите реквизиты получателя\n• Сделайте скриншот подтверждения платежа"
+        },
+        "confirmationRequirements": "Требования к подтверждению оплаты:",
+        "confirmationDetails": "• Принимаются файлы в формате PDF, JPG или PNG\n• Документ должен содержать сумму, дату и время платежа\n• На документе должны быть видны реквизиты получателя\n• Максимальный размер файла - 5 МБ"
+      }
+    },
+    "contract": {
+      "title": "Договор на оказание услуг",
+      "notGenerated": "Договор еще не сформирован",
+      "notGeneratedDescription": "После проверки всех документов будет сформирован договор для подписания. Вы получите уведомление, когда договор будет готов.",
+      "contractNumber": "Договор №{{number}}",
+      "created": "Создан",
+      "signed": "Подписан",
+      "description": "Договор содержит условия оказания услуг, права и обязанности сторон, сроки выполнения работ и другие существенные условия. Пожалуйста, внимательно ознакомьтесь с договором перед подписанием.",
+      "downloadForReview": "Скачать договор для ознакомления",
+      "downloadContract": "Скачать договор",
+      "download": "Скачать",
+      "successfullySigned": "Договор успешно подписан",
+      "successfullySignedDescription": "Договор успешно подписан. Теперь вы можете перейти к оплате услуг.",
+      "proceedToPayment": "Перейти к оплате",
+      "signRequired": "Требуется подписание",
+      "signRequiredDescription": "Необходимо подписать договор для продолжения обработки заявки. Пожалуйста, скачайте и внимательно ознакомьтесь с договором перед подписанием.",
+      "confirmSignDialog": {
+        "title": "Подтверждение подписания договора",
+        "description": "Вы собираетесь подписать договор №{{number}}. Подписывая договор, вы подтверждаете, что ознакомились с его содержанием и согласны с условиями."
+      },
+      "confirmSign": "Подтвердить подписание"
+    },
+    "applicationInfo": {
+      "notSpecified": "Не указано",
+      "serviceInfo": "Информация об услуге",
+      "service": "Услуга",
+      "workType": "Тип выполняемых работ",
+      "objects": "Объекты",
+      "addObject": "Добавить объект",
+      "noObjects": "Объекты не добавлены. Нажмите \"Добавить объект\" для добавления.",
+      "objectNumber": "Объект №{{number}}",
+      "editingObject": "Редактирование объекта №{{number}}",
+      "district": "Район",
+      "street": "Улица",
+      "building": "Здание/дом",
+      "apartment": "Квартира",
+      "tags": "Теги",
+      "objectTags": "Теги объекта",
+      "selectTags": "Выберите теги",
+      "deleteObjectConfirm": "Удалить объект?",
+      "loadingData": "Загрузка данных...",
+      "changesSaved": "Изменения сохранены",
+      "saveError": "Ошибка сохранения",
+      "customerData": "Данные заказчика",
+      "individual": "Физическое лицо",
+      "legal": "Юридическое лицо",
+      "inn": "ИНН",
+      "fullName": "ФИО",
+      "lastName": "Фамилия",
+      "firstName": "Имя",
+      "secondName": "Отчество",
+      "phone": "Телефон",
+      "additionalPhone": "Дополнительный телефон",
+      "email": "Email",
+      "postalCode": "Почтовый индекс",
+      "address": "Адрес",
+      "passportSeries": "Серия и номер паспорта",
+      "passportIssuer": "Кем выдан паспорт",
+      "companyName": "Название компании",
+      "directorName": "ФИО директора",
+      "okpo": "ОКПО",
+      "paymentAccount": "Расчетный счет",
+      "bank": "Банк",
+      "bik": "БИК"
+    }
+  },
+  "application": {
+    "breadcrumbs": {
+      "home": "Главная",
+      "myApplications": "Мои заявки"
+    },
+    "loading": {
+      "dataLoading": "Загрузка данных заявки..."
+    },
+    "error": {
+      "loadingError": "Ошибка загрузки",
+      "tryAgain": "Попробовать снова",
+      "notFound": "Заявка не найдена",
+      "notFoundDescription": "Не удалось найти заявку с указанным идентификатором."
+    },
+    "header": {
+      "editApplication": "Редактирование заявки",
+      "newApplication": "Регистрация новой заявки",
+      "description": "Пошаговая регистрация заявки на услуги БишкекГлавАрхитектура",
+      "applicationId": "ID: {{id}}"
+    },
+    "document": {
+      "type": {
+        "unknown": "Неизвестный тип документа"
+      },
+      "error": {
+        "notFound": "Документ не найден в системе",
+        "loadingError": "Ошибка при загрузке документа",
+        "openNewWindow": "Не удалось открыть новое окно. Файл будет скачан.",
+        "emptyFile": "Получен пустой файл",
+        "serverError": "Не удалось получить файл от сервера",
+        "openFile": "Не удалось открыть файл",
+        "downloadFile": "Не удалось скачать файл"
+      },
+      "defaultTitle": "PDF Документ",
+      "defaultFileName": "документ",
+      "fileName": "Название документа",
+      "fileType": "Тип документа",
+      "signatureInfo": "Информация о подписи",
+      "loading_document": "Загрузка документа...",
+      "signature": {
+        "whoSigned": "Кто подписал",
+        "whenSigned": "Когда подписан"
+      },
+      "officialStamp": {
+        "title": "Официальное подтверждение",
+        "description": "ГУ \"Бишкекглавархитектура\" подтверждает, что данный документ официально подписан электронной цифровой подписью и является юридически значимым."
+      },
+      "loading": {
+        "title": "Загрузка документа...",
+        "subtitle": "Пожалуйста, подождите"
+      },
+      "readyForDownload": {
+        "title": "Документ готов к скачиванию",
+        "subtitle": "Проверен {{date}}",
+        "alertTitle": "Документ найден в системе",
+        "alertDescription": "Документ успешно найден и готов к просмотру.",
+        "pdfViewHint": "Вы можете открыть PDF документ в новой вкладке для просмотра."
+      },
+      "successfullyDownloaded": {
+        "title": "Документ успешно загружен",
+        "subtitle": "Проверен и загружен {{date}}",
+        "alertTitle": "Загрузка завершена",
+        "alertDescription": "Документ был успешно найден в системе и загружен на ваше устройство."
+      },
+      "notFound": {
+        "title": "Документ не найден",
+        "subtitle": "Проверка от БГА",
+        "alertTitle": "Документ не найден в системе",
+        "alertDescription": "Запрошенный документ не найден в базе данных Бишкекглавархитектуры. Если вы уверены, что документ должен существовать, пожалуйста, обратитесь в службу поддержки.",
+        "possibleReasons": "Возможные причины:",
+        "reason1": "Документ еще не прошел процедуру подписания",
+        "reason2": "Указана неверная ссылка на документ",
+        "reason3": "Срок действия документа истек"
+      },
+      "downloadError": {
+        "title": "Ошибка загрузки",
+        "subtitle": "Не удалось загрузить документ",
+        "alertTitle": "Ошибка при загрузке файла",
+        "alertDescription": "Произошла ошибка при попытке загрузить документ. Попробуйте еще раз или обратитесь в службу поддержки."
+      },
+      "invalidGuid": {
+        "title": "Неверная ссылка",
+        "subtitle": "Ошибка в параметрах",
+        "alertTitle": "Неверный идентификатор документа",
+        "alertDescription": "Ссылка на документ содержит неверный или отсутствующий идентификатор (GUID). Проверьте правильность ссылки и попробуйте еще раз.",
+        "instruction": "Пожалуйста, убедитесь, что вы используете корректную ссылку, предоставленную Бишкекглавархитектурой."
+      },
+      "actions": {
+        "openPdfInNewTab": "Открыть PDF в новой вкладке",
+        "downloadDocument": "Скачать документ",
+        "tryDownloadAgain": "Попробовать загрузить снова"
+      },
+      "pdfViewer": {
+        "opening": "Открытие PDF в новой вкладке..."
+      }
+    }
+  },
+  "steps": {
+    "objects": "Объекты",
+    "applicant": "Заявитель",
+    "object": {
+      "title": "Шаг 1: Информация об услуге и объектах",
+      "serviceAndWorkType": "Услуга и тип работ",
+      "workingDays": "р.дн.",
+      "workTypeLabel": "Тип выполняемых работ",
+      "workTypeHelperText": "Опишите какие работы планируется выполнить",
+      "workTypePlaceholder": "Например: Строительство жилого дома, реконструкция офисного здания и т.д.",
+      "objectsCount": "Объекты ({{count}})",
+      "addObject": "Добавить объект",
+      "objectsHelpText": "Вы можете добавить несколько объектов для одной заявки. Для каждого объекта укажите адрес и выберите соответствующие теги.",
+      "map": {
+        "scheme": "Схема",
+        "satellite": "Спутник"
+      },
+      "address": "Адрес",
+      "objectNumber": "Объект №{{number}}",
+      "clearObjectData": "Очистить данные объекта",
+      "deleteObject": "Удалить объект",
+      "district": "Район",
+      "selectDistrict": "Выберите район",
+      "street": "Улица",
+      "building": "Здание",
+      "apartment": "Номер квартиры/офиса",
+      "objectTags": "Теги объекта",
+      "selectTags": "Выберите теги",
+      "tagsHelperText": "Выберите один или несколько тегов для классификации объекта",
+      "noName": "Без названия",
+      "noAddress": "Без адреса"
+    },
+    "participants": {
+      "title": "Шаг 2: Данные заказчика",
+      "selectRole": "Выберите вашу роль",
+      "selectRoleDescription": "Пожалуйста, укажите, в каком качестве вы подаете заявку",
+      "imCustomer": "Я заказчик",
+      "imCustomerDescription": "Подаю заявку от своего лица",
+      "imApplicant": "Я заявитель",
+      "imApplicantDescription": "Подаю заявку по поручению другого человека или компании",
+      "customerType": "Тип заказчика",
+      "individual": "Физическое лицо",
+      "legal": "Юридическое лицо",
+      "applicantInfo": "Вы заполняете данные заказчика как заявитель. После заполнения данных заказчика, вам нужно будет указать свои данные.",
+      "pin": "ПИН",
+      "innOkpo": "ИНН/ОКПО",
+      "pinHelperText": "14-значный персональный идентификационный номер",
+      "innOkpoHelperText": "ИНН или ОКПО организации",
+      "okpo": "ОКПО",
+      "okpoHelperText": "Общереспубликанский классификатор предприятий и организаций",
+      "fullName": "ФИО",
+      "organizationName": "Название организации",
+      "fullNamePlaceholder": "Иванов Иван Иванович",
+      "organizationNamePlaceholder": "ОсОО \"Название компании\"",
+      "lastName": "Фамилия",
+      "firstName": "Имя",
+      "secondName": "Отчество",
+      "lastNamePlaceholder": "Иванов",
+      "firstNamePlaceholder": "Иван",
+      "secondNamePlaceholder": "Иванович",
+      "directorName": "ФИО руководителя",
+      "directorNamePlaceholder": "Петров Петр Петрович",
+      "phone": "Телефон",
+      "additionalPhone": "Дополнительный телефон",
+      "phoneFormat": "Формат: +996 XXX XX XX XX",
+      "phonePlaceholder": "+996 700 12 34 56",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+      "address": "Адрес",
+      "addressPlaceholder": "г. Бишкек, ул. Киевская, 114",
+      "postalCode": "Почтовый индекс",
+      "postalCodePlaceholder": "720000",
+      "passportSeries": "Серия и номер паспорта",
+      "passportSeriesPlaceholder": "AN 1234567",
+      "passportIssueDate": "Дата выдачи паспорта",
+      "passportIssuer": "Кем выдан паспорт",
+      "passportIssuerPlaceholder": "МКК 50-01",
+      "paymentAccount": "Расчетный счет",
+      "bank": "Банк",
+      "bik": "БИК"
+    },
+    "documents": {
+      "title": "Шаг 3: Загрузка документов",
+      "allRequiredUploaded": "✓ Все обязательные документы загружены",
+      "uploadAllRequired": "Необходимо загрузить все обязательные документы",
+      "mandatoryDocuments": "Обязательные документы",
+      "optionalDocuments": "Дополнительные документы",
+      "uploaded": "Загружен",
+      "view": "Просмотреть",
+      "replace": "Заменить",
+      "upload": "Загрузить",
+      "uploadSummary": "Итоги загрузки",
+      "allRequiredUploadedSuccess": "Все обязательные документы загружены ✓",
+      "notAllRequiredUploaded": "Не все обязательные документы загружены",
+      "fileSizeError": "Размер файла не должен превышать 10 МБ",
+      "fileTypeError": "Поддерживаются только файлы PDF, JPG и PNG"
+    },
+    "review": {
+      "passport_series": "Серия документа",
+      "passport_issued_date": "Дата выдачи",
+      "passport_whom_issued": "Кем выдан",
+      "title": "Шаг 4: Финальная проверка данных",
+      "lastStep": "Последний шаг перед подачей заявки",
+      "lastStepDescription": "Пожалуйста, внимательно проверьте все введенные данные. После подачи заявки изменения будут невозможны. Для подачи заявки необходимо подписать документы электронной цифровой подписью.",
+      "attention": "Внимание!",
+      "attentionDescription": "Не все обязательные данные заполнены. Проверьте предыдущие шаги.",
+      "serviceInfo": "Информация об услуге",
+      "service": "Услуга",
+      "workType": "Тип работ",
+      "customer": "Заказчик",
+      "customerData": "Данные заказчика",
+      "individual": "Физическое лицо",
+      "legal": "Юридическое лицо",
+      "pin": "ПИН",
+      "innOkpo": "ИНН/ОКПО",
+      "fullName": "ФИО",
+      "organizationName": "Название организации",
+      "director": "Руководитель",
+      "phone": "Телефон",
+      "email": "Email",
+      "address": "Адрес",
+      "objects": "Объекты ({{count}})",
+      "objectNumber": "Объект №{{number}}",
+      "district": "Район",
+      "tags": "Теги",
+      "uploadedDocuments": "Загруженные документы",
+      "mandatoryDocuments": "Обязательные документы",
+      "optionalDocuments": "Дополнительные документы",
+      "signed": "Подписан",
+      "notUploaded": "Не загружен",
+      "signDocument": "Подписать документ",
+      "digitalSignature": "Электронная цифровая подпись",
+      "documentsSignedSuccess": "Документы успешно подписаны электронной цифровой подписью",
+      "signDate": "Дата подписания",
+      "status": "Статус",
+      "valid": "Действительна",
+      "signRequiredForSubmission": "Для подачи заявки необходимо подписать документы электронной цифровой подписью",
+      "readyToSubmit": "Заявка готова к подаче",
+      "notReadyToSubmit": "Заявка не готова к подаче",
+      "readyToSubmitDescription": "Все необходимые данные заполнены, документы загружены и подписаны ЭЦП. Вы можете подать заявку.",
+      "notReadyToSubmitDescription": "Для подачи заявки необходимо:",
+      "requirements": {
+        "pin": "Указать ПИН/ИНН заказчика",
+        "name": "Указать имя заказчика",
+        "service": "Выбрать услугу",
+        "documents": "Загрузить все обязательные документы",
+        "signature": "Подписать документы электронной цифровой подписью"
+      },
+      "signWithEDS": "Подписать ЭЦП",
+      "viewDocument": "Просмотреть документ",
+      "submitApplication": "Подать заявление",
+      "fillAllRequiredFields": "Заполните все обязательные поля и загрузите документы для подписания ЭЦП",
+      "signToSubmit": "Подпишите документы ЭЦП для подачи заявления",
+      "application": "Заявление",
+      "notSpecified": "Не указано",
+      "noDocuments": "Документы не загружены",
+      "documentSigned": "Документ успешно подписан",
+      "signRequiredFirst": "Сначала необходимо подписать документы ЭЦП"
+    },
+    "completion": {
+      "title": "Заявка успешно создана!",
+      "applicationNumber": "Номер вашей заявки:",
+      "underReview": "На рассмотрении",
+      "numberCopied": "Номер заявки скопирован",
+      "completed": "✅ Что уже сделано:",
+      "completedItems": {
+        "submitted": "Заявка автоматически передана на рассмотрение",
+        "submittedDesc": "Статус: На рассмотрении из личного кабинета",
+        "notifications": "Уведомления отправлены в Единое Окно БГА",
+        "documentsSaved": "Документы сохранены в системе",
+        "documentsDesc": "Все загруженные файлы прикреплены к заявке"
+      },
+      "nextSteps": {
+        "study": {
+          "title": "Изучение материалов",
+          "description": "Специалист БГА изучит предоставленные документы",
+          "duration": "1-3 рабочих дня"
+        },
+        "assign": {
+          "title": "Назначение исполнителя",
+          "description": "Будет назначен ответственный архитектор",
+          "duration": "В течение дня"
+        },
+        "prepare": {
+          "title": "Подготовка заключения",
+          "description": "Подготовка архитектурного заключения или замечаний",
+          "duration": "5-10 рабочих дней"
+        },
+        "notify": {
+          "title": "Уведомление о готовности",
+          "description": "Вы получите уведомление на email и SMS",
+          "duration": "Автоматически"
+        }
+      },
+      "createNew": "Создать новую заявку",
+      "goToList": "Перейти к списку заявок",
+      "tip": "Совет",
+      "tipDescription": "Сохраните номер заявки. Вы можете отслеживать статус выполнения в личном кабинете или по телефону горячей линии БГА."
+    },
+    "print": {
+      "title": "Шаг 5: Печать обязательных документов",
+      "mandatoryStep": "⚠️ Обязательный шаг!",
+      "mandatoryStepDescription": "Для завершения регистрации заявки необходимо распечатать и передать заявителю следующие документы. Без подписанных документов регистрация не может быть завершена.",
+      "documentsForPrint": "Документы для печати",
+      "generating": "Генерация документов...",
+      "primary": "Основной",
+      "ready": "Готово",
+      "signaturesRequired": "Требуется подписей",
+      "copies": "Экземпляров",
+      "copiesDescription": "для заявителя и в дело",
+      "preview": "Предварительный просмотр",
+      "documentDownloaded": "Документ скачан",
+      "printAll": "Печать всех документов",
+      "printAllDescription": "Все документы будут выведены на печать одновременно",
+      "process": "Процесс оформления",
+      "processSteps": {
+        "generate": {
+          "label": "Генерация документов",
+          "description": "Подготовка документов к печати"
+        },
+        "print": {
+          "label": "Печать документов",
+          "description": "Распечатайте все необходимые документы"
+        },
+        "sign": {
+          "label": "Подписание документов",
+          "description": "Получите необходимые подписи"
+        },
+        "check": {
+          "label": "Проверка и завершение",
+          "description": "Убедитесь, что все шаги выполнены"
+        }
+      },
+      "processHelp": {
+        "generate": "Документы генерируются автоматически",
+        "print": "Используйте кнопки печати для каждого документа",
+        "sign": "Отметьте выполненные пункты в контрольном списке",
+        "check": "Все готово для завершения регистрации"
+      },
+      "checklistTitle": "✅ Контрольный список перед завершением",
+      "checklistProgress": "Выполнено {{completed}} из {{total}}",
+      "checklist": {
+        "allPrinted": {
+          "label": "Все документы распечатаны",
+          "description": "Убедитесь, что распечатаны все 3 документа"
+        },
+        "applicantSigned": {
+          "label": "Заявитель подписал заявление",
+          "description": "Подпись должна быть на всех экземплярах"
+        },
+        "receiptGiven": {
+          "label": "Заявитель получил расписку",
+          "description": "Один экземпляр расписки передан заявителю"
+        },
+        "registrarSigned": {
+          "label": "Регистратор подписал все документы",
+          "description": "Ваша подпись и печать на всех документах"
+        }
+      },
+      "completeAllItems": "Пожалуйста, выполните все пункты контрольного списка перед завершением",
+      "printHistory": "История печати"
+    }
+  },
+  "documents": {
+    "error": {
+      "loadingDocuments": "Ошибка загрузки документов",
+      "documentNotFound": "Документ не найден",
+      "uploadFailed": "Загрузка не удалась",
+      "uploadError": "Ошибка при загрузке файла",
+      "deleteError": "Ошибка при удалении файла"
+    },
+    "success": {
+      "uploaded": "Документ успешно загружен",
+      "deleted": "Документ удален"
+    },
+    "mockData": {
+      "applicantPassport": "Паспорт заявителя",
+      "passportCopy": "Копия паспорта",
+      "technicalPassport": "Технический паспорт",
+      "objectTechnicalPassport": "Техпаспорт объекта",
+      "additionalDocuments": "Дополнительные документы",
+      "otherDocuments": "Прочие документы"
+    }
+  },
+  "stepper": {
+    "steps": {
+      "object": "Объект",
+      "participants": "Участники",
+      "documents": "Документы",
+      "review": "Проверка",
+      "print": "Печать"
+    },
+    "error": {
+      "addressSearchError": "Ошибка поиска адреса:",
+      "fileTooLarge": "Файл слишком большой",
+      "unsupportedFormat": "Неподдерживаемый формат",
+      "uploadError": "Ошибка загрузки",
+      "saveFirstApplication": "Сначала сохраните заявку",
+      "validationFailed": "Заявка не прошла проверку",
+      "applicationValidationFailed": "Заявка не прошла валидацию",
+      "loadingData": "Ошибка загрузки данных"
+    },
+    "success": {
+      "documentUploaded": "Документ загружен",
+      "applicationCreated": "Заявка создана",
+      "applicationSaved": "Заявка сохранена",
+      "applicationSubmitted": "Заявка успешно отправлена!"
+    },
+    "validation": {
+      "selectService": "Выберите услугу",
+      "enterWorkDescription": "Введите описание работ",
+      "addObjectAddress": "Добавьте адрес объекта",
+      "enterCorrectINN": "Введите корректный ИНН (14 цифр)",
+      "enterName": "Введите ФИО/название организации",
+      "enterPhone": "Введите номер телефона",
+      "enterCorrectEmail": "Введите корректный email",
+      "uploadRequiredDocuments": "Загрузите все обязательные документы"
+    }
+  },
+  "services": {
+    "mockData": {
+      "apzService": "Получение архитектурно-планировочного задания (АПЗ)",
+      "projectApproval": "Согласование проектной документации",
+      "buildingPermit": "Разрешение на строительство",
+      "technicalConditions": "Технические условия на подключение",
+      "commissioningAct": "Акт ввода в эксплуатацию"
+    }
+  },
+  "tags": {
+    "mockData": {
+      "residential": "Жилое",
+      "commercial": "Коммерческое",
+      "industrial": "Промышленное",
+      "social": "Социальное",
+      "newConstruction": "Новое строительство",
+      "reconstruction": "Реконструкция",
+      "replanning": "Перепланировка"
+    }
+  },
+  "object": {
+    "error": {
+      "loadingServices": "Ошибка загрузки услуг",
+      "loadingDistricts": "Ошибка загрузки районов",
+      "loadingTags": "Ошибка загрузки тэгов",
+      "searchError": "Ошибка поиска:"
+    },
+    "success": {
+      "objectAdded": "Объект добавлен",
+      "objectCleared": "Данные объекта очищены",
+      "objectRemoved": "Объект удален"
+    },
+    "validation": {
+      "selectService": "Выберите услугу",
+      "enterWorkType": "Укажите тип выполняемых работ",
+      "fillRequiredFields": "Заполните все обязательные поля",
+      "atLeastOneObject": "Должен быть хотя бы один объект"
+    },
+    "address": {
+      "notSpecified": "Не указан"
+    }
+  },
+  "participants": {
+    "error": {
+      "customerDataError": "Ошибка при получении компании",
+      "customerSaveError": "Ошибка при сохранении данных",
+      "selectRole": "Пожалуйста, выберите роль",
+      "fillRequiredFields": "Пожалуйста, заполните все обязательные поля"
+    },
+    "success": {
+      "customerDataSaved": "Данные заказчика сохранены"
+    },
+    "validation": {
+      "pinRequired": "ИНН/ПИН обязателен для заполнения",
+      "pinFormat": "ПИН должен содержать 14 цифр",
+      "nameRequired": "ФИО или название организации обязательно",
+      "phoneRequired": "Телефон обязателен для заполнения",
+      "phoneFormat": "Введите полный номер в формате +996 XXX-XX-XX-XX",
+      "emailRequired": "Email обязателен для заполнения",
+      "emailFormat": "Некорректный email адрес",
+      "addressRequired": "Адрес обязателен для заполнения",
+      "directorRequired": "ФИО руководителя обязательно для юридических лиц"
+    }
+  },
+  "print": {
+    "error": {
+      "generateDocumentsError": "Ошибка при генерации документов",
+      "completeAllItems": "Необходимо: {items}"
+    },
+    "success": {
+      "documentsReady": "Документы готовы к печати",
+      "documentPrinted": "Документ \"{name}\" отправлен на печать",
+      "allDocumentsPrinted": "Все документы отправлены на печать",
+      "documentPreview": "Предпросмотр документа \"{name}\""
+    },
+    "documents": {
+      "applicationForm": "Заявление на оказание услуги",
+      "applicationFormDescription": "Основной документ с данными заявителя и описанием запрашиваемой услуги",
+      "receiptForm": "Расписка о приеме документов",
+      "receiptFormDescription": "Подтверждение приема документов с перечнем и датой",
+      "documentsList": "Опись документов",
+      "documentsListDescription": "Полный перечень принятых документов с указанием количества листов",
+      "applicantRegistrarSignatures": "Заявитель, Регистратор"
+    },
+    "checklist": {
+      "printAllDocuments": "распечатать все документы",
+      "getApplicantSignature": "получить подпись заявителя",
+      "giveReceiptToApplicant": "передать расписку заявителю",
+      "signDocumentsByRegistrar": "подписать документы регистратором"
+    }
+  },
+  "rootStore": {
+    "error": {
+      "loadingTemplate": "Ошибка загрузки шаблона",
+      "loadingAgreement": "Ошибка загрузки соглашения",
+      "loadingApplication": "Ошибка загрузки заявки",
+      "savingApplication": "Ошибка при сохранении заявки",
+      "updatingApplication": "Ошибка при обновлении заявки",
+      "applicationValidationFailed": "Заявка не прошла проверку",
+      "submittingApplication": "Ошибка при подаче заявки"
+    },
+    "success": {
+      "applicationLoaded": "Заявка загружена",
+      "documentsSignedEDS": "Документы успешно подписаны ЭЦП",
+      "applicationCreatedAndSaved": "Заявка создана и сохранена",
+      "applicationSaved": "Заявка сохранена",
+      "applicationSubmitted": "Заявка успешно подана!",
+      "newApplicationStarted": "Начата новая заявка"
+    },
+    "warning": {
+      "notAllDocumentsUploaded": "Не все обязательные документы загружены. Заявка будет сохранена как черновик",
+      "signRequiredFirst": "Сначала необходимо подписать документы ЭЦП"
+    }
+  },
+  "documentCard": {
+    "signatureInfo": "Информация о подписи",
+    "signature": {
+      "whoSigned": "Кто подписал",
+      "whenSigned": "Когда подписан"
+    },
+    "officialStamp": {
+      "title": "Официальное подтверждение",
+      "description": "Бишкекглавархитектура подтверждает, что данный документ официально подписан электронной цифровой подписью и является юридически значимым."
+    },
+    "fileName": "Название документа",
+    "fileType": "Тип документа",
+    "downloadWillBeStarted": "Файл будет скачан",
+    "signatureTable": {
+      "ariaLabel": "Таблица подписей",
+      "whoSigned": "Кто подписал",
+      "whenSigned": "Когда подписан"
+    },
+    "documentTable": {
+      "ariaLabel": "Таблица документов"
+    },
+    "loading": {
+      "title": "Загрузка документа...",
+      "subtitle": "Пожалуйста, подождите"
+    },
+    "readyForDownload": {
+      "title": "Документ готов к скачиванию",
+      "subtitle": "Проверен {{date}}",
+      "alertTitle": "Документ найден в системе",
+      "alertDescription": "Документ успешно найден и готов к просмотру.",
+      "pdfViewHint": "Вы можете открыть PDF документ в новой вкладке для просмотра."
+    },
+    "successfullyDownloaded": {
+      "title": "Документ успешно загружен",
+      "subtitle": "Проверен и загружен {{date}}",
+      "alertTitle": "Загрузка завершена",
+      "alertDescription": "Документ был успешно найден в системе и загружен на ваше устройство."
+    },
+    "notFound": {
+      "title": "Документ не найден",
+      "subtitle": "Проверка от БГА",
+      "alertTitle": "Документ не найден в системе",
+      "alertDescription": "Запрошенный документ не найден в базе данных Бишкекглавархитектуры. Если вы уверены, что документ должен существовать, пожалуйста, обратитесь в службу поддержки.",
+      "possibleReasons": "Возможные причины:",
+      "reason1": "Документ еще не прошел процедуру подписания",
+      "reason2": "Указана неверная ссылка на документ",
+      "reason3": "Срок действия документа истек"
+    },
+    "downloadError": {
+      "title": "Ошибка загрузки",
+      "subtitle": "Не удалось загрузить документ",
+      "alertTitle": "Ошибка при загрузке файла",
+      "alertDescription": "Произошла ошибка при попытке загрузить документ. Попробуйте еще раз или обратитесь в службу поддержки."
+    },
+    "invalidGuid": {
+      "title": "Неверная ссылка",
+      "subtitle": "Ошибка в параметрах",
+      "alertTitle": "Неверный идентификатор документа",
+      "alertDescription": "Ссылка на документ содержит неверный или отсутствующий идентификатор (GUID). Проверьте правильность ссылки и попробуйте еще раз.",
+      "instruction": "Пожалуйста, убедитесь, что вы используете корректную ссылку, предоставленную Бишкекглавархитектурой."
+    },
+    "actions": {
+      "openPdfInNewTab": "Открыть PDF в новой вкладке",
+      "downloadDocument": "Скачать документ",
+      "tryDownloadAgain": "Попробовать загрузить снова"
+    },
+    "documentFound": {
+      "title": "Действительный документ",
+      "subtitle": "Проверен {{date}}"
+    },
+    "documentNotFound": {
+      "title": "Документ не найден",
+      "subtitle": "Проверка от БГА",
+      "alertTitle": "Документ не найден в системе",
+      "alertDescription": "Запрошенный документ не найден в базе данных Бишкекглавархитектуры. Если вы уверены, что документ должен существовать, пожалуйста, обратитесь в службу поддержки.",
+      "possibleReasons": "Возможные причины:",
+      "reason1": "Документ еще не прошел процедуру подписания",
+      "reason2": "Указана неверная ссылка на документ",
+      "reason3": "Срок действия документа истек"
+    },
+    "documentName": "Название документа"
+  },
+  "ApplicationListView": {
+    "Application": "Заявка",
+    "entityTitle": "Заявка",
+    "workDescription": "Описание требуемых работ",
+    "archObjectId": "Объект",
+    "statusId": "Статус",
+    "companyId": "Заказчик",
+    "rServiceId": "Услуга",
+    "rServiceName": "Название услуги",
+    "uniqueCode": "Код",
+    "registrationDate": "Время регистрации",
+    "deadline": "Срок",
+    "number": "Номер",
+    "comment": "Комментарии",
+    "company_name": "Наименование компании",
+    "status_name": "Статус",
+    "r_service_name": "Услуга",
+    "work_description": "Описание требуемых работ",
+    "registration_date": "Время регистрации",
+    "Costing": "Калькуляция",
+    "objectName": "Название объекта",
+    "address": "Адрес",
+    "sendDate": "Время отправки",
+    "createNewApplication": "Создать новую заявку"
+  },
+  "ApplicationPublic": {
+    "applicationTitle": "Заявка №",
+    "registrationTime": "Время регистрации",
+    "customer": "Заказчик",
+    "inn": "ИНН",
+    "service": "Услуга",
+    "address": "Адрес",
+    "object": "Объект",
+    "invalidDate": "Некорректная дата",
+    "statusApproved": "Одобрено",
+    "statusRejected": "Отклонено",
+    "statusInProgress": "В обработке",
+    "statusWaiting": "Ожидание",
+    "workDocuments": {
+      "title": "Рабочие документы",
+      "fileName": "Файл",
+      "comment": "Комментарии",
+      "uploadedAt": "Загружен в",
+      "isSigned": "ЭЦП подписан",
+      "signedBy": "Кем подписан"
+    },
+    "outgoingDocuments": {
+      "title": "Исходящие документы",
+      "document": "Документ",
+      "uploadedAt": "Загружен в",
+      "isSigned": "ЭЦП подписан",
+      "signedBy": "Кем подписан"
+    }
+  },
+  "ApplicationStatusAddEditView": {
+    "entityTitle": "ApplicationStatus",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "nameKg": "nameKg"
+  },
+  "ApplicationStatusListView": {
+    "ApplicationStatus": "ApplicationStatus",
+    "entityTitle": "ApplicationStatus",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "nameKg": "nameKg"
+  },
+  "PayerAddEditView": {
+    "entityTitle": "Плательщик",
+    "okpo": "ОКПО",
+    "postalCode": "Почтовый индекс",
+    "ugns": "УГНС",
+    "regNumber": "Регистрационный номер",
+    "typeOrganizationId": "Тип организации",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "fullName": "Полное имя",
+    "address": "Адрес",
+    "director": "Директор",
+    "pin": "ИНН",
+    "imTheCustomer": "Я являюсь плательщиком",
+    "imThePayer": "Я являюсь плательщиком",
+    "validation": {
+      "okpoMaxLength": "Не больше 50 символов",
+      "postalCodeMaxLength": "Не больше 6 символов",
+      "ugnsMaxLength": "Не больше 50 символов",
+      "regNumberMaxLength": "Не больше 50 символов",
+      "typeOrganizationIdRequired": "Обязательное поле",
+      "lastNameRequired": "Обязательное поле",
+      "lastNameMaxLength": "Не больше 50 символов",
+      "firstNameRequired": "Обязательное поле",
+      "firstNameMaxLength": "Не больше 50 символов",
+      "secondNameMaxLength": "Не больше 50 символов",
+      "fullNameMaxLength": "Не больше 50 символов",
+      "addressMaxLength": "Не больше 50 символов",
+      "directorMaxLength": "Не больше 50 символов",
+      "nameFormat": "Можно использовать только буквы кириллицы или латиницы, пробелы, дефис и апостроф.",
+      "pinFormat": "ИНН должен содержать только цифры и быть длиной 14 символов."
+    }
+  },
+  "PayerListView": {
+    "entityTitle": "Плательщик",
+    "okpo": "ОКПО",
+    "postalCode": "Почтовый индекс",
+    "ugns": "УГНС",
+    "regNumber": "Регистрационный номер",
+    "typeOrganizationId": "Тип организации",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "fullName": "Полное имя",
+    "address": "Адрес",
+    "director": "Директор",
+    "pin": "ИНН",
+    "full_name": "Полное имя",
+    "last_name": "Фамилия",
+    "first_name": "Имя",
+    "reg_number": "Регистрационный номер",
+    "postal_code": "Почтовый индекс",
+    "second_name": "Отчество",
+    "organization_type_name": "Тип организации",
+    "customer_name": "Компания"
+  },
+  "UserAddEditView": {
+    "entityTitle": "User",
+    "isApproved": "isApproved",
+    "lastName": "lastName",
+    "firstName": "firstName",
+    "secondName": "secondName",
+    "pin": "pin"
+  },
+  "UserListView": {
+    "User": "User",
+    "entityTitle": "User",
+    "isApproved": "isApproved",
+    "lastName": "lastName",
+    "firstName": "firstName",
+    "secondName": "secondName",
+    "pin": "pin"
+  },
+  "AuthTypeAddEditView": {
+    "entityTitle": "AuthType",
+    "description": "description",
+    "name": "name",
+    "code": "code"
+  },
+  "AuthTypeListView": {
+    "AuthType": "AuthType",
+    "entityTitle": "AuthType",
+    "description": "description",
+    "name": "name",
+    "code": "code"
+  },
+  "ApplicationCustomerAddEditView": {
+    "entityTitle": "ApplicationCustomer",
+    "director": "director",
+    "okpo": "okpo",
+    "paymentAccount": "paymentAccount",
+    "postalCode": "postalCode",
+    "ugns": "ugns",
+    "bank": "bank",
+    "bik": "bik",
+    "registrationNumber": "registrationNumber",
+    "identityDocumentTypeId": "identityDocumentTypeId",
+    "organizationTypeId": "organizationTypeId",
+    "pin": "pin",
+    "applicationId": "applicationId",
+    "isOrganization": "isOrganization",
+    "fullName": "fullName",
+    "address": "address"
+  },
+  "ApplicationCustomerListView": {
+    "ApplicationCustomer": "ApplicationCustomer",
+    "entityTitle": "ApplicationCustomer",
+    "director": "director",
+    "okpo": "okpo",
+    "paymentAccount": "paymentAccount",
+    "postalCode": "postalCode",
+    "ugns": "ugns",
+    "bank": "bank",
+    "bik": "bik",
+    "registrationNumber": "registrationNumber",
+    "identityDocumentTypeId": "identityDocumentTypeId",
+    "organizationTypeId": "organizationTypeId",
+    "pin": "pin",
+    "applicationId": "applicationId",
+    "isOrganization": "isOrganization",
+    "fullName": "fullName",
+    "address": "address"
+  },
+  "ApplicationPayerAddEditView": {
+    "entityTitle": "Плательщик",
+    "okpo": "ОКПО",
+    "postalCode": "Почтовый индекс",
+    "ugns": "УГНС",
+    "regNumber": "Регистрационный номер",
+    "typeOrganizationId": "Тип организации",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "fullName": "Полное имя",
+    "address": "Адрес",
+    "director": "Директор",
+    "pin": "ИНН",
+    "imTheCustomer": "Я являюсь плательщиком",
+    "bik": "БИК",
+    "account_number": "Номер счета",
+    "bank_name": "Наименование банка",
+    "validation": {
+      "fullNameMaxLength": "Не больше 50 символов",
+      "addressMaxLength": "Не больше 50 символов",
+      "pinFormat": "ИНН должен содержать только цифры и быть длиной 14 символов."
+    }
+  },
+  "ApplicationPayerListView": {
+    "chooseFromPrevious": "Выбрать из предыдущих",
+    "entityTitle": "Плательщик",
+    "okpo": "ОКПО",
+    "postalCode": "Почтовый индекс",
+    "ugns": "УГНС",
+    "regNumber": "Регистрационный номер",
+    "typeOrganizationId": "Тип организации",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "fullName": "Полное имя",
+    "address": "Адрес",
+    "director": "Директор",
+    "pin": "ИНН",
+    "imTheCustomer": "Я являюсь плательщиком",
+    "bik": "БИК",
+    "account_number": "Номер счета",
+    "bank_name": "Наименование банка",
+    "postal_code": "Почтовый индекс",
+    "reg_number": "Регистрационный номер",
+    "last_name": "Фамилия",
+    "first_name": "Имя",
+    "second_name": "Отчество",
+    "application_id": "Заявка",
+    "type_organization_id": "Тип организации",
+    "created_at": "Создан",
+    "updated_at": "Обновлен",
+    "created_by": "Создан пользователем",
+    "updated_by": "Обновлен пользователем",
+    "full_name": "Полное имя"
+  },
+  "LanguageAddEditView": {
+    "entityTitle": "Language",
+    "name": "name",
+    "nameKg": "nameKg",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "description": "description",
+    "code": "code",
+    "isdefault": "isdefault",
+    "queuenumber": "queuenumber"
+  },
+  "LanguageListView": {
+    "Language": "Language",
+    "entityTitle": "Language",
+    "name": "name",
+    "nameKg": "nameKg",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "description": "description",
+    "code": "code",
+    "isdefault": "isdefault",
+    "queuenumber": "queuenumber"
+  },
+  "SDocumenttemplatetranslationAddEditView": {
+    "entityTitle": "SDocumenttemplatetranslation",
+    "template": "template",
+    "iddocumenttemplate": "iddocumenttemplate",
+    "idlanguage": "idlanguage"
+  },
+  "SDocumenttemplatetranslationListView": {
+    "SDocumenttemplatetranslation": "SDocumenttemplatetranslation",
+    "entityTitle": "SDocumenttemplatetranslation",
+    "template": "template",
+    "iddocumenttemplate": "iddocumenttemplate",
+    "idlanguage": "idlanguage"
+  },
+  "SDocumenttemplateAddEditView": {
+    "entityTitle": "SDocumenttemplate",
+    "nameKg": "nameKg",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "idcustomsvgicon": "idcustomsvgicon",
+    "iconcolor": "iconcolor",
+    "iddocumenttype": "iddocumenttype"
+  },
+  "SDocumenttemplateListView": {
+    "SDocumenttemplate": "SDocumenttemplate",
+    "entityTitle": "SDocumenttemplate",
+    "nameKg": "nameKg",
+    "descriptionKg": "descriptionKg",
+    "textColor": "textColor",
+    "backgroundColor": "backgroundColor",
+    "name": "name",
+    "description": "description",
+    "code": "code",
+    "idcustomsvgicon": "idcustomsvgicon",
+    "iconcolor": "iconcolor",
+    "iddocumenttype": "iddocumenttype"
+  },
+  "uploaded_application_documentListView": {
+    "hash_code": "Хэш-код",
+    "hash_code_date": "Дата хэш-кода",
+    "uploaded_application_document": "Документы",
+    "doc_name": "Документ",
+    "file_name": "Прикреленный файл",
+    "status": "Статус",
+    "entityTitle": "Документы",
+    "incoming_entityTitle": "Входящие документы",
+    "outgoing_entityTitle": "Исходящие документы",
+    "file_id": "Файл",
+    "application_document_id": "Заявка",
+    "name": "Название",
+    "service_document_id": "Документ",
+    "created_at": "Загружен в",
+    "updated_at": "Обновлен в",
+    "created_by": "Создан",
+    "updated_by": "Обновлен",
+    "accept": "Принят",
+    "lastUploads": "Прикрепить из старых",
+    "oldAttacheds": "Загруженные документы",
+    "number": "Номер заявки",
+    "chooseDocument": "Выбрать",
+    "service_name": "Услуга",
+    "document_number": "№",
+    "is_outcome": "Тип документа",
+    "is_signed": "Подписанный мной",
+    "is_required": "Обязательный",
+    "required": "Обязательный",
+    "replace": "Заменить",
+    "upload": "Загрузить",
+    "uploaded": "Загружен",
+    "not_uploaded": "Не загружен",
+    "accepted": "Принят",
+    "important_message": "ВАЖНО: Перед следующим шагом необходимо подписать все загруженные документы.",
+    "sign_selected_documents": "Подписать выбранные документы",
+    "incoming_documents": "Входящие документы"
+  },
+  "rejectPopup": {
+    "openRemarks": "Открыть замечания",
+    "remarks": "Замечания"
+  },
+  "applicationHeader": {
+    "applicationNumber": "Заявка №{{number}}",
+    "submissionDateLabel": "Дата подачи заявки",
+    "submitted": "Подана: {{date}}",
+    "status": {
+      "draft": "Черновик",
+      "underConsideration": "На рассмотрении",
+      "rejected": "Отклонен",
+      "accepted": "Принят и в работе",
+      "returnWithError": "Возвращено с замечаниями",
+      "done": "Завершен",
+      "documentsReady": "Документы готовы",
+      "unknown": "Статус неизвестен"
+    }
+  },
+  "pdfViewer": {
+    "opening": "Открытие PDF в новой вкладке..."
+  },
+  "documentStore": {
+    "unknownType": "Неизвестный тип документа",
+    "defaultTitle": "PDF Документ",
+    "defaultFileName": "документ",
+    "error": {
+      "notFound": "Документ не найден",
+      "loadingError": "Ошибка при загрузке документа",
+      "openNewWindow": "Не удалось открыть новое окно. Файл будет скачан.",
+      "emptyFile": "Получен пустой файл",
+      "serverError": "Не удалось получить файл от сервера",
+      "openFile": "Не удалось открыть файл",
+      "downloadFile": "Не удалось скачать файл",
+      "viewError": "Ошибка при просмотре документа:",
+      "downloadError": "Ошибка при загрузке документа:"
+    }
+  },
+  "applicationDocumentDownloadView": {
+    "guidMissing": "GUID parameter is missing in URL",
+    "invalidGuid": "Invalid GUID format:"
+  },
+  "applicationProgress": {
+    "processingTitle": "Процесс обработки заявки",
+    "currentStep": "Текущий шаг",
+    "submissionDate": "Дата подачи",
+    "deadline": "Крайний срок",
+    "notSet": "Не установлен",
+    "timeProgress": "Временной прогресс",
+    "remainingDays": "Осталось {{days}} дн.",
+    "dayTooltip": "День {{elapsed}} из {{total}}",
+    "dayProgress": "День {{elapsed}} из {{total}}",
+    "elapsedDays": "Прошло {{days}} дней"
+  },
+  "applicationTabs": {
+    "tabsLabel": "Вкладки заявки",
+    "information": "Информация",
+    "documents": "Документы",
+    "contract": "Договор",
+    "payment": "История платежей",
+    "outputDocuments": "Выходные документы",
+    "notSigned": "Не подписан",
+    "qrPayment": "Оплата QR",
+    "pendingPayment": "Ожидает оплаты"
+  },
+  "applicationView": {
+    "loadingData": "Загрузка данных заявки...",
+    "savingChanges": "Сохранение изменений...",
+    "sendForReview": "Отправить на рассмотрение",
+    "lastUpdated": "Последнее обновление"
+  },
+  "NotificationTemplateAddEditView": {
+    "entityTitle": "Шаблон уведомлений",
+    "contactTypeId": "Тип контакта",
+    "code": "Код",
+    "subject": "Заголовок",
+    "body": "Тело",
+    "placeholders": "Плейсхолдеры",
+    "link": "Ссылка"
+  },
+  "NotificationTemplateListView": {
+    "entityTitle": "Шаблон уведомлений",
+    "contactTypeId": "Тип контакта",
+    "code": "Код",
+    "subject": "Заголовок",
+    "body": "Тело",
+    "placeholders": "Плейсхолдеры",
+    "link": "Ссылка"
+  },
+  "ApplicationPaidInvoiceAddEditView": {
+    "entityTitle": "Поступившие платежи",
+    "applicationId": "ID заявки",
+    "customerId": "ID клиента",
+    "date": "Дата",
+    "paymentIdentifier": "Идентификатор платежа",
+    "sum": "Сумма",
+    "description": "Описание",
+    "additional": "Дополнительно"
+  },
+  "ApplicationPaidInvoiceListView": {
+    "ApplicationPaidInvoice": "Поступившие платежи",
+    "entityTitle": "Поступившие платежи",
+    "applicationId": "ID заявки",
+    "customerId": "ID клиента",
+    "date": "Дата",
+    "paymentIdentifier": "Идентификатор платежа",
+    "sum": "Сумма",
+    "description": "Описание",
+    "additional": "Дополнительно",
+    "toApplicaition": "К заявке №",
+    "customerName": "Клиента"
+  },
+  "UserProfile": {
+    "personalInfo": "Личная информация",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "pin": "ИНН",
+    "email": "Электронная почта",
+    "accountInfo": "Информация об аккаунте",
+    "created": "Дата создания",
+    "lastUpdate": "Последнее обновление",
+    "status": "Статус аккаунта",
+    "approved": "Подтвержден",
+    "notApproved": "Не подтвержден",
+    "editInfo": "Редактировать информацию",
+    "changePassword": "Изменить пароль",
+    "editPersonalInfo": "Редактирование личной информации",
+    "oldPassword": "Текущий пароль",
+    "newPassword": "Новый пароль",
+    "confirmPassword": "Подтверждение пароля"
+  },
+  "HistoryTableListView": {
+    "HistoryTable": "История изменений",
+    "entityTitle": "История изменений",
+    "operation": "Операция",
+    "entity_type": "Таблица",
+    "created_at": "Создан",
+    "created_by": "Кем создан",
+    "old_value": "Старое значение",
+    "new_value": "Новое значение",
+    "db_action_INSERT": "Вставка новой записи",
+    "db_action_UPDATE": "Обновление записи",
+    "db_action_DELETE": "Удаление записи",
+    "full_name": "Сотрудник",
+    "startDate": "Дата начала",
+    "endDate": "Дата окончания"
+  },
+  "registration": {
+    "register": "Зарегистрироваться",
+    "continue": "Продолжить",
+    "responsibilityWarning": "Вы несете полную ответственность за точность введенных данных email и телефона. Ошибки могут привести к проблемам с доступом.",
+    "filesRequired": "Необходимо прикрепить файлы",
+    "companyRegistration": "Регистрация компании",
+    "personRegistration": "Регистрация пользователя",
+    "registrationType": "Тип регистрации",
+    "selectAuthType": "Регистрация через",
+    "emailRequired": "Email обязателен для регистрации",
+    "company": "Юридическое лицо",
+    "person": "Физическое лицо",
+    "phone": "Телефон",
+    "step1": "Ввод ИНН",
+    "step2": "Подтверждение ЭЦП",
+    "step3": "Дополнительная информация",
+    "companyEnterInnTitle": "Введите ИНН вашей компании",
+    "personEnterInnTitle": "Введите ваш ИНН",
+    "companyEnterInnDescription": "Пожалуйста, введите ИНН (14 цифр) вашей компании. ИНН должен быть зарегистрирован в системе Тундук.",
+    "personEnterInnDescription": "Пожалуйста, введите ваш ИНН (14 цифр). ИНН должен быть зарегистрирован в системе Тундук.",
+    "inn": "ИНН",
+    "innValidationError": "ИНН должен состоять из 14 цифр",
+    "innAlreadyExists": "Этот ИНН уже зарегистрирован в системе",
+    "digitalSignTitle": "Подтверждение цифровой подписью",
+    "digitalSignDescription": "Для подтверждения подлинности регистрации, необходимо подтвердить операцию с помощью ЭЦП.",
+    "clickNextToSign": "Нажмите 'Далее' для подтверждения ЭЦП",
+    "companyInfoFromTunduk": "Информация о компании из Тундук",
+    "personInfoFromTunduk": "Информация о физическом лице из Тундук (в разработке)",
+    "companyName": "Название компании",
+    "legalAddress": "Юридический адрес",
+    "registrationDate": "Дата регистрации",
+    "fullName": "ФИО",
+    "residentialAddress": "Адрес проживания",
+    "birthDate": "Дата рождения",
+    "registrationNumber": "Регистрационный номер",
+    "additionalInfoTitle": "Дополнительная информация",
+    "additionalInfoDescription": "Пожалуйста, предоставьте дополнительную информацию для завершения регистрации.",
+    "email": "Email",
+    "emailValidationError": "Пожалуйста, введите корректный email адрес",
+    "companyNameValidationError": "Название компании обязательно для заполнения",
+    "confirmationDocuments": "Подтверждающие документы",
+    "confirmationDocumentsDescription": "Прикрепите документы которые подтверждают что вы директор компании",
+    "successTitle": "Регистрация успешно завершена!",
+    "companySuccessMessage": "Ваша компания успешно зарегистрирована в системе. Теперь вы можете использовать личный кабинет.",
+    "personSuccessMessage": "Вы успешно зарегистрированы в системе. Теперь вы можете использовать личный кабинет.",
+    "checkYourEmail": "Проверьте вашу почту",
+    "emailCheckMessage": "Мы отправили данные для доступа к личному кабинету на указанный вами email. Проверьте папку «Входящие» и «Спам».",
+    "accessCredentials": "Данные для входа",
+    "credentialsMessage": "В письме вы найдете логин и пароль для входа в личный кабинет. Храните эти данные в надежном месте.",
+    "verificationStatus": "Статус проверки",
+    "verificationMessage": "Ваши документы будут проверены администратором. О результате проверки вы будете уведомлены по электронной почте.",
+    "nextStepQuestion": "Готовы перейти к следующему шагу?",
+    "goToLogin": "Перейти к странице входа",
+    "lastName": "Фамилия",
+    "firstName": "Имя",
+    "secondName": "Отчество",
+    "agreementTitle": "Пользовательское соглашение о работе в личном кабинете",
+    "iAgreeToTerms": "Ознакомлен и подтверждаю подписание документа"
+  },
+  "menu": {
+    "settings": "Настройки",
+    "archiveApplications": "Архив заявок",
+    "applicationsInProgress": "Заявки в работе",
+    "applicationsNeedAction": "Требующие моего участия заявки",
+    "applicationsCompleted": "Выполненные заявки",
+    "applicationHistory": "История изменений заявок"
+  },
+  "serviceInfoPanel": {
+    "title": "Информация о выбранной услуге",
+    "daysCount": "{{count}} дней",
+    "requiredDocuments": "Необходимые документы",
+    "requiredDocumentsCount": "{{required}} обязательных из {{total}}",
+    "mandatoryDocumentsTitle": "ОБЯЗАТЕЛЬНЫЕ ДОКУМЕНТЫ:",
+    "optionalDocumentsTitle": "ДОПОЛНИТЕЛЬНЫЕ ДОКУМЕНТЫ:",
+    "outputDocuments": "Документы, которые вы получите",
+    "outputDocumentsCount": "{{count}} документов",
+    "notice": {
+      "title": "Обратите внимание:",
+      "documentsActual": "Все документы должны быть актуальными на момент подачи заявки",
+      "documentsClear": "Копии документов должны быть четкими и читаемыми",
+      "additionalDocuments": "При необходимости могут быть запрошены дополнительные документы",
+      "lawRequirements": "Требования установлены в соответствии с законодательством КР"
+    }
+  },
+  "digitalSign": {
+    "enterYourInn": "Введите свой ИНН",
+    "inn": "ИНН",
+    "pinCode": "PIN-код",
+    "pinCodeSent": "ПИН код отправлен",
+    "pinCodeSentNotification": "Вам был отправлен PIN-код доступа на почту или телефон привязанные к ОЭП",
+    "noDigitalSignature": "Отсутствует ЭЦП",
+    "successfullySigned": "Успешно подписано",
+    "sendCode": "Отправить код",
+    "sign": "Подписать",
+    "cancel": "Отменить"
+  },
+  "qrPayment": {
+    "title": "Оплата через QR-код",
+    "totalAmount": "Общая сумма",
+    "paidAmount": "Оплачено",
+    "remainingAmount": "К оплате",
+    "paymentProgress": "Прогресс оплаты",
+    "fullyPaid": "Заявка полностью оплачена",
+    "refresh": "Обновить",
+    "generateQr": "Сгенерировать QR-код",
+    "generateQrDescription": "Создайте QR-код для быстрой оплаты через мобильное приложение банка",
+    "generateForRemaining": "Создать QR на ",
+    "enterManualAmount": "Указать другую сумму",
+    "howToPay": "Как оплатить?",
+    "scanToPay": "Отсканируйте для оплаты",
+    "downloadQr": "Скачать QR",
+    "regenerate": "Обновить",
+    "noQrGenerated": "QR-код не создан",
+    "clickToGenerate": "Нажмите кнопку выше для генерации",
+    "qrGenerated": "QR-код успешно создан",
+    "qrGeneratedManual": "QR-код создан для указанной суммы",
+    "linkCopied": "Ссылка скопирована",
+    "supportTitle": "Поддержка",
+    "supportDescription": "При возникновении проблем с оплатой обратитесь в службу поддержки",
+    "supportPhone": "Телефон",
+    "payFullAmount": "Оплатить полную сумму",
+    "qrAmountInfo": "QR-код создан для оплаты на сумму: ",
+    "resetAndCreateNew": "Сбросить и создать новый QR-код",
+    "createNewQr": "Создать новый",
+    "instructions": {
+      "title": "Инструкция по оплате",
+      "step1": "1. Откройте мобильное приложение вашего банка",
+      "step2": "2. Выберите функцию сканирования QR-кода",
+      "step3": "3. Отсканируйте QR-код на экране",
+      "step4": "4. Подтвердите оплату в приложении",
+      "warning": "После оплаты обновите страницу для проверки статуса"
+    },
+    "manualPayment": {
+      "title": "Частичная оплата",
+      "description": "Укажите сумму для частичной оплаты",
+      "amount": "Сумма",
+      "helper": "Минимальная сумма: 1 сом"
+    },
+    "errors": {
+      "fetchAmount": "Ошибка загрузки информации о платеже",
+      "generateQr": "Ошибка генерации QR-кода",
+      "invalidAmount": "Укажите корректную сумму",
+      "noPaymentData": "Нет данных о платеже"
+    }
+  }
+}

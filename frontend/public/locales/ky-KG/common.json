@@ -1,0 +1,297 @@
+{
+  "add": "Кошуу",
+  "addDocument": "Документ кошуу",
+  "delete": "Өчүрүү",
+  "edit": "Өзгөртүү",
+  "update": "Жаңыртуу",
+  "remove": "Өчүрүү",
+  "create": "Түзүү",
+  "clear": "Тазалоо",
+  "save": "Сактоо",
+  "cancel": "Жокко чыгаруу",
+  "close": "Жабуу",
+  "ok": "Жарайт",
+  "no": "Жок",
+  "back": "Артка",
+  "goOut": "Чыгуу",
+  "yes": "Ооба",
+  "noRowsLabel": "Жазуулар жок",
+  "noResultsOverlayLabel": "Жыйынтыктар жок",
+  "columnMenuLabel": "Тилкелер менюсу",
+  "columnMenuShowColumns": "Тилкелерди көрсөтүү",
+  "columnMenuManageColumns": "Тилкелерди башкаруу",
+  "columnMenuFilter": "Чыпкалоо",
+  "columnMenuHideColumn": "Тилкени жашыруу",
+  "columnMenuUnsort": "Сортировканы жокко чыгаруу",
+  "columnMenuSortAsc": "Өсүү боюнча сортировкалоо",
+  "columnMenuSortDesc": "Кемүү боюнча сортировкалоо",
+  "actions": "Аракеттер",
+  "search": "Издөө",
+  "rowsPerPage": "Баракчадагы саптар",
+  "areYouSure": "Сиз ишенесизби?",
+  "print": "Басып чыгаруу",
+  "print_selected": "Тандалганды басып чыгаруу",
+  "download": "Жүктөп алуу",
+  "notifications": "Билдирүүлөр",
+  "clearAll": "Баарын тазалоо",
+  "go": "Өтүү",
+  "view": "Көрүү",
+  "clearNotify": "Тазалоо",
+  "addFile": "Файл кошуу",
+  "downloadFile": "Файл жүктөп алуу",
+  "acceptFileWithoutFile": "Файлсыз кабыл алуу",
+  "all": "Баары",
+  "hide": "Жашыруу",
+  "startDate": "Башталуу күнү",
+  "endDate": "Аяктоо күнү",
+  "hideSelect": "Тизмени жашыруу",
+  "showSelect": "Тизме боюнча көрсөтүү",
+  "foundTotal": "Табылган жазуулар",
+  "confirm": "Тастыктоо",
+  "Add_to_Registry": "Реестрге кошуу",
+  "Select_status": "Статус тандоо:",
+  "Register_of_completed_works": "Аткарылган иштердин реестри:",
+  "Find": "Табуу",
+  "Load_more": "Дагы жүктөө",
+  "Count": "Саны",
+  "Load_group": "Топту жүктөө",
+  "INprogress": "Иштетилүүдө",
+  "Completed": "Аяктаган",
+  "Rejected": "Четке кагылган",
+  "DateNotDetermened": "Мөөнөт белгиленген жок",
+  "DateMissed": "Мөөнөт бүттү",
+  "Attach_telegram": "Телеграм тиркөө",
+  "Download_structure": "Структураны жүктөп алуу",
+  "Download_current_work_schedule": "Учурдагы иш графигин жүктөп алуу",
+  "Choose": "Тандоо",
+  "Accept": "Кабыл алуу",
+  "Reject": "Четке кагуу",
+  "Add_new": "Жаңы кошуу",
+  "country": "Өлкөнү тандаңыз",
+  "backtoApp": "Арыздарга кайтуу",
+  "reasonForDelete": "Өчүрүүнүн себеби",
+  "openIn2GIS": "2gis те ачуу",
+  "openInDarekOnEni": "Darek.kg те ЕНИ боюнча ачуу",
+  "openInDarekOnLatLng": "Darek.kg те координаттар боюнча ачуу",
+  "chooseLanguage": "Тил тандаңыз",
+  "next": "Кийинки",
+  "message": {
+    "error": {
+      "validationError": "Маалыматты туура эмес жөнөтүп жатасыз, администраторго кайрылыңыз!",
+      "authorizationError": "Сизде мүмкүнчүлүк жок!",
+      "businessLogicError": "Логика катасы, администраторго кайрылыңыз!",
+      "notFoundError": "Баракча табылган жок!",
+      "serverError": "Сервер менен байланыш катасы. Сервер иштеп жатканын жана жеткиликтүү экенин текшериңиз.",
+      "unexpectedError": "Күтүлбөгөн ката кетти",
+      "documentLinkExpired": "Документтерди жүктөп алуу үчүн шилтеменин мөөнөтү бүттү",
+      "fileContentMissing": "Сервердин жообунда файлдын мазмуну жок",
+      "downloadError": "Файл жүктөөдө ката кетти",
+      "downloadFailed": "Файл жүктөлбөй калды. Кийинчерээк аракет кылыңыз."
+    }
+  },
+  "tour": {
+    "back": "Артка",
+    "close": "Жабуу",
+    "last": "Аяктоо",
+    "next": "Кийинки",
+    "skip": "Окутууну өткөрүп жиберүү"
+  },
+  "organization": {
+    "selectOrganisation": "Уюм тандаңыз",
+    "id": "ID",
+    "name": "Аталышы",
+    "pin": "ПИН",
+    "action": "Аракеттер"
+  },
+  "sign": {
+    "enterINN": "ИННиңизди киргизиңиз",
+    "PinSent": "Сизге ОЭП менен байланышкан почта же телефонго мүмкүнчүлүк PIN-коду жөнөтүлдү",
+    "SentCode": "Код жөнөтүү",
+    "Sign": "Кол коюу",
+    "Cancel": "Жокко чыгаруу",
+    "inn": "ИНН",
+    "pinCode": "PIN-код",
+    "signSuccess": "Ийгиликтүү кол коюлду"
+  },
+  "fileField": {
+    "fileTooLarge": "Файл өтө чоң. Максималдуу өлчөм: {{maxSize}}, файлдын өлчөмү: {{fileSize}}",
+    "invalidFileType": "Файлдын түрү туура эмес. Уруксат берилген түрлөр: {{allowedTypes}}"
+  },
+  "documents": {
+    "error": {
+      "loadingDocuments": "Документтерди жүктөө катасы",
+      "documentNotFound": "Документ табылган жок",
+      "uploadFailed": "Жүктөө ийгиликсиз болду",
+      "uploadError": "Файл жүктөөдө ката",
+      "deleteError": "Файл өчүрүүдө ката"
+    },
+    "success": {
+      "uploaded": "Документ ийгиликтүү жүктөлдү",
+      "deleted": "Документ өчүрүлдү"
+    },
+    "mockData": {
+      "applicantPassport": "Арыз берүүчүнүн паспорту",
+      "passportCopy": "Паспорттун көчүрмөсү",
+      "technicalPassport": "Техникалык паспорт",
+      "objectTechnicalPassport": "Объекттин техпаспорту",
+      "additionalDocuments": "Кошумча документтер",
+      "otherDocuments": "Башка документтер"
+    }
+  },
+  "stepper": {
+    "steps": {
+      "object": "Объект",
+      "participants": "Катышуучулар",
+      "documents": "Документтер",
+      "review": "Текшерүү",
+      "print": "Басып чыгаруу"
+    },
+    "error": {
+      "addressSearchError": "Дарек издөө катасы:",
+      "fileTooLarge": "Файл өтө чоң",
+      "unsupportedFormat": "Колдоого алынбаган формат",
+      "uploadError": "Жүктөө катасы",
+      "saveFirstApplication": "Алгач арызды сактаңыз",
+      "validationFailed": "Арыз текшерүүдөн өтпөдү",
+      "applicationValidationFailed": "Арыз валидациядан өтпөдү",
+      "loadingData": "Маалыматтарды жүктөө катасы"
+    },
+    "success": {
+      "documentUploaded": "Документ жүктөлдү",
+      "applicationCreated": "Арыз түзүлдү",
+      "applicationSaved": "Арыз сакталды",
+      "applicationSubmitted": "Арыз ийгиликтүү жөнөтүлдү!"
+    },
+    "validation": {
+      "selectService": "Кызматты тандаңыз",
+      "enterWorkDescription": "Иштердин сүрөттөмөсүн киргизиңиз",
+      "addObjectAddress": "Объекттин дарегин кошуңуз",
+      "enterCorrectINN": "Туура ИНН киргизиңиз (14 сан)",
+      "enterName": "Ф.А.А./уюмдун атын киргизиңиз",
+      "enterPhone": "Телефон номерин киргизиңиз",
+      "enterCorrectEmail": "Туура email киргизиңиз",
+      "uploadRequiredDocuments": "Бардык милдеттүү документтерди жүктөңүз"
+    }
+  },
+  "services": {
+    "mockData": {
+      "apzService": "Архитектуралык-пландаштыруу тапшырмасын (АПТ) алуу",
+      "projectApproval": "Долбоордук документацияны макулдашуу",
+      "buildingPermit": "Куруу уруксаты",
+      "technicalConditions": "Туташтыруу үчүн техникалык шарттар",
+      "commissioningAct": "Эксплуатацияга берүү акты"
+    }
+  },
+  "tags": {
+    "mockData": {
+      "residential": "Турак",
+      "commercial": "Соода",
+      "industrial": "Өнөр жай",
+      "social": "Социалдык",
+      "newConstruction": "Жаңы курулуш",
+      "reconstruction": "Реконструкция",
+      "replanning": "Кайра пландоо"
+    }
+  },
+  "object": {
+    "error": {
+      "loadingServices": "Кызматтарды жүктөө катасы",
+      "loadingDistricts": "Райондорду жүктөө катасы",
+      "loadingTags": "Тегдерди жүктөө катасы",
+      "searchError": "Издөө катасы:"
+    },
+    "success": {
+      "objectAdded": "Объект кошулду",
+      "objectCleared": "Объекттин маалыматтары тазаланды",
+      "objectRemoved": "Объект өчүрүлдү"
+    },
+    "validation": {
+      "selectService": "Кызматты тандаңыз",
+      "enterWorkType": "Аткарылуучу иштердин түрүн көрсөтүңүз",
+      "fillRequiredFields": "Бардык милдеттүү талааларды толтуруңуз",
+      "atLeastOneObject": "Жок дегенде бир объект болушу керек"
+    },
+    "address": {
+      "notSpecified": "Көрсөтүлгөн жок"
+    }
+  },
+  "participants": {
+    "error": {
+      "customerDataError": "Компанияны алуу катасы",
+      "customerSaveError": "Маалыматтарды сактоо катасы",
+      "selectRole": "Ролду тандаңыз",
+      "fillRequiredFields": "Бардык милдеттүү талааларды толтуруңуз"
+    },
+    "success": {
+      "customerDataSaved": "Буйрутуучунун маалыматтары сакталды"
+    },
+    "validation": {
+      "pinRequired": "ИНН/ПИН толтуруу үчүн милдеттүү",
+      "pinFormat": "ПИН 14 сандан турушу керек",
+      "nameRequired": "Ф.А.А. же уюмдун аты милдеттүү",
+      "phoneRequired": "Телефон толтуруу үчүн милдеттүү",
+      "phoneFormat": "+996 XXX-XX-XX-XX форматында толук номерди киргизиңиз",
+      "emailRequired": "Email толтуруу үчүн милдеттүү",
+      "emailFormat": "Туура эмес email дарек",
+      "addressRequired": "Дарек толтуруу үчүн милдеттүү",
+      "directorRequired": "Юридикалык жактар үчүн жетекчинин Ф.А.А. милдеттүү"
+    }
+  },
+  "prints": {
+    "error": {
+      "generateDocumentsError": "Документтерди түзүү катасы",
+      "completeAllItems": "Зарыл: {items}"
+    },
+    "success": {
+      "documentsReady": "Документтер басып чыгарууга даяр",
+      "documentPrinted": "\"{name}\" документи басып чыгарууга жөнөтүлдү",
+      "allDocumentsPrinted": "Бардык документтер басып чыгарууга жөнөтүлдү",
+      "documentPreview": "\"{name}\" документинин алдын ала көрүүсү"
+    },
+    "documents": {
+      "applicationForm": "Кызмат көрсөтүү үчүн арыз",
+      "applicationFormDescription": "Арыз берүүчүнүн маалыматтары жана талап кылынган кызматтын сүрөттөмөсү менен негизги документ",
+      "receiptForm": "Документтерди кабыл алуу распискасы",
+      "receiptFormDescription": "Документтерди кабыл алуу тастыктамасы тизме жана күнү менен",
+      "documentsList": "Документтердин тизмеси",
+      "documentsListDescription": "Кабыл алынган документтердин барактарынын санын көрсөтүү менен толук тизмеси",
+      "applicantRegistrarSignatures": "Арыз берүүчү, Каттоочу"
+    },
+    "checklist": {
+      "printAllDocuments": "бардык документтерди басып чыгаруу",
+      "getApplicantSignature": "арыз берүүчүнүн колун алуу",
+      "giveReceiptToApplicant": "арыз берүүчүгө расписка берүү",
+      "signDocumentsByRegistrar": "каттоочу тарабынан документтерге кол коюу"
+    }
+  },
+  "rootStore": {
+    "error": {
+      "loadingTemplate": "Шаблонду жүктөө катасы",
+      "loadingAgreement": "Келишимди жүктөө катасы",
+      "loadingApplication": "Арызды жүктөө катасы",
+      "savingApplication": "Арызды сактоо катасы",
+      "updatingApplication": "Арызды жаңыртуу катасы",
+      "applicationValidationFailed": "Арыз текшерүүдөн өтпөдү",
+      "submittingApplication": "Арызды берүү катасы"
+    },
+    "success": {
+      "applicationLoaded": "Арыз жүктөлдү",
+      "documentsSignedEDS": "Документтерге ЭСК ийгиликтүү коюлду",
+      "applicationCreatedAndSaved": "Арыз түзүлүп сакталды",
+      "applicationSaved": "Арыз сакталды",
+      "applicationSubmitted": "Арыз ийгиликтүү берилди!",
+      "newApplicationStarted": "Жаңы арыз башталды"
+    },
+    "warning": {
+      "notAllDocumentsUploaded": "Бардык милдеттүү документтер жүктөлгөн жок. Арыз долбоор катары сакталат",
+      "signRequiredFirst": "Алгач документтерге ЭСК коюу зарыл"
+    }
+  },
+  "steps": {
+    "objects": "Объекттер",
+    "applicant": "Арыз берүүчү",
+    "documents": "Документтер",
+    "review": "Текшерүү",
+    "completion": "Аяктоо"
+  }
+}

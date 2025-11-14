@@ -1,0 +1,298 @@
+{
+  "add": "Добавить",
+  "addDocument": "Добавить документ",
+  "delete": "Удалить",
+  "edit": "Редактировать",
+  "update": "Обновить",
+  "remove": "Удалить",
+  "create": "Создать",
+  "clear": "Очистить",
+  "save": "Сохранить",
+  "cancel": "Отменить",
+  "close": "Закрыть",
+  "ok": "Ок",
+  "no": "Нет",
+  "back": "Назад",
+  "goOut": "Выйти",
+  "yes": "Да",
+  "noRowsLabel": "Нет записей",
+  "noResultsOverlayLabel": "Нет результатов",
+  "columnMenuLabel": "Меню колонок",
+  "columnMenuShowColumns": "Показать колонки",
+  "columnMenuManageColumns": "Управление колонками",
+  "columnMenuFilter": "Фильтр",
+  "columnMenuHideColumn": "Скрыть колонку",
+  "columnMenuUnsort": "Отменить сортировку",
+  "columnMenuSortAsc": "Сортировать по возрастанию",
+  "columnMenuSortDesc": "Сортировать по убыванию",
+  "actions": "Действия",
+  "search": "Поиск",
+  "rowsPerPage": "Строк на страницу",
+  "areYouSure": "Вы уверены?",
+  "print": "Печать",
+  "print_selected": "Печать выделенного",
+  "download": "Скачать",
+  "notifications": "Уведомления",
+  "clearAll": "Убрать все",
+  "go": "Перейти",
+  "view": "Просмотр",
+  "clearNotify": "Убрать",
+  "addFile": "Добавить файл",
+  "downloadFile": "Скачать файл",
+  "acceptFileWithoutFile": "Принять без файла",
+  "all": "Все",
+  "hide": "Скрыть",
+  "startDate": "Дата начала",
+  "endDate": "Дата конца",
+  "hideSelect": "Скрыть список",
+  "showSelect": "Показать списком",
+  "foundTotal": "Найдено записей",
+  "confirm": "Подтвердить",
+  "Add_to_Registry": "Добавить в реестр",
+  "Select_status": "Выбрать статус:",
+  "Register_of_completed_works": "Реестр выполненных работ:",
+  "Find": "Найти",
+  "Load_more": "Загрузить еще",
+  "Count": "Количество",
+  "Load_group": "Загрузить группу",
+  "INprogress": "В работе",
+  "Completed": "Завершено",
+  "Rejected": "Отклонено",
+  "DateNotDetermened": "Срок не установлен",
+  "DateMissed": "Срок истек",
+  "Attach_telegram": "Прикрепить телеграм",
+  "Telegram_attached": "Telegram уже привязан",
+  "Download_structure": "Скачать структуру",
+  "Download_current_work_schedule": "Скачать текущий рабочий график",
+  "Choose": "Выбрать",
+  "Accept": "Принять",
+  "Reject": "Отклонить",
+  "Add_new": "Добавить новую",
+  "country": "Выберите страну",
+  "backtoApp": "Вернуться к заявкам",
+  "reasonForDelete": "Основание для удаления",
+  "openIn2GIS": "Открыть в 2gis",
+  "openInDarekOnEni": "Открыть в Darek.kg по ЕНИ",
+  "openInDarekOnLatLng": "Открыть в Darek.kg по координатам",
+  "chooseLanguage": "Выберите язык",
+  "next": "Далее",
+  "message": {
+    "error": {
+      "validationError": "Не правильно отправляете данные, обратитесь к администратору!",
+      "authorizationError": "У вас нет доступа!",
+      "businessLogicError": "Ошибка логики, обратитесь к администратору!",
+      "notFoundError": "Страница не найдена!",
+      "serverError": "Ошибка подключения к серверу. Пожалуйста, убедитесь что сервер запущен и доступен.",
+      "unexpectedError": "Произошла непредвиденная ошибка",
+      "documentLinkExpired": "Срок ссылки для скачивания документов истек",
+      "fileContentMissing": "Содержимое файла отсутствует в ответе сервера",
+      "downloadError": "Ошибка при скачивании файла",
+      "downloadFailed": "Не удалось скачать файл. Пожалуйста, попробуйте позже."
+    }
+  },
+  "tour": {
+    "back": "Назад",
+    "close": "Закрыть",
+    "last": "Завершить",
+    "next": "Далее",
+    "skip": "Пропустить обучение"
+  },
+  "organization": {
+    "selectOrganisation": "Выберите организацию",
+    "id": "ID",
+    "name": "Название",
+    "pin": "ПИН",
+    "action": "Действия"
+  },
+  "sign": {
+    "enterINN": "Введите свой ИНН",
+    "PinSent": "Вам был отправлен PIN-код доступа на почту или телефон привязанные к ОЭП",
+    "SentCode": "Отправить код",
+    "Sign": "Подписать",
+    "Cancel": "Отменить",
+    "inn": "ИНН",
+    "pinCode": "PIN-код",
+    "signSuccess": "Успешно подписано"
+  },
+  "fileField": {
+    "fileTooLarge": "Файл слишком большой. Максимальный размер: {{maxSize}}, размер файла: {{fileSize}}",
+    "invalidFileType": "Недопустимый тип файла. Разрешены только: {{allowedTypes}}"
+  },
+  "documents": {
+    "error": {
+      "loadingDocuments": "Ошибка загрузки документов",
+      "documentNotFound": "Документ не найден",
+      "uploadFailed": "Загрузка не удалась",
+      "uploadError": "Ошибка при загрузке файла",
+      "deleteError": "Ошибка при удалении файла"
+    },
+    "success": {
+      "uploaded": "Документ успешно загружен",
+      "deleted": "Документ удален"
+    },
+    "mockData": {
+      "applicantPassport": "Паспорт заявителя",
+      "passportCopy": "Копия паспорта",
+      "technicalPassport": "Технический паспорт",
+      "objectTechnicalPassport": "Техпаспорт объекта",
+      "additionalDocuments": "Дополнительные документы",
+      "otherDocuments": "Прочие документы"
+    }
+  },
+  "stepper": {
+    "steps": {
+      "object": "Объект",
+      "participants": "Участники",
+      "documents": "Документы",
+      "review": "Проверка",
+      "print": "Печать"
+    },
+    "error": {
+      "addressSearchError": "Ошибка поиска адреса:",
+      "fileTooLarge": "Файл слишком большой",
+      "unsupportedFormat": "Неподдерживаемый формат",
+      "uploadError": "Ошибка загрузки",
+      "saveFirstApplication": "Сначала сохраните заявку",
+      "validationFailed": "Заявка не прошла проверку",
+      "applicationValidationFailed": "Заявка не прошла валидацию",
+      "loadingData": "Ошибка загрузки данных"
+    },
+    "success": {
+      "documentUploaded": "Документ загружен",
+      "applicationCreated": "Заявка создана",
+      "applicationSaved": "Заявка сохранена",
+      "applicationSubmitted": "Заявка успешно отправлена!"
+    },
+    "validation": {
+      "selectService": "Выберите услугу",
+      "enterWorkDescription": "Введите описание работ",
+      "addObjectAddress": "Добавьте адрес объекта",
+      "enterCorrectINN": "Введите корректный ИНН (14 цифр)",
+      "enterName": "Введите ФИО/название организации",
+      "enterPhone": "Введите номер телефона",
+      "enterCorrectEmail": "Введите корректный email",
+      "uploadRequiredDocuments": "Загрузите все обязательные документы"
+    }
+  },
+  "services": {
+    "mockData": {
+      "apzService": "Получение архитектурно-планировочного задания (АПЗ)",
+      "projectApproval": "Согласование проектной документации",
+      "buildingPermit": "Разрешение на строительство",
+      "technicalConditions": "Технические условия на подключение",
+      "commissioningAct": "Акт ввода в эксплуатацию"
+    }
+  },
+  "tags": {
+    "mockData": {
+      "residential": "Жилое",
+      "commercial": "Коммерческое",
+      "industrial": "Промышленное",
+      "social": "Социальное",
+      "newConstruction": "Новое строительство",
+      "reconstruction": "Реконструкция",
+      "replanning": "Перепланировка"
+    }
+  },
+  "object": {
+    "error": {
+      "loadingServices": "Ошибка загрузки услуг",
+      "loadingDistricts": "Ошибка загрузки районов",
+      "loadingTags": "Ошибка загрузки тэгов",
+      "searchError": "Ошибка поиска:"
+    },
+    "success": {
+      "objectAdded": "Объект добавлен",
+      "objectCleared": "Данные объекта очищены",
+      "objectRemoved": "Объект удален"
+    },
+    "validation": {
+      "selectService": "Выберите услугу",
+      "enterWorkType": "Укажите тип выполняемых работ",
+      "fillRequiredFields": "Заполните все обязательные поля",
+      "atLeastOneObject": "Должен быть хотя бы один объект"
+    },
+    "address": {
+      "notSpecified": "Не указан"
+    }
+  },
+  "participants": {
+    "error": {
+      "customerDataError": "Ошибка при получении компании",
+      "customerSaveError": "Ошибка при сохранении данных",
+      "selectRole": "Пожалуйста, выберите роль",
+      "fillRequiredFields": "Пожалуйста, заполните все обязательные поля"
+    },
+    "success": {
+      "customerDataSaved": "Данные заказчика сохранены"
+    },
+    "validation": {
+      "pinRequired": "ИНН/ПИН обязателен для заполнения",
+      "pinFormat": "ПИН должен содержать 14 цифр",
+      "nameRequired": "ФИО или название организации обязательно",
+      "phoneRequired": "Телефон обязателен для заполнения",
+      "phoneFormat": "Введите полный номер в формате +996 XXX-XX-XX-XX",
+      "emailRequired": "Email обязателен для заполнения",
+      "emailFormat": "Некорректный email адрес",
+      "addressRequired": "Адрес обязателен для заполнения",
+      "directorRequired": "ФИО руководителя обязательно для юридических лиц"
+    }
+  },
+  "prints": {
+    "error": {
+      "generateDocumentsError": "Ошибка при генерации документов",
+      "completeAllItems": "Необходимо: {items}"
+    },
+    "success": {
+      "documentsReady": "Документы готовы к печати",
+      "documentPrinted": "Документ \"{name}\" отправлен на печать",
+      "allDocumentsPrinted": "Все документы отправлены на печать",
+      "documentPreview": "Предпросмотр документа \"{name}\""
+    },
+    "documents": {
+      "applicationForm": "Заявление на оказание услуги",
+      "applicationFormDescription": "Основной документ с данными заявителя и описанием запрашиваемой услуги",
+      "receiptForm": "Расписка о приеме документов",
+      "receiptFormDescription": "Подтверждение приема документов с перечнем и датой",
+      "documentsList": "Опись документов",
+      "documentsListDescription": "Полный перечень принятых документов с указанием количества листов",
+      "applicantRegistrarSignatures": "Заявитель, Регистратор"
+    },
+    "checklist": {
+      "printAllDocuments": "распечатать все документы",
+      "getApplicantSignature": "получить подпись заявителя",
+      "giveReceiptToApplicant": "передать расписку заявителю",
+      "signDocumentsByRegistrar": "подписать документы регистратором"
+    }
+  },
+  "rootStore": {
+    "error": {
+      "loadingTemplate": "Ошибка загрузки шаблона",
+      "loadingAgreement": "Ошибка загрузки соглашения",
+      "loadingApplication": "Ошибка загрузки заявки",
+      "savingApplication": "Ошибка при сохранении заявки",
+      "updatingApplication": "Ошибка при обновлении заявки",
+      "applicationValidationFailed": "Заявка не прошла проверку",
+      "submittingApplication": "Ошибка при подаче заявки"
+    },
+    "success": {
+      "applicationLoaded": "Заявка загружена",
+      "documentsSignedEDS": "Документы успешно подписаны ЭЦП",
+      "applicationCreatedAndSaved": "Заявка создана и сохранена",
+      "applicationSaved": "Заявка сохранена",
+      "applicationSubmitted": "Заявка успешно подана!",
+      "newApplicationStarted": "Начата новая заявка"
+    },
+    "warning": {
+      "notAllDocumentsUploaded": "Не все обязательные документы загружены. Заявка будет сохранена как черновик",
+      "signRequiredFirst": "Сначала необходимо подписать документы ЭЦП"
+    }
+  },
+  "steps": {
+    "objects": "Объекты",
+    "applicant": "Заявитель",
+    "documents": "Документы",
+    "review": "Проверка",
+    "completion": "Завершение"
+  }
+}

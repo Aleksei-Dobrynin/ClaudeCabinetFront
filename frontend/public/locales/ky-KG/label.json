@@ -1,0 +1,1993 @@
+{
+  
+  "dashboard": {
+    "title": "Арыз берүүчүнүн дашборду",
+    "welcome": "Кош келдиңиз",
+    "organization": "Уюм:",
+    
+    "statistics": {
+      "title": "Арыздардын статистикасы",
+      "total": "Бардык арыздар",
+      "requiresAction": "Иш аракет талап кылат",
+      "inProgress": "Иштелүүдө",
+      "completed": "Аягына чыккан",
+      "goToApplications": "Арыздарга өтүү"
+    },
+    
+    "applications": {
+      "title": "Сиздин көңүлүңүздү талап кылат",
+      "description": "Тез өтүү үчүн карточканы басыңыз",
+      "showAll": "Көңүл бурууну талап кылган бардык арыздарды көрсөтүү",
+      "viewAll": "Баарын көрүү",
+      "application": "Арыз",
+      "days": "күн",
+      "progress": "Прогресс",
+      "goTo": "Өтүү"
+    },
+    
+    "actions": {
+      "uploadDocuments": "Документтерди жүктөө",
+      "signContract": "Контрактка кол коюу",
+      "payService": "Кызматты төлөө",
+      "getResult": "Натыйжаны алуу",
+      "urgent": "Шашылыш",
+      "ecp": "ЭСК",
+      "payment": "Төлөм",
+      "ready": "Даяр"
+    },
+    
+    "actionDescriptions": {
+      "uploadDocuments": "Техникалык кеңештин эскертүүлөрүн эске алуу менен оңдолгон АПТ жүктөө керек",
+      "signContract": "Контракт кол коюуга даяр. Электрондук санариптик колтамганы колдонуңуз",
+      "payService": "5000 сом өлчөмүндө мамлекеттик алым төлөө керек",
+      "getResult": "Документтер алууга даяр. Пайдаланууга киргизүү уруксаты даярдалды"
+    },
+    
+    "quickActions": {
+      "title": "Ыкчам аракеттер",
+      "submitApplication": "Жаңы арыз берүү",
+      "templates": "Документтердин үлгүлөрү",
+      "payment": "Кызматтарды төлөө",
+      "support": "Техникалык колдоо"
+    },
+    
+    "calendar": {
+      "title": "Окуялар календары",
+      "noEvents": "Пландаштырылган иш-чаралар жок",
+      "addReminder": "Эскертүү кошуу",
+      "months": {
+        "january": "Январь",
+        "february": "Февраль",
+        "march": "Март",
+        "april": "Апрель",
+        "may": "Май",
+        "june": "Июнь",
+        "july": "Июль",
+        "august": "Август",
+        "september": "Сентябрь",
+        "october": "Октябрь",
+        "november": "Ноябрь",
+        "december": "Декабрь"
+      }
+    },
+    
+    "reference": {
+      "title": "Маалымдама маалыматы",
+      "description": "Ченемдик документтер, көрсөтмөлөр жана документтерге талаптар",
+      "documentRequirements": "Документтерге талаптар",
+      "fillingSamples": "Толтуруу үлгүлөрү",
+      "regulatoryBase": "Ченемдик база",
+      "technicalSupport": "Техникалык колдоо",
+      "supportDescription": "Системаны колдонуу боюнча жардам алыңыз",
+      "contactSupport": "Колдоо кызматына жазуу"
+    },
+    
+    "common": {
+      "loading": "Жүктөлүүдө...",
+      "error": "Ката кетти",
+      "retry": "Кайталоо",
+      "noData": "Маалымат жок",
+      "refresh": "Жаңылоо",
+      "close": "Жабуу",
+      "save": "Сактоо",
+      "cancel": "Жокко чыгаруу"
+    },
+    
+    "errors": {
+      "loadingFailed": "Маалыматтарды жүктөө мүмкүн болбоду",
+      "updateFailed": "Маалыматтарды жаңылоо мүмкүн болбоду",
+      "networkError": "Тармак катасы. Интернетке туташууну текшериңиз",
+      "unknownError": "Белгисиз ката кетти"
+    }
+  },
+  "authorization": {
+    "login": "Кирүү",
+    "myprofile": "Менин профили",
+    "profileSettings": "Каттоо эсебинин жөндөөлөрү",
+    "title": "БишкекБашкыАрхитектура",
+    "email": "Электрондук почта дареги",
+    "password": "Сырсөз",
+    "signIn": "Кирүү",
+    "forgotPassword": "Сырсөздү унуттуңузбу?",
+    "loginVia": "Аркылуу кирүү",
+    "loginAndPassword": "Логин жана сырсөз",
+    "loginPasswordDescription": "Логин(ИНН) жана сырсөз",
+    "rutoken": "Рутокен",
+    "rutokenDescription": "USB түзмөгүндөгү электрондук колтамга",
+    "registration": "Каттоо",
+    "register": "Катталуу",
+    "registrationDescription": "Кабинетте катталуу",
+    "applicantCabinet": "Арыз берүүчүнүн кабинети",
+    "loginViaCredentials": "Логин жана сырсөз аркылуу кирүү",
+    "loginViaToken": "Рутокен аркылуу кирүү",
+    "passwordRecovery": "Мүмкүнчүлүктү калыбына келтирүү",
+    "rememberMe": "Мени эстеп кал",
+    "noAccount": "Дагы деле эле аккаунтуңуз жокпу?",
+    "registerNow": "Каттоодон өтүңүз",
+    "tokenPin": "USB-токендин PIN-коду",
+    "recoverPassword": "Калыбына келтирүү"
+  },
+  "tour": {
+    "back": "Артка",
+    "close": "Жабуу",
+    "last": "Аяктоо",
+    "next": "Кийинки",
+    "skip": "Окутууну өткөрүп жиберүү",
+    "steps": {
+      "welcome": "АИС БГА жеке кабинетине кош келдиңиз! Иштеп баштоо үчүн жеке маалыматтарыңызды толтуруу керек. Оң жогорку бурчтагы профиль белгисин басыңыз.",
+      "archive": "Бул жерде арыздардын архивин көрө аласыз.",
+      "inProgress": "Учурда иштелип жаткан арыздар.",
+      "history": "Арыздарыңыз боюнча бардык өзгөрүүлөрдүн тарыхы."
+    }
+  },
+  "ServiceListView": {
+    "Service": "Кызматтар",
+    "entityTitle": "Кызматтар",
+    "name": "Аталышы",
+    "short_name": "Кыска аталышы",
+    "code": "Код",
+    "description": "Сүрөттөмө",
+    "day_count": "Күндөрдүн саны",
+    "price": "Кызматтын баасы",
+    "workflow_name": "Иш процесси"
+  },
+  "ServiceAddEditView": {
+    "entityTitle": "Кызматтар",
+    "name": "Аталышы",
+    "short_name": "Кыска аталышы",
+    "code": "Код",
+    "description": "Сүрөттөмө",
+    "day_count": "Күндөрдүн саны",
+    "price": "Кызматтын баасы",
+    "workflow_id": "Иш процесси"
+  },
+  "RepresentativeAddEditView": {
+    "entityTitle": "Өкүл (ыйгарым укуктуу адам)",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "pin": "ИНН",
+    "companyId": "Буйрутуучу",
+    "hasAccess": "Мүмкүнчүлүгү бар",
+    "email": "Почта",
+    "phone": "Телефон номери",
+    "typeId": "Түрү",
+    "lastName": "Фамилиясы",
+    "validation": {
+      "firstNameMaxLength": "50 символдон көп эмес",
+      "secondNameMaxLength": "50 символдон көп эмес",
+      "lastNameMaxLength": "50 символдон көп эмес",
+      "nameFormat": "Кирил же латын тамгаларын, боштуктарды, дефис жана апострофту гана колдонуу мүмкүн.",
+      "emailFormat": "Email форматы туура эмес"
+    }
+  },
+  "RepresentativeListView": {
+    "Representative": "Өкүл (ыйгарым укуктуу адам)",
+    "entityTitle": "Өкүл (ыйгарым укуктуу адам)",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "pin": "ИНН",
+    "companyId": "Буйрутуучу",
+    "hasAccess": "Мүмкүнчүлүгү бар",
+    "typeId": "Түрү",
+    "email": "Почта",
+    "phone": "Телефон номери",
+    "hasAccount": "Логини бар",
+    "lastName": "Фамилиясы",
+    "last_name": "Фамилиясы",
+    "first_name": "Аты",
+    "has_access": "Мүмкүнчүлүгү бар",
+    "second_name": "Атасынын аты",
+    "customer_name": "Компания",
+    "representative_type_name": "Түрү",
+    "sendInvite": "Чакырык жөнөтүү",
+    "created_at": "Түзүлгөн күнү",
+    "updated_at": "Өзгөртүлгөн күнү",
+    "created_by": "Түзгөн",
+    "updated_by": "Өзгөрткөн",
+    "company_id": "Компания",
+    "type_id": "Түрү"
+  },
+  "fileDownload": {
+    "downloadTooltip": "Жүктөп алуу",
+    "errorOpenNewWindow": "Жаңы терезени ачуу мүмкүн болгон жок. Балким ал бөгөт коюлган."
+  },
+  "uploadedApplicationDocument": {
+    "validation": {
+      "fileRequired": "Файлды жүктөп салыңыз"
+    }
+  },
+  "RepresentativeTypeAddEditView": {
+    "entityTitle": "Өкүлдүн түрү",
+    "description": "сүрөттөмө",
+    "name": "аталышы",
+    "code": "код"
+  },
+  "RepresentativeTypeListView": {
+    "RepresentativeType": "Өкүлдүн түрү",
+    "entityTitle": "Өкүлдүн түрү",
+    "description": "сүрөттөмө",
+    "name": "аталышы",
+    "code": "код"
+  },
+  "RepresentativeContactAddEditView": {
+    "entityTitle": "Өкүлдүн байланышы",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "rTypeId": "түрүнүн ID",
+    "representativeId": "өкүлдүн ID"
+  },
+  "RepresentativeContactListView": {
+    "RepresentativeContact": "Өкүлдүн байланышы",
+    "entityTitle": "Өкүлдүн байланышы",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "rTypeId": "түрүнүн ID",
+    "representativeId": "өкүлдүн ID"
+  },
+  "CustomerRequisiteAddEditView": {
+    "entityTitle": "Реквизиттер",
+    "paymentAccount": "Эсеп",
+    "bank": "Банк",
+    "bik": "БИК",
+    "organizationId": "Буйрутуучу"
+  },
+  "CustomerRequisiteListView": {
+    "entityTitle": "Реквизиттер",
+    "paymentAccount": "Эсеп",
+    "bank": "Банк",
+    "bik": "БИК",
+    "organizationId": "Буйрутуучу",
+    "customer_name": "Буйрутуучу",
+    "payment_account": "Эсеп"
+  },
+  "CustomerAddEditView": {
+    "entityTitle": "Арыз берүүчү",
+    "pin": "ИНН",
+    "okpo": "ОКПО",
+    "postalCode": "Почта индекси",
+    "imTheCustomer": "Мен арыз берүүчү болуп саналам",
+    "ugns": "УГНС",
+    "regNumber": "Каттоо номери",
+    "organizationTypeId": "Уюмдун түрү",
+    "name": "Аталышы",
+    "address": "Дарек",
+    "director": "Директор",
+    "nomer": "Номер",
+    "phone1": "Телефон номери 1",
+    "phone2": "Телефон номери 2",
+    "email": "Электрондук почта дареги",
+    "email_2": "Электрондук почта дареги 2",
+    "is_foreign_company": "Чет элдик уюм",
+    "is_foreign_citezen": "Чет элдик жаран",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "identity_document_type_id": "Документтин түрү",
+    "passport_series": "Документтин сериясы",
+    "passport_issued_date": "Берилген күнү",
+    "passport_whom_issued": "Ким тарабынан берилген",
+    "allowNotification": "Билдирүүлөргө уруксат берүү",
+    "validation": {
+      "required": "Милдеттүү талаа",
+      "pinFormat": "ИНН сандардан гана турушу жана 14 символдун узундугунда болушу керек.",
+      "maxLength100": "100 символдон көп эмес",
+      "emailFormat": "Туура почта дарегин киргизиңиз!"
+    }
+  },
+  "CustomerListView": {
+    "entityTitle": "Арыз берүүчү",
+    "pin": "ИНН",
+    "okpo": "ОКПО",
+    "postalCode": "Почта индекси",
+    "ugns": "УГНС",
+    "regNumber": "Каттоо номери",
+    "organizationTypeId": "Уюмдун түрү",
+    "name": "Аталышы",
+    "address": "Дарек",
+    "director": "Директор",
+    "nomer": "Номер",
+    "reg_number": "Каттоо номери",
+    "postal_code": "Почта индекси",
+    "organization_type_name": "Уюмдун түрү"
+  },
+  "OrganizationTypeAddEditView": {
+    "entityTitle": "Уюмдун түрү",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "nameKg": "аталышы кыр"
+  },
+  "OrganizationTypeListView": {
+    "OrganizationType": "Уюмдун түрү",
+    "entityTitle": "Уюмдун түрү",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "nameKg": "аталышы кыр"
+  },
+  "CustomerContactAddEditView": {
+    "entityTitle": "Кардардын байланышы",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "rTypeId": "түрүнүн ID",
+    "organizationId": "уюмдун ID"
+  },
+  "CustomerContactListView": {
+    "CustomerContact": "Кардардын байланышы",
+    "entityTitle": "Кардардын байланышы",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "rTypeId": "түрүнүн ID",
+    "organizationId": "уюмдун ID"
+  },
+  "UploadedApplicationDocumentAddEditView": {
+    "entityTitle": "Жүктөлгөн арыз документи",
+    "hashCode": "Хэш-код",
+    "hashCodeDate": "Хэш-код күнү",
+    "serviceDocumentId": "Сервистик документтин ID",
+    "fileId": "Файлдын ID",
+    "name": "Аталышы",
+    "applicationId": "Арыздын ID",
+    "statusId": "Статустун ID"
+  },
+  "UploadedApplicationDocumentListView": {
+    "entityTitle": "Жүктөлгөн арыз документи",
+    "name": "Аталышы",
+    "file_id": "Файлдын идентификатору",
+    "service_document_id": "Сервистик документтин идентификатору",
+    "is_outcome": "Кирүүчү",
+    "document_number": "Документтин номери",
+    "file_name": "Файлдын аты",
+    "application_document_id": "Арыз документинин идентификатору",
+    "application_document_name": "Арыз документинин аталышы",
+    "status_name": "Статус"
+  },
+  "DocumentStatusAddEditView": {
+    "entityTitle": "Документтин статусу",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "nameKg": "аталышы кыр"
+  },
+  "DocumentStatusListView": {
+    "DocumentStatus": "Документтин статусу",
+    "entityTitle": "Документтин статусу",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "nameKg": "аталышы кыр"
+  },
+  "ArchObjectAddEditView": {
+    "entityTitle": "Объект",
+    "districtId": "Район",
+    "address": "Дарек",
+    "xCoord": "Кеңдик",
+    "yCoord": "Узундук",
+    "name": "Аталышы",
+    "identifier": "Идентификатор",
+    "description": "Сүрөттөмө",
+    "tags": "Тегдер"
+  },
+  "ArchObjectListView": {
+    "entityTitle": "Объект",
+    "districtId": "Район",
+    "address": "Дарек",
+    "name": "Аталышы",
+    "identifier": "Идентификатор",
+    "description": "Сүрөттөмө",
+    "x_coord": "Кеңдик",
+    "y_coord": "Узундук",
+    "district_name": "Район"
+  },
+  "ApplicationPayerRequisiteAddEditView": {
+    "entityTitle": "Арыз төлөөчүсүнүн реквизити",
+    "paymentAccount": "төлөм эсеби",
+    "bank": "банк",
+    "bik": "БИК",
+    "applicationPayerId": "арыз төлөөчүсүнүн ID"
+  },
+  "ApplicationPayerRequisiteListView": {
+    "ApplicationPayerRequisite": "Арыз төлөөчүсүнүн реквизити",
+    "entityTitle": "Арыз төлөөчүсүнүн реквизити",
+    "paymentAccount": "төлөм эсеби",
+    "bank": "банк",
+    "bik": "БИК",
+    "applicationPayerId": "арыз төлөөчүсүнүн ID"
+  },
+  "PayerRequisiteAddEditView": {
+    "entityTitle": "Төлөөчүнүн реквизити",
+    "paymentAccount": "төлөм эсеби",
+    "bank": "банк",
+    "bik": "БИК",
+    "payerId": "төлөөчүнүн ID"
+  },
+  "PayerRequisiteListView": {
+    "PayerRequisite": "Төлөөчүнүн реквизити",
+    "entityTitle": "Төлөөчүнүн реквизити",
+    "paymentAccount": "төлөм эсеби",
+    "bank": "банк",
+    "bik": "БИК",
+    "payerId": "төлөөчүнүн ID"
+  },
+  "DocumentStatusHistoryAddEditView": {
+    "entityTitle": "Документтин статус тарыхы",
+    "documentId": "документтин ID",
+    "statusId": "статустун ID",
+    "description": "сүрөттөмө",
+    "oldStatusId": "эски статустун ID"
+  },
+  "DocumentStatusHistoryListView": {
+    "DocumentStatusHistory": "Документтин статус тарыхы",
+    "entityTitle": "Документтин статус тарыхы",
+    "documentId": "документтин ID",
+    "statusId": "статустун ID",
+    "description": "сүрөттөмө",
+    "oldStatusId": "эски статустун ID"
+  },
+  "PayerContactAddEditView": {
+    "entityTitle": "Төлөөчүнүн байланышы",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "rTypeId": "түрүнүн ID",
+    "payerId": "төлөөчүнүн ID"
+  },
+  "PayerContactListView": {
+    "PayerContact": "Төлөөчүнүн байланышы",
+    "entityTitle": "Төлөөчүнүн байланышы",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "rTypeId": "түрүнүн ID",
+    "payerId": "төлөөчүнүн ID"
+  },
+  "ApplicationStatusHistoryAddEditView": {
+    "entityTitle": "Арыз статусунун тарыхы",
+    "statusId": "статустун ID",
+    "oldStatusId": "эски статустун ID",
+    "applicationId": "арыздын ID"
+  },
+  "ApplicationStatusHistoryListView": {
+    "ApplicationStatusHistory": "Арыз статусунун тарыхы",
+    "entityTitle": "Арыз статусунун тарыхы",
+    "statusId": "статустун ID",
+    "oldStatusId": "эски статустун ID",
+    "applicationId": "арыздын ID"
+  },
+  "UserAuthMethodsAddEditView": {
+    "entityTitle": "Колдонуучунун аутентификация ыкмалары",
+    "authTypeId": "аутентификация түрүнүн ID",
+    "userId": "колдонуучунун ID",
+    "authData": "аутентификация маалыматы"
+  },
+  "UserAuthMethodsListView": {
+    "UserAuthMethods": "Колдонуучунун аутентификация ыкмалары",
+    "entityTitle": "Колдонуучунун аутентификация ыкмалары",
+    "authTypeId": "аутентификация түрүнүн ID",
+    "userId": "колдонуучунун ID",
+    "authData": "аутентификация маалыматы"
+  },
+  "ArchObjectTagAddEditView": {
+    "entityTitle": "Архитектуралык объекттин теги",
+    "idObject": "объекттин ID",
+    "rTagId": "тегдин ID"
+  },
+  "ArchObjectTagListView": {
+    "ArchObjectTag": "Архитектуралык объекттин теги",
+    "entityTitle": "Архитектуралык объекттин теги",
+    "idObject": "объекттин ID",
+    "rTagId": "тегдин ID"
+  },
+  "UserContactAddEditView": {
+    "entityTitle": "Колдонуучунун байланышы",
+    "rTypeId": "түрүнүн ID",
+    "rTypeName": "түрүнүн аты",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "customerId": "кардардын ID",
+    "userId": "колдонуучунун ID"
+  },
+  "UserContactListView": {
+    "UserContact": "Колдонуучунун байланышы",
+    "entityTitle": "Колдонуучунун байланышы",
+    "rTypeId": "түрүнүн ID",
+    "rTypeName": "түрүнүн аты",
+    "value": "маани",
+    "allowNotification": "билдирүүгө уруксат берүү",
+    "customerId": "кардардын ID",
+    "userId": "колдонуучунун ID"
+  },
+  "NotificationLogAddEditView": {
+    "entityTitle": "Билдирүү журналы",
+    "text": "текст",
+    "title": "аталышы",
+    "applicationId": "арыздын ID",
+    "contact": "байланыш",
+    "dateSend": "жөнөтүү күнү",
+    "rContactTypeId": "байланыш түрүнүн ID"
+  },
+  "NotificationLogListView": {
+    "NotificationLog": "Билдирүү журналы",
+    "entityTitle": "Билдирүү журналы",
+    "text": "текст",
+    "title": "аталышы",
+    "applicationId": "арыздын ID",
+    "contact": "байланыш",
+    "dateSend": "жөнөтүү күнү",
+    "rContactTypeId": "байланыш түрүнүн ID"
+  },
+  "UserLoginHistoryAddEditView": {
+    "entityTitle": "Колдонуучунун кирүү тарыхы",
+    "startTime": "башталуу убактысы",
+    "endTime": "аяктоо убактысы",
+    "authTypeId": "аутентификация түрүнүн ID",
+    "userId": "колдонуучунун ID",
+    "ipAddress": "IP дарек",
+    "device": "түзмөк",
+    "browser": "браузер",
+    "os": "операциялык система"
+  },
+  "UserLoginHistoryListView": {
+    "UserLoginHistory": "Колдонуучунун кирүү тарыхы",
+    "entityTitle": "Колдонуучунун кирүү тарыхы",
+    "startTime": "башталуу убактысы",
+    "endTime": "аяктоо убактысы",
+    "authTypeId": "аутентификация түрүнүн ID",
+    "userId": "колдонуучунун ID",
+    "ipAddress": "IP дарек",
+    "device": "түзмөк",
+    "browser": "браузер",
+    "os": "операциялык система"
+  },
+  "ApplicationAddEditView": {
+    "entityTitle": "Арыз",
+    "workDescription": "Талап кылынган иштердин сүрөттөмөсү",
+    "archObjectId": "Объект",
+    "statusId": "Статус",
+    "companyId": "Буйрутуучу",
+    "rServiceId": "Кызмат",
+    "rServiceName": "Кызматтын аталышы",
+    "uniqueCode": "Код",
+    "registrationDate": "Каттоо убактысы",
+    "deadline": "Мөөнөт",
+    "number": "Номер",
+    "comment": "Комментарийлер",
+    "validation": {
+      "dateInvalid": "Сураныч, туура күндү киргизиңиз"
+    }
+  },
+  "ApplicationAddEdit": {
+    "documents": {
+      "title": "Арыз документтери",
+      "uploading": "Документ жүктөлүүдө...",
+      "uploadProgress": "Жүктөө прогресси: {{progress}}%",
+      "tableAriaLabel": "Арыз документтеринин таблицасы",
+      "noDocuments": "Документтер жүктөлгөн жок",
+      "required": "Милдеттүү",
+      "signed": "Кол коюлган",
+      "signSelected": "Тандалган документтерге кол коюу",
+      "noComment": "Комментарий жок",
+      "showComment": "Комментарийди көрсөтүү",
+      "showCommentFor": "{{name}} документине комментарийди көрсөтүү",
+      "download": "Документти жүктөп алуу",
+      "downloadDocument": "{{name}} документин жүктөп алуу",
+      "view": "Документти көрүү",
+      "viewDocument": "{{name}} документин көрүү",
+      "upload": "Жүктөп салуу",
+      "replace": "Алмаштыруу",
+      "uploadCorrected": "{{name}} документинин оңдолгон версиясын жүктөп салуу",
+      "columns": {
+        "name": "Аталышы",
+        "signature": "Кол",
+        "status": "Статус",
+        "actions": "Аракеттер"
+      },
+      "status": {
+        "approved": "Бекитилген",
+        "rejected": "Четке кагылган",
+        "pending": "Каралууда",
+        "uploaded": "Жүктөлгөн",
+        "notUploaded": "Жүктөлгөн жок"
+      },
+      "commentDialog": {
+        "title": "Документке комментарий"
+      }
+    },
+    "outcomeDocuments": {
+      "title": "Документтер",
+      "uploading": "Документ жүктөлүүдө...",
+      "uploadProgress": "Жүктөө прогресси: {{progress}}%",
+      "tableAriaLabel": "Арыз документтеринин таблицасы",
+      "noDocuments": "Документтер жүктөлгөн жок",
+      "required": "Милдеттүү",
+      "signed": "Кол коюлган",
+      "signSelected": "Тандалган документтерге кол коюу",
+      "noComment": "Комментарий жок",
+      "download": "Документти жүктөп алуу",
+      "downloadDocument": "{{name}} документин жүктөп алуу",
+      "view": "Документти көрүү",
+      "viewDocument": "{{name}} документин көрүү",
+      "columns": {
+        "name": "Аталышы",
+        "signature": "Кол",
+        "actions": "Аракеттер"
+      },
+      "status": {
+        "approved": "Бекитилген",
+        "rejected": "Четке кагылган",
+        "pending": "Каралууда",
+        "uploaded": "Жүктөлгөн",
+        "notUploaded": "Жүктөлгөн жок"
+      },
+      "commentDialog": {
+        "title": "Документке комментарий"
+      }
+    },
+    "finalDocuments": {
+      "notAvailable": "Чыгуу документтери азырынча жеткиликтүү эмес",
+      "notAvailableDescription": "Документтер арыз иштетүүнүн бардык этаптары аяктагандан кийин жеткиликтүү болот",
+      "completionAct": "Аткарылган иштердин акты",
+      "actSigned": "Акт кол коюлган жана иштер эскертүүлөрсүз кабыл алынган",
+      "signedDate": "Кол коюлган",
+      "signRequiredForAccess": "Документтерге мүмкүнчүлүк алуу үчүн аткарылган иштердин актысына кол коюу зарыл",
+      "signWarning": "Актыга кол койгондон кийин бардык иштер эскертүүлөрсүз кабыл алынган деп эсептелет. Документтерди жүктөп алуу мүмкүн болот.",
+      "viewAct": "Актыны көрүү",
+      "signWithEDS": "ЭЦП менен кол коюу",
+      "outputDocuments": "Чыгуу документтери",
+      "downloadAll": "Баарын жүктөп алуу",
+      "issued": "Берилген",
+      "validUntil": "Аракет кылат",
+      "view": "Көрүү",
+      "download": "Жүктөп алуу",
+      "status": {
+        "issued": "Берилген",
+        "draft": "Долбоор"
+      },
+      "preparingDocuments": "Документтер даярдоо процессинде",
+      "preparingDocumentsDescription": "Чыгуу документтери расмийлөөнүн бардык процедуралары аяктагандан кийин жеткиликтүү болот.",
+      "documentsInfo": "Документтер жөнүндө маалымат",
+      "documentsInfoDescription": "Бардык документтер юридикалык күчкө ээ жана максаты боюнча колдонулушу мүмкүн. Документтердин көчүрмөлөрүн архивиңиз үчүн сактоону сунуштайбыз.",
+      "supportContact": "Суроолор пайда болсо БГАнын колдоо кызматына кайрылыңыз.",
+      "signActDialog": {
+        "title": "Аткарылган иштердин актысына кол коюу",
+        "description": "Аткарылган иштердин актысына кол коюу менен сиз бардык кызматтар толук көлөмдө көрсөтүлгөнүн жана аткарылган иштердин сапатына карата талаптарыңыз жок экенин тастыктайсыз.",
+        "warning": "Көңүл буруңуз! Актыга кол койгондон кийин бул аракетти жокко чыгаруу мүмкүн болбойт."
+      }
+    },
+    "payment": {
+      "title": "Төлөмдөр тарыхы",
+      "currency": "сом",
+      "noPayments": "Төлөмдөр табылган жок",
+      "noPaymentsDescription": "Бул арыз боюнча төлөмдөр тарыхы азырынча жок. Төлөм жүргүзүлгөндөн кийин маалымат бул бөлүмдө пайда болот.",
+      "columns": {
+        "dateTime": "Күнү жана убактысы",
+        "amount": "Сумма",
+        "paymentId": "Төлөмдүн идентификатору"
+      },
+      "instructionDialog": {
+        "title": "Төлөө боюнча нускама",
+        "methods": "Төлөө ыкмалары:",
+        "bankTransfer": {
+          "title": "1. Банк которуусу",
+          "description": "• Эсепте көрсөтүлгөн реквизиттерди колдонуңуз\n• Төлөмдүн максатында эсеп номерин жана арыз номерин көрсөтүңүз\n• Төлөгөндөн кийин квитанция/чекти сактап калыңыз"
+        },
+        "onlinePayment": {
+          "title": "2. Онлайн төлөм",
+          "description": "• Банкыңыздын мобилдик тиркемесин колдонуңуз\n• \"Төлөмдөр\" же \"Которуулар\" бөлүмүн тандаңыз\n• Алуучунун реквизиттерин киргизиңиз\n• Төлөмдү ырастагандын скриншотун алыңыз"
+        },
+        "confirmationRequirements": "Төлөмдү ырастоо талаптары:",
+        "confirmationDetails": "• PDF, JPG же PNG форматындагы файлдар кабыл алынат\n• Документте сумма, күнү жана төлөм убактысы болушу керек\n• Документте алуучунун реквизиттери көрүнүш керек\n• Файлдын максималдуу өлчөмү - 5 МБ"
+      }
+    },
+    "contract": {
+      "title": "Кызмат көрсөтүү келишими",
+      "notGenerated": "Келишим дагы деле түзүлгөн жок",
+      "notGeneratedDescription": "Бардык документтер текшерилгенден кийин кол коюу үчүн келишим түзүлөт. Келишим даяр болгондо билдирүү аласыз.",
+      "contractNumber": "Келишим №{{number}}",
+      "created": "Түзүлгөн",
+      "signed": "Кол коюлган",
+      "description": "Келишимде кызмат көрсөтүү шарттары, тараптардын укуктары жана милдеттери, иштерди аткаруу мөөнөттөрү жана башка маанилүү шарттар камтылган. Кол коюудан мурун келишим менен кылдат таанышыңыз.",
+      "downloadForReview": "Танышуу үчүн келишимди жүктөп алуу",
+      "downloadContract": "Келишимди жүктөп алуу",
+      "download": "Жүктөп алуу",
+      "successfullySigned": "Келишим ийгиликтүү кол коюлган",
+      "successfullySignedDescription": "Келишим ийгиликтүү кол коюлган. Эми кызматтардын төлөмүнө өтө аласыз.",
+      "proceedToPayment": "Төлөмгө өтүү",
+      "signRequired": "Кол коюу талап кылынат",
+      "signRequiredDescription": "Арызды иштетүүнү улантуу үчүн келишимге кол коюу зарыл. Кол коюудан мурун келишимди жүктөп алып, кылдат таанышыңыз.",
+      "confirmSignDialog": {
+        "title": "Келишимге кол коюуну тастыктоо",
+        "description": "Сиз №{{number}} келишимге кол коюуга жакындайсыз. Келишимге кол коюу менен сиз анын мазмуну менен таанышканыңызды жана шарттарга макул экениңизди тастыктайсыз."
+      },
+      "confirmSign": "Кол коюуну тастыктоо"
+    },
+    "applicationInfo": {
+      "notSpecified": "Көрсөтүлгөн жок",
+      "serviceInfo": "Кызмат жөнүндө маалымат",
+      "service": "Кызмат",
+      "workType": "Аткарылуучу иштердин түрү",
+      "objects": "Объекттер",
+      "addObject": "Объект кошуу",
+      "noObjects": "Объекттер кошулган жок. Кошуу үчүн \"Объект кошуу\" баскысын басыңыз.",
+      "objectNumber": "Объект №{{number}}",
+      "editingObject": "Объект №{{number}} өзгөртүү",
+      "district": "Район",
+      "street": "Көчө",
+      "building": "Имарат/үй",
+      "apartment": "Квартира",
+      "tags": "Тегдер",
+      "objectTags": "Объекттин тегдери",
+      "selectTags": "Тегдерди тандаңыз",
+      "deleteObjectConfirm": "Объектти өчүрүү?",
+      "loadingData": "Маалыматтар жүктөлүүдө...",
+      "changesSaved": "Өзгөртүүлөр сакталды",
+      "saveError": "Сактоо катасы",
+      "customerData": "Буйрутуучунун маалыматтары",
+      "individual": "Жеке адам",
+      "legal": "Юридикалык жак",
+      "inn": "ИНН",
+      "fullName": "Ф.А.А.",
+      "lastName": "Фамилия",
+      "firstName": "Аты",
+      "secondName": "Отчество",
+      "phone": "Телефон",
+      "additionalPhone": "Кошумча телефон",
+      "email": "Email",
+      "postalCode": "Почта индекси",
+      "address": "Дарек",
+      "passportSeries": "Паспорттун сериясы жана номери",
+      "passportIssuer": "Паспортту берген",
+      "companyName": "Компаниянын аталышы",
+      "directorName": "Директордун Ф.А.А.",
+      "okpo": "ОКПО",
+      "paymentAccount": "Расчет эсеби",
+      "bank": "Банк",
+      "bik": "БИК"
+    }
+  },
+  "application": {
+    "breadcrumbs": {
+      "home": "Башкы",
+      "myApplications": "Менин арыздарым"
+    },
+    "loading": {
+      "dataLoading": "Арыз маалыматтары жүктөлүүдө..."
+    },
+    "error": {
+      "loadingError": "Жүктөө катасы",
+      "tryAgain": "Кайра аракет кылуу",
+      "notFound": "Арыз табылган жок",
+      "notFoundDescription": "Көрсөтүлгөн идентификатор менен арыз табуу мүмкүн болгон жок."
+    },
+    "header": {
+      "editApplication": "Арызды өзгөртүү",
+      "newApplication": "Жаңы арыз каттоо",
+      "description": "БишкекБашкыАрхитектуранын кызматтарына арыз каттоо",
+      "applicationId": "ID: {{id}}"
+    },
+    "document": {
+      "type": {
+        "unknown": "Белгисиз документ түрү"
+      },
+      "error": {
+        "notFound": "Документ системада табылган жок",
+        "loadingError": "Документ жүктөөдө ката кетти",
+        "openNewWindow": "Жаңы терезени ачуу мүмкүн болгон жок. Файл жүктөлөт.",
+        "emptyFile": "Бош файл алынды",
+        "serverError": "Серверден файл алуу мүмкүн болгон жок",
+        "openFile": "Файлды ачуу мүмкүн болгон жок",
+        "downloadFile": "Файлды жүктөп алуу мүмкүн болгон жок"
+      },
+      "defaultTitle": "PDF Документ",
+      "defaultFileName": "документ",
+      "fileName": "Документтин аталышы",
+      "fileType": "Документтин түрү",
+      "signatureInfo": "Кол жөнүндө маалымат",
+      "loading_document": "Документ жүктөлүүдө...",
+      "signature": {
+        "whoSigned": "Кол койгон",
+        "whenSigned": "Кол коюлган"
+      },
+      "officialStamp": {
+        "title": "Расмий тастыктоо",
+        "description": "\"БишкекБашкыАрхитектура\" МК бул документ электрондук санариптик кол менен расмий кол коюлганын жана юридикалык мааниге ээ экенин тастыктайт."
+      },
+      "loading": {
+        "title": "Документ жүктөлүүдө...",
+        "subtitle": "Күтө туруңуз"
+      },
+      "readyForDownload": {
+        "title": "Документ жүктөөгө даяр",
+        "subtitle": "Текшерилди {{date}}",
+        "alertTitle": "Документ системада табылды",
+        "alertDescription": "Документ ийгиликтүү табылды жана жүктөөгө даяр.",
+        "pdfViewHint": "PDF документин көрүү үчүн жаңы өтмөктө ача аласыз."
+      },
+      "successfullyDownloaded": {
+        "title": "Документ ийгиликтүү жүктөлдү",
+        "subtitle": "Текшерилди жана жүктөлдү {{date}}",
+        "alertTitle": "Жүктөө аяктады",
+        "alertDescription": "Документ системада ийгиликтүү табылды жана сиздин түзмөккө жүктөлдү."
+      },
+      "notFound": {
+        "title": "Документ табылган жок",
+        "subtitle": "БГАдан текшерүү",
+        "alertTitle": "Документ системада табылган жок",
+        "alertDescription": "Талап кылынган документ БишкекБашкыАрхитектуранын маалымат базасында табылган жок. Документ болушу керек деп ойлосоңуз, колдоо кызматына кайрылыңыз.",
+        "possibleReasons": "Мүмкүн болгон себептер:",
+        "reason1": "Документ дагы деле кол коюу процедурасын өтпөгөн",
+        "reason2": "Документке туура эмес шилтеме көрсөтүлгөн",
+        "reason3": "Документтин аракет мөөнөтү бүткөн"
+      },
+      "downloadError": {
+        "title": "Жүктөө катасы",
+        "subtitle": "Документ жүктөлбөй калды",
+        "alertTitle": "Файл жүктөөдө ката кетти",
+        "alertDescription": "Документ жүктөөдө ката кетти. Кайра аракет кылыңыз же колдоо кызматына кайрылыңыз."
+      },
+      "invalidGuid": {
+        "title": "Туура эмес шилтеме",
+        "subtitle": "Параметрлерде ката",
+        "alertTitle": "Документтин туура эмес идентификатору",
+        "alertDescription": "Документке шилтеме туура эмес же жетишсиз идентификатор (GUID) камтыйт. Шилтеменин туура экенин текшерип, кайра аракет кылыңыз.",
+        "instruction": "БишкекБашкыАрхитектура тарабынан берилген туура шилтемени колдоноруңузга ынаныч жасаңыз."
+      },
+      "actions": {
+        "openPdfInNewTab": "PDF жаңы өтмөктө ачуу",
+        "downloadDocument": "Документ жүктөп алуу",
+        "tryDownloadAgain": "Кайра жүктөп алууга аракет кылуу"
+      },
+      "pdfViewer": {
+        "opening": "PDF жаңы өтмөктө ачылууда..."
+      }
+    }
+  },
+  "steps": {
+    "objects": "Объекттер",
+    "applicant": "Арыз берүүчү",
+    "object": {
+      "title": "1-кадам: Кызмат жана объекттер жөнүндө маалымат",
+      "serviceAndWorkType": "Кызмат жана иштин түрү",
+      "workingDays": "иш күнү",
+      "workTypeLabel": "Аткарылуучу иштердин түрү",
+      "workTypeHelperText": "Кандай иштер аткарылышы пландаштырылганын сүрөттөп бериңиз",
+      "workTypePlaceholder": "Мисалы: Турак үйдүн курулушу, кеңсе имаратынын реконструкциясы ж.б.",
+      "objectsCount": "Объекттер ({{count}})",
+      "addObject": "Объект кошуу",
+      "objectsHelpText": "Бир арызга бир нече объект кошсоңуз болот. Ар бир объект үчүн даректи көрсөтүп, тиешелүү тегдерди тандаңыз.",
+      "map": {
+        "scheme": "Схема",
+        "satellite": "Серке"
+      },
+      "address": "Дарек",
+      "objectNumber": "Объект №{{number}}",
+      "clearObjectData": "Объекттин маалыматтарын тазалоо",
+      "deleteObject": "Объектти өчүрүү",
+      "district": "Район",
+      "selectDistrict": "Районду тандаңыз",
+      "street": "Көчө",
+      "building": "Имарат",
+      "apartment": "Квартира/кеңсе номери",
+      "objectTags": "Объекттин тегдери",
+      "selectTags": "Тегдерди тандаңыз",
+      "tagsHelperText": "Объектти классификациялоо үчүн бир же бир нече тегди тандаңыз",
+      "noName": "Атысыз",
+      "noAddress": "Дарексиз"
+    },
+    "participants": {
+      "title": "2-кадам: Буйрутуучунун маалыматтары",
+      "selectRole": "Ролуңузду тандаңыз",
+      "selectRoleDescription": "Кандай мүнөздө арыз берип жаткандыгыңызды көрсөтүңүз",
+      "imCustomer": "Мен буйрутуучумун",
+      "imCustomerDescription": "Өз атымнан арыз берип жатам",
+      "imApplicant": "Мен арыз берүүчүмүн",
+      "imApplicantDescription": "Башка адамдын же компаниянын тапшырмасы боюнча арыз берип жатам",
+      "customerType": "Буйрутуучунун түрү",
+      "individual": "Жеке адам",
+      "legal": "Юридикалык жак",
+      "applicantInfo": "Сиз арыз берүүчү катары буйрутуучунун маалыматтарын толтуруп жатасыз. Буйрутуучунун маалыматтарын толтургандан кийин, өзүңүздүн маалыматтарыңызды көрсөтүшүңүз керек.",
+      "pin": "ПИН",
+      "innOkpo": "ИНН/ОКПО",
+      "pinHelperText": "14 сандык жеке идентификациялык номер",
+      "innOkpoHelperText": "Уюмдун ИНН же ОКПО",
+      "okpo": "ОКПО",
+      "okpoHelperText": "Республикалык кесипкөйлүк жана уюмдардын классификатору",
+      "fullName": "Ф.А.А.",
+      "organizationName": "Уюмдун аталышы",
+      "fullNamePlaceholder": "Иванов Иван Иванович",
+      "organizationNamePlaceholder": "ЖЧК \"Компаниянын аталышы\"",
+      "lastName": "Фамилиясы",
+      "firstName": "Аты",
+      "secondName": "Атасынын аты",
+      "lastNamePlaceholder": "Иванов",
+      "firstNamePlaceholder": "Иван",
+      "secondNamePlaceholder": "Иванович",
+      "directorName": "Жетекчинин Ф.А.А.",
+      "directorNamePlaceholder": "Петров Петр Петрович",
+      "phone": "Телефон",
+      "additionalPhone": "Кошумча телефон",
+      "phoneFormat": "Формат: +996 XXX XX XX XX",
+      "phonePlaceholder": "+996 700 12 34 56",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+      "address": "Дарек",
+      "addressPlaceholder": "Бишкек ш., Киев көч., 114",
+      "postalCode": "Почта индекси",
+      "postalCodePlaceholder": "720000",
+      "passportSeries": "Паспорттун сериясы жана номери",
+      "passportSeriesPlaceholder": "AN 1234567",
+      "passportIssueDate": "Паспорт берилген күнү",
+      "passportIssuer": "Паспорт ким тарабынан берилген",
+      "passportIssuerPlaceholder": "МКК 50-01",
+      "paymentAccount": "Эсеп",
+      "bank": "Банк",
+      "bik": "БИК"
+    },
+    "documents": {
+      "title": "3-кадам: Документтерди жүктөө",
+      "allRequiredUploaded": "✓ Бардык милдеттүү документтер жүктөлдү",
+      "uploadAllRequired": "Бардык милдеттүү документтерди жүктөө зарыл",
+      "mandatoryDocuments": "Милдеттүү документтер",
+      "optionalDocuments": "Кошумча документтер",
+      "uploaded": "Жүктөлдү",
+      "view": "Көрүү",
+      "replace": "Алмаштыруу",
+      "upload": "Жүктөө",
+      "uploadSummary": "Жүктөө корутундусу",
+      "allRequiredUploadedSuccess": "Бардык милдеттүү документтер жүктөлдү ✓",
+      "notAllRequiredUploaded": "Бардык милдеттүү документтер жүктөлгөн жок",
+      "fileSizeError": "Файлдын өлчөмү 10 МБ ашпашы керек",
+      "fileTypeError": "PDF, JPG жана PNG файлдары гана колдоого алынат"
+    },
+    "review": {
+      "passport_series":"Документтин сериясы",
+      "passport_whom_issued":"Ким тарабынан берилген",
+      "passport_issued_date":"Берилген күнү",
+      "title": "4-кадам: Маалыматтардын акыркы текшерүүсү",
+      "lastStep": "Арызды берүүдөн мурунку акыркы кадам",
+      "lastStepDescription": "Киргизилген бардык маалыматтарды кылдат текшериңиз. Арызды бергенден кийин өзгөртүү мүмкүн болбойт. Арыз берүү үчүн документтерге электрондук санариптик кол коюу зарыл.",
+      "attention": "Көңүл буруңуз!",
+      "attentionDescription": "Бардык милдеттүү маалыматтар толтурулган жок. Мурунку кадамдарды текшериңиз.",
+      "serviceInfo": "Кызмат жөнүндө маалымат",
+      "service": "Кызмат",
+      "workType": "Иштин түрү",
+      "customer": "Буйрутуучу",
+      "customerData": "Буйрутуучунун маалыматтары",
+      "individual": "Жеке адам",
+      "legal": "Юридикалык жак",
+      "pin": "ПИН",
+      "innOkpo": "ИНН/ОКПО",
+      "fullName": "Ф.А.А.",
+      "organizationName": "Уюмдун аталышы",
+      "director": "Жетекчи",
+      "phone": "Телефон",
+      "email": "Email",
+      "address": "Дарек",
+      "objects": "Объекттер ({{count}})",
+      "objectNumber": "Объект №{{number}}",
+      "district": "Район",
+      "tags": "Тегдер",
+      "uploadedDocuments": "Жүктөлгөн документтер",
+      "mandatoryDocuments": "Милдеттүү документтер",
+      "optionalDocuments": "Кошумча документтер",
+      "signed": "Кол коюлган",
+      "notUploaded": "Жүктөлгөн жок",
+      "signDocument": "Документке кол коюу",
+      "digitalSignature": "Электрондук санариптик кол",
+      "documentsSignedSuccess": "Документтерге электрондук санариптик кол ийгиликтүү коюлду",
+      "signDate": "Кол коюлган күнү",
+      "status": "Статус",
+      "valid": "Жарактуу",
+      "signRequiredForSubmission": "Арыз берүү үчүн документтерге электрондук санариптик кол коюу зарыл",
+      "readyToSubmit": "Арыз берүүгө даяр",
+      "notReadyToSubmit": "Арыз берүүгө даяр эмес",
+      "readyToSubmitDescription": "Зарыл болгон бардык маалыматтар толтурулду, документтер жүктөлүп, ЭСК коюлду. Арыз бере аласыз.",
+      "notReadyToSubmitDescription": "Арыз берүү үчүн төмөнкүлөр зарыл:",
+      "requirements": {
+        "pin": "Буйрутуучунун ПИН/ИНН көрсөтүү",
+        "name": "Буйрутуучунун атын көрсөтүү",
+        "service": "Кызматты тандоо",
+        "documents": "Бардык милдеттүү документтерди жүктөө",
+        "signature": "Документтерге электрондук санариптик кол коюу"
+      },
+      "signWithEDS": "ЭСК менен кол коюу",
+      "viewDocument": "Документти көрүү",
+      "submitApplication": "Арыз берүү",
+      "fillAllRequiredFields": "ЭСК коюу үчүн бардык милдеттүү талааларды толтуруп, документтерди жүктөңүз",
+      "signToSubmit": "Арыз берүү үчүн документтерге ЭСК коюңуз",
+      "application": "Арыз",
+      "notSpecified": "Көрсөтүлгөн жок",
+      "noDocuments": "Документтер жүктөлгөн жок",
+      "documentSigned": "Документ ийгиликтүү кол коюлду",
+      "signRequiredFirst": "Алгач документтерге ЭСК коюу зарыл"
+    },
+    "completion": {
+      "title": "Арыз ийгиликтүү түзүлдү!",
+      "applicationNumber": "Арыздын номери:",
+      "underReview": "Каралууда",
+      "numberCopied": "Арыздын номери көчүрүлдү",
+      "completed": "✅ Буга чейин аткарылган:",
+      "completedItems": {
+        "submitted": "Арыз автоматтык түрдө кароога берилди",
+        "submittedDesc": "Статус: Жеке кабинеттен каралууда",
+        "notifications": "БГАнын Бирдиктүү терезесине билдирүүлөр жөнөтүлдү",
+        "documentsSaved": "Документтер системада сакталды",
+        "documentsDesc": "Бардык жүктөлгөн файлдар арызга тиркелди"
+      },
+      "nextSteps": {
+        "study": {
+          "title": "Материалдарды изилдөө",
+          "description": "БГАнын адиси берилген документтерди изилдейт",
+          "duration": "1-3 иш күнү"
+        },
+        "assign": {
+          "title": "Аткаруучунун дайындалышы",
+          "description": "Жооптуу архитектор дайындалат",
+          "duration": "Күндүн ичинде"
+        },
+        "prepare": {
+          "title": "Корутундуну даярдоо",
+          "description": "Архитектуралык корутундуну же эскертүүлөрдү даярдоо",
+          "duration": "5-10 иш күнү"
+        },
+        "notify": {
+          "title": "Даярдыгы жөнүндө билдирүү",
+          "description": "Email жана SMS билдирүүсүн аласыз",
+          "duration": "Автоматтык түрдө"
+        }
+      },
+      "createNew": "Жаңы арыз түзүү",
+      "goToList": "Арыздардын тизмесине өтүү",
+      "tip": "Кеңеш",
+      "tipDescription": "Арыздын номерин сактап калыңыз. Аткарылуу статусун жеке кабинеттен же БГАнын ысык линиясынан байкоого болот."
+    },
+    "print": {
+      "title": "5-кадам: Милдеттүү документтерди басып чыгаруу",
+      "mandatoryStep": "⚠️ Милдеттүү кадам!",
+      "mandatoryStepDescription": "Арыз каттоону бүтүрүү үчүн төмөнкү документтерди басып чыгарып, арыз берүүчүгө берүү зарыл. Кол коюлган документтерсиз каттоо аяктала албайт.",
+      "documentsForPrint": "Басып чыгаруу үчүн документтер",
+      "generating": "Документтер түзүлүүдө...",
+      "primary": "Негизги",
+      "ready": "Даяр",
+      "signaturesRequired": "Колдор талап кылынат",
+      "copies": "Көчүрмөлөр",
+      "copiesDescription": "арыз берүүчү үчүн жана иш үчүн",
+      "preview": "Алдын ала көрүү",
+      "documentDownloaded": "Документ жүктөлдү",
+      "printAll": "Бардык документтерди басып чыгаруу",
+      "printAllDescription": "Бардык документтер бир эле убакта басып чыгарылат",
+      "process": "Расмийлөө процесси",
+      "processSteps": {
+        "generate": {
+          "label": "Документтерди түзүү",
+          "description": "Басып чыгаруу үчүн документтерди даярдоо"
+        },
+        "print": {
+          "label": "Документтерди басып чыгаруу",
+          "description": "Зарыл болгон бардык документтерди басып чыгарыңыз"
+        },
+        "sign": {
+          "label": "Документтерге кол коюу",
+          "description": "Зарыл болгон колдорду алыңыз"
+        },
+        "check": {
+          "label": "Текшерүү жана аяктоо",
+          "description": "Бардык кадамдар аткарылганын текшериңиз"
+        }
+      },
+      "processHelp": {
+        "generate": "Документтер автоматтык түрдө түзүлөт",
+        "print": "Ар бир документ үчүн басып чыгаруу баскычтарын колдонуңуз",
+        "sign": "Көзөмөл тизмесиндеги аткарылган пункттарды белгилеңиз",
+        "check": "Каттоону аяктоо үчүн баары даяр"
+      },
+      "checklistTitle": "✅ Аяктооден мурунку көзөмөл тизмеси",
+      "checklistProgress": "{{total}} ичинен {{completed}} аткарылды",
+      "checklist": {
+        "allPrinted": {
+          "label": "Бардык документтер басып чыгарылды",
+          "description": "3 документтин тең басып чыгарылганын текшериңиз"
+        },
+        "applicantSigned": {
+          "label": "Арыз берүүчү арызга кол койду",
+          "description": "Кол бардык көчүрмөлөрдө болушу керек"
+        },
+        "receiptGiven": {
+          "label": "Арыз берүүчү расписка алды",
+          "description": "Расписканын бир көчүрмөсү арыз берүүчүгө берилди"
+        },
+        "registrarSigned": {
+          "label": "Каттоочу бардык документтерге кол койду",
+          "description": "Бардык документтерде сиздин колуңуз жана мөөрүңүз"
+        }
+      },
+      "completeAllItems": "Аяктоодан мурун көзөмөл тизмесинин бардык пункттарын аткарыңыз",
+      "printHistory": "Басып чыгаруу тарыхы"
+    }
+  },
+  "documents": {
+    "error": {
+      "loadingDocuments": "Документтерди жүктөө катасы",
+      "documentNotFound": "Документ табылган жок",
+      "uploadFailed": "Жүктөө ийгиликсиз болду",
+      "uploadError": "Файл жүктөөдө ката",
+      "deleteError": "Файл өчүрүүдө ката"
+    },
+    "success": {
+      "uploaded": "Документ ийгиликтүү жүктөлдү",
+      "deleted": "Документ өчүрүлдү"
+    },
+    "mockData": {
+      "applicantPassport": "Арыз берүүчүнүн паспорту",
+      "passportCopy": "Паспорттун көчүрмөсү",
+      "technicalPassport": "Техникалык паспорт",
+      "objectTechnicalPassport": "Объекттин техпаспорту",
+      "additionalDocuments": "Кошумча документтер",
+      "otherDocuments": "Башка документтер"
+    }
+  },
+  "stepper": {
+    "steps": {
+      "object": "Объект",
+      "participants": "Катышуучулар",
+      "documents": "Документтер",
+      "review": "Текшерүү",
+      "print": "Басып чыгаруу"
+    },
+    "error": {
+      "addressSearchError": "Дарек издөө катасы:",
+      "fileTooLarge": "Файл өтө чоң",
+      "unsupportedFormat": "Колдоого алынбаган формат",
+      "uploadError": "Жүктөө катасы",
+      "saveFirstApplication": "Алгач арызды сактаңыз",
+      "validationFailed": "Арыз текшерүүдөн өтпөдү",
+      "applicationValidationFailed": "Арыз валидациядан өтпөдү",
+      "loadingData": "Маалыматтарды жүктөө катасы"
+    },
+    "success": {
+      "documentUploaded": "Документ жүктөлдү",
+      "applicationCreated": "Арыз түзүлдү",
+      "applicationSaved": "Арыз сакталды",
+      "applicationSubmitted": "Арыз ийгиликтүү жөнөтүлдү!"
+    },
+    "validation": {
+      "selectService": "Кызматты тандаңыз",
+      "enterWorkDescription": "Иштердин сүрөттөмөсүн киргизиңиз",
+      "addObjectAddress": "Объекттин дарегин кошуңуз",
+      "enterCorrectINN": "Туура ИНН киргизиңиз (14 сан)",
+      "enterName": "Ф.А.А./уюмдун атын киргизиңиз",
+      "enterPhone": "Телефон номерин киргизиңиз",
+      "enterCorrectEmail": "Туура email киргизиңиз",
+      "uploadRequiredDocuments": "Бардык милдеттүү документтерди жүктөңүз"
+    }
+  },
+  "services": {
+    "mockData": {
+      "apzService": "Архитектуралык-пландаштыруу тапшырмасын (АПТ) алуу",
+      "projectApproval": "Долбоордук документацияны макулдашуу",
+      "buildingPermit": "Куруу уруксаты",
+      "technicalConditions": "Туташтыруу үчүн техникалык шарттар",
+      "commissioningAct": "Эксплуатацияга берүү акты"
+    }
+  },
+  "tags": {
+    "mockData": {
+      "residential": "Турак",
+      "commercial": "Соода",
+      "industrial": "Өнөр жай",
+      "social": "Социалдык",
+      "newConstruction": "Жаңы курулуш",
+      "reconstruction": "Реконструкция",
+      "replanning": "Кайра пландоо"
+    }
+  },
+  "object": {
+    "error": {
+      "loadingServices": "Кызматтарды жүктөө катасы",
+      "loadingDistricts": "Райондорду жүктөө катасы",
+      "loadingTags": "Тегдерди жүктөө катасы",
+      "searchError": "Издөө катасы:"
+    },
+    "success": {
+      "objectAdded": "Объект кошулду",
+      "objectCleared": "Объекттин маалыматтары тазаланды",
+      "objectRemoved": "Объект өчүрүлдү"
+    },
+    "validation": {
+      "selectService": "Кызматты тандаңыз",
+      "enterWorkType": "Аткарылуучу иштердин түрүн көрсөтүңүз",
+      "fillRequiredFields": "Бардык милдеттүү талааларды толтуруңуз",
+      "atLeastOneObject": "Жок дегенде бир объект болушу керек"
+    },
+    "address": {
+      "notSpecified": "Көрсөтүлгөн жок"
+    }
+  },
+  "participants": {
+    "error": {
+      "customerDataError": "Компанияны алуу катасы",
+      "customerSaveError": "Маалыматтарды сактоо катасы",
+      "selectRole": "Ролду тандаңыз",
+      "fillRequiredFields": "Бардык милдеттүү талааларды толтуруңуз"
+    },
+    "success": {
+      "customerDataSaved": "Буйрутуучунун маалыматтары сакталды"
+    },
+    "validation": {
+      "pinRequired": "ИНН/ПИН толтуруу үчүн милдеттүү",
+      "pinFormat": "ПИН 14 сандан турушу керек",
+      "nameRequired": "Ф.А.А. же уюмдун аты милдеттүү",
+      "phoneRequired": "Телефон толтуруу үчүн милдеттүү",
+      "phoneFormat": "+996 XXX-XX-XX-XX форматында толук номерди киргизиңиз",
+      "emailRequired": "Email толтуруу үчүн милдеттүү",
+      "emailFormat": "Туура эмес email дарек",
+      "addressRequired": "Дарек толтуруу үчүн милдеттүү",
+      "directorRequired": "Юридикалык жактар үчүн жетекчинин Ф.А.А. милдеттүү"
+    }
+  },
+  "print": {
+    "error": {
+      "generateDocumentsError": "Документтерди түзүү катасы",
+      "completeAllItems": "Зарыл: {items}"
+    },
+    "success": {
+      "documentsReady": "Документтер басып чыгарууга даяр",
+      "documentPrinted": "\"{name}\" документи басып чыгарууга жөнөтүлдү",
+      "allDocumentsPrinted": "Бардык документтер басып чыгарууга жөнөтүлдү",
+      "documentPreview": "\"{name}\" документинин алдын ала көрүүсү"
+    },
+    "documents": {
+      "applicationForm": "Кызмат көрсөтүү үчүн арыз",
+      "applicationFormDescription": "Арыз берүүчүнүн маалыматтары жана талап кылынган кызматтын сүрөттөмөсү менен негизги документ",
+      "receiptForm": "Документтерди кабыл алуу распискасы",
+      "receiptFormDescription": "Документтерди кабыл алуу тастыктамасы тизме жана күнү менен",
+      "documentsList": "Документтердин тизмеси",
+      "documentsListDescription": "Кабыл алынган документтердин барактарынын санын көрсөтүү менен толук тизмеси",
+      "applicantRegistrarSignatures": "Арыз берүүчү, Каттоочу"
+    },
+    "checklist": {
+      "printAllDocuments": "бардык документтерди басып чыгаруу",
+      "getApplicantSignature": "арыз берүүчүнүн колун алуу",
+      "giveReceiptToApplicant": "арыз берүүчүгө расписка берүү",
+      "signDocumentsByRegistrar": "каттоочу тарабынан документтерге кол коюу"
+    }
+  },
+  "rootStore": {
+    "error": {
+      "loadingTemplate": "Шаблонду жүктөө катасы",
+      "loadingAgreement": "Келишимди жүктөө катасы",
+      "loadingApplication": "Арызды жүктөө катасы",
+      "savingApplication": "Арызды сактоо катасы",
+      "updatingApplication": "Арызды жаңыртуу катасы",
+      "applicationValidationFailed": "Арыз текшерүүдөн өтпөдү",
+      "submittingApplication": "Арызды берүү катасы"
+    },
+    "success": {
+      "applicationLoaded": "Арыз жүктөлдү",
+      "documentsSignedEDS": "Документтерге ЭСК ийгиликтүү коюлду",
+      "applicationCreatedAndSaved": "Арыз түзүлүп сакталды",
+      "applicationSaved": "Арыз сакталды",
+      "applicationSubmitted": "Арыз ийгиликтүү берилди!",
+      "newApplicationStarted": "Жаңы арыз башталды"
+    },
+    "warning": {
+      "notAllDocumentsUploaded": "Бардык милдеттүү документтер жүктөлгөн жок. Арыз долбоор катары сакталат",
+      "signRequiredFirst": "Алгач документтерге ЭСК коюу зарыл"
+    }
+  },
+  "documentCard": {
+    "signatureInfo": "Кол жөнүндө маалымат",
+    "signature": {
+      "whoSigned": "Кол койгон",
+      "whenSigned": "Кол коюлган"
+    },
+    "officialStamp": {
+      "title": "Расмий тастыктоо",
+      "description": "БишкекБашкыАрхитектура бул документ электрондук санариптик кол менен расмий кол коюлганын жана юридикалык мааниге ээ экенин тастыктайт."
+    },
+    "fileName": "Документтин аталышы",
+    "fileType": "Документтин түрү",
+    "downloadWillBeStarted": "Файл жүктөлөт",
+    "signatureTable": {
+      "ariaLabel": "Колдордун таблицасы",
+      "whoSigned": "Кол койгон",
+      "whenSigned": "Кол коюлган"
+    },
+    "documentTable": {
+      "ariaLabel": "Документтердин таблицасы"
+    },
+    "loading": {
+      "title": "Документ жүктөлүүдө...",
+      "subtitle": "Күтө туруңуз"
+    },
+    "readyForDownload": {
+      "title": "Документ жүктөөгө даяр",
+      "subtitle": "Текшерилди {{date}}",
+      "alertTitle": "Документ системада табылды",
+      "alertDescription": "Документ ийгиликтүү табылды жана жүктөөгө даяр.",
+      "pdfViewHint": "PDF документти көрүү үчүн жаңы өтмөктө ача аласыз."
+    },
+    "successfullyDownloaded": {
+      "title": "Документ ийгиликтүү жүктөлдү",
+      "subtitle": "Текшерилди жана жүктөлдү {{date}}",
+      "alertTitle": "Жүктөө аяктады",
+      "alertDescription": "Документ системада ийгиликтүү табылды жана сиздин түзмөккө жүктөлдү."
+    },
+    "notFound": {
+      "title": "Документ табылган жок",
+      "subtitle": "БГАдан текшерүү",
+      "alertTitle": "Документ системада табылган жок",
+      "alertDescription": "Талап кылынган документ БишкекБашкыАрхитектуранын маалымат базасында табылган жок. Документ болушу керек деп ойлосоңуз, колдоо кызматына кайрылыңыз.",
+      "possibleReasons": "Мүмкүн болгон себептер:",
+      "reason1": "Документ дагы деле кол коюу процедурасын өтпөгөн",
+      "reason2": "Документке туура эмес шилтеме көрсөтүлгөн",
+      "reason3": "Документтин аракет мөөнөтү бүткөн"
+    },
+    "downloadError": {
+      "title": "Жүктөө катасы",
+      "subtitle": "Документ жүктөлбөй калды",
+      "alertTitle": "Файл жүктөөдө ката кетти",
+      "alertDescription": "Документ жүктөөдө ката кетти. Кайра аракет кылыңыз же колдоо кызматына кайрылыңыз."
+    },
+    "invalidGuid": {
+      "title": "Туура эмес шилтеме",
+      "subtitle": "Параметрлерде ката",
+      "alertTitle": "Документтин туура эмес идентификатору",
+      "alertDescription": "Документке шилтеме туура эмес же жетишсиз идентификатор (GUID) камтыйт. Шилтеменин туура экенин текшерип, кайра аракет кылыңыз.",
+      "instruction": "БишкекБашкыАрхитектура тарабынан берилген туура шилтемени колдоноруңузга ынаныч жасаңыз."
+    },
+    "actions": {
+      "openPdfInNewTab": "PDF жаңы өтмөктө ачуу",
+      "downloadDocument": "Документ жүктөп алуу",
+      "tryDownloadAgain": "Кайра жүктөп алууга аракет кылуу"
+    },
+    "documentFound": {
+      "title": "Жарактуу документ",
+      "subtitle": "Текшерилди {{date}}"
+    },
+    "documentNotFound": {
+      "title": "Документ табылган жок",
+      "subtitle": "БГАдан текшерүү",
+      "alertTitle": "Документ системада табылган жок",
+      "alertDescription": "Талап кылынган документ БишкекБашкыАрхитектуранын маалымат базасында табылган жок. Документ болушу керек деп ойлосоңуз, колдоо кызматына кайрылыңыз.",
+      "possibleReasons": "Мүмкүн болгон себептер:",
+      "reason1": "Документ дагы деле кол коюу процедурасын өтпөгөн",
+      "reason2": "Документке туура эмес шилтеме көрсөтүлгөн",
+      "reason3": "Документтин аракет мөөнөтү бүткөн"
+    },
+    "documentName": "Документтин аталышы"
+  },
+  "ApplicationListView": {
+    "Application": "Арыз",
+    "entityTitle": "Арыз",
+    "workDescription": "Талап кылынган иштердин сүрөттөмөсү",
+    "archObjectId": "Объект",
+    "statusId": "Статус",
+    "companyId": "Буйрутуучу",
+    "rServiceId": "Кызмат",
+    "rServiceName": "Кызматтын аталышы",
+    "uniqueCode": "Код",
+    "registrationDate": "Каттоо убактысы",
+    "deadline": "Мөөнөт",
+    "number": "Номер",
+    "comment": "Комментарийлер",
+    "company_name": "Компаниянын аталышы",
+    "status_name": "Статус",
+    "r_service_name": "Кызмат",
+    "work_description": "Талап кылынган иштердин сүрөттөмөсү",
+    "registration_date": "Каттоо убактысы",
+    "Costing": "Калькуляция",
+    "objectName": "Объекттин аталышы",
+    "address": "Дарек",
+    "sendDate": "Жөнөтүү убактысы",
+    "createNewApplication": "Жаңы арыз түзүү"
+  },
+  "ApplicationPublic": {
+    "applicationTitle": "Арыз №",
+    "registrationTime": "Каттоо убактысы",
+    "customer": "Буйрутуучу",
+    "inn": "ИНН",
+    "service": "Кызмат",
+    "address": "Дарек",
+    "object": "Объект",
+    "invalidDate": "Туура эмес күн",
+    "statusApproved": "Бекитилген",
+    "statusRejected": "Четке кагылган",
+    "statusInProgress": "Иштетилүүдө",
+    "statusWaiting": "Күтүү",
+    "workDocuments": {
+      "title": "Иш документтери",
+      "fileName": "Файл",
+      "comment": "Комментарийлер",
+      "uploadedAt": "Жүктөлгөн",
+      "isSigned": "ЭСК коюлган",
+      "signedBy": "Кол койгон"
+    },
+    "outgoingDocuments": {
+      "title": "Чыгуу документтери",
+      "document": "Документ",
+      "uploadedAt": "Жүктөлгөн",
+      "isSigned": "ЭСК коюлган",
+      "signedBy": "Кол койгон"
+    }
+  },
+  "ApplicationStatusAddEditView": {
+    "entityTitle": "Арыз статусу",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "nameKg": "аталышы кыр"
+  },
+  "ApplicationStatusListView": {
+    "ApplicationStatus": "Арыз статусу",
+    "entityTitle": "Арыз статусу",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "nameKg": "аталышы кыр"
+  },
+  "PayerAddEditView": {
+    "entityTitle": "Төлөөчү",
+    "okpo": "ОКПО",
+    "postalCode": "Почта индекси",
+    "ugns": "УГНС",
+    "regNumber": "Каттоо номери",
+    "typeOrganizationId": "Уюмдун түрү",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "fullName": "Толук аты",
+    "address": "Дарек",
+    "director": "Директор",
+    "pin": "ИНН",
+    "imTheCustomer": "Мен буйрутуучумун",
+    "imThePayer": "Мен төлөөчүмүн",
+    "validation": {
+      "okpoMaxLength": "50 символдон көп эмес",
+      "postalCodeMaxLength": "6 символдон көп эмес",
+      "ugnsMaxLength": "50 символдон көп эмес",
+      "regNumberMaxLength": "50 символдон көп эмес",
+      "typeOrganizationIdRequired": "Милдеттүү талаа",
+      "lastNameRequired": "Милдеттүү талаа",
+      "lastNameMaxLength": "50 символдон көп эмес",
+      "firstNameRequired": "Милдеттүү талаа",
+      "firstNameMaxLength": "50 символдон көп эмес",
+      "secondNameMaxLength": "50 символдон көп эмес",
+      "fullNameMaxLength": "50 символдон көп эмес",
+      "addressMaxLength": "50 символдон көп эмес",
+      "directorMaxLength": "50 символдон көп эмес",
+      "nameFormat": "Кирил же латын тамгаларын, боштуктарды, дефис жана апострофту гана колдонуу мүмкүн.",
+      "pinFormat": "ИНН сандардан гана турушу жана 14 символдун узундугунда болушу керек."
+    }
+  },
+  "PayerListView": {
+    "entityTitle": "Төлөөчү",
+    "okpo": "ОКПО",
+    "postalCode": "Почта индекси",
+    "ugns": "УГНС",
+    "regNumber": "Каттоо номери",
+    "typeOrganizationId": "Уюмдун түрү",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "fullName": "Толук аты",
+    "address": "Дарек",
+    "director": "Директор",
+    "pin": "ИНН",
+    "full_name": "Толук аты",
+    "last_name": "Фамилиясы",
+    "first_name": "Аты",
+    "reg_number": "Каттоо номери",
+    "postal_code": "Почта индекси",
+    "second_name": "Атасынын аты",
+    "organization_type_name": "Уюмдун түрү",
+    "customer_name": "Компания"
+  },
+  "UserAddEditView": {
+    "entityTitle": "Колдонуучу",
+    "isApproved": "бекитилген",
+    "lastName": "фамилиясы",
+    "firstName": "аты",
+    "secondName": "атасынын аты",
+    "pin": "ПИН"
+  },
+  "UserListView": {
+    "User": "Колдонуучу",
+    "entityTitle": "Колдонуучу",
+    "isApproved": "бекитилген",
+    "lastName": "фамилиясы",
+    "firstName": "аты",
+    "secondName": "атасынын аты",
+    "pin": "ПИН"
+  },
+  "AuthTypeAddEditView": {
+    "entityTitle": "Аутентификация түрү",
+    "description": "сүрөттөмө",
+    "name": "аталышы",
+    "code": "код"
+  },
+  "AuthTypeListView": {
+    "AuthType": "Аутентификация түрү",
+    "entityTitle": "Аутентификация түрү",
+    "description": "сүрөттөмө",
+    "name": "аталышы",
+    "code": "код"
+  },
+  "ApplicationCustomerAddEditView": {
+    "entityTitle": "Арыз буйрутуучусу",
+    "director": "директор",
+    "okpo": "ОКПО",
+    "paymentAccount": "төлөм эсеби",
+    "postalCode": "почта индекси",
+    "ugns": "УГНС",
+    "bank": "банк",
+    "bik": "БИК",
+    "registrationNumber": "каттоо номери",
+    "identityDocumentTypeId": "жеке документтин түрүнүн ID",
+    "organizationTypeId": "уюм түрүнүн ID",
+    "pin": "ПИН",
+    "applicationId": "арыз ID",
+    "isOrganization": "уюм",
+    "fullName": "толук аты",
+    "address": "дарек"
+  },
+  "ApplicationCustomerListView": {
+    "ApplicationCustomer": "Арыз буйрутуучусу",
+    "entityTitle": "Арыз буйрутуучусу",
+    "director": "директор",
+    "okpo": "ОКПО",
+    "paymentAccount": "төлөм эсеби",
+    "postalCode": "почта индекси",
+    "ugns": "УГНС",
+    "bank": "банк",
+    "bik": "БИК",
+    "registrationNumber": "каттоо номери",
+    "identityDocumentTypeId": "жеке документтин түрүнүн ID",
+    "organizationTypeId": "уюм түрүнүн ID",
+    "pin": "ПИН",
+    "applicationId": "арыз ID",
+    "isOrganization": "уюм",
+    "fullName": "толук аты",
+    "address": "дарек"
+  },
+  "ApplicationPayerAddEditView": {
+    "entityTitle": "Төлөөчү",
+    "okpo": "ОКПО",
+    "postalCode": "Почта индекси",
+    "ugns": "УГНС",
+    "regNumber": "Каттоо номери",
+    "typeOrganizationId": "Уюмдун түрү",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "fullName": "Толук аты",
+    "address": "Дарек",
+    "director": "Директор",
+    "pin": "ИНН",
+    "imTheCustomer": "Мен төлөөчүмүн",
+    "bik": "БИК",
+    "account_number": "Эсеп номери",
+    "bank_name": "Банктын аталышы",
+    "validation": {
+      "fullNameMaxLength": "50 символдон көп эмес",
+      "addressMaxLength": "50 символдон көп эмес",
+      "pinFormat": "ИНН сандардан гана турушу жана 14 символдун узундугунда болушу керек."
+    }
+  },
+  "ApplicationPayerListView": {
+    "chooseFromPrevious": "Мурункулардан тандоо",
+    "entityTitle": "Төлөөчү",
+    "okpo": "ОКПО",
+    "postalCode": "Почта индекси",
+    "ugns": "УГНС",
+    "regNumber": "Каттоо номери",
+    "typeOrganizationId": "Уюмдун түрү",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "fullName": "Толук аты",
+    "address": "Дарек",
+    "director": "Директор",
+    "pin": "ИНН",
+    "imTheCustomer": "Мен төлөөчүмүн",
+    "bik": "БИК",
+    "account_number": "Эсеп номери",
+    "bank_name": "Банктын аталышы",
+    "postal_code": "Почта индекси",
+    "reg_number": "Каттоо номери",
+    "last_name": "Фамилиясы",
+    "first_name": "Аты",
+    "second_name": "Атасынын аты",
+    "application_id": "Арыз",
+    "type_organization_id": "Уюмдун түрү",
+    "created_at": "Түзүлдү",
+    "updated_at": "Жаңыртылды",
+    "created_by": "Колдонуучу түзгөн",
+    "updated_by": "Колдонуучу жаңыртты",
+    "full_name": "Толук аты"
+  },
+  "LanguageAddEditView": {
+    "entityTitle": "Тил",
+    "name": "аталышы",
+    "nameKg": "аталышы кыр",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "isdefault": "демейки",
+    "queuenumber": "кезек номери"
+  },
+  "LanguageListView": {
+    "Language": "Тил",
+    "entityTitle": "Тил",
+    "name": "аталышы",
+    "nameKg": "аталышы кыр",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "isdefault": "демейки",
+    "queuenumber": "кезек номери"
+  },
+  "SDocumenttemplatetranslationAddEditView": {
+    "entityTitle": "Документ шаблон котормосу",
+    "template": "шаблон",
+    "iddocumenttemplate": "документ шаблон ID",
+    "idlanguage": "тил ID"
+  },
+  "SDocumenttemplatetranslationListView": {
+    "SDocumenttemplatetranslation": "Документ шаблон котормосу",
+    "entityTitle": "Документ шаблон котормосу",
+    "template": "шаблон",
+    "iddocumenttemplate": "документ шаблон ID",
+    "idlanguage": "тил ID"
+  },
+  "SDocumenttemplateAddEditView": {
+    "entityTitle": "Документ шаблону",
+    "nameKg": "аталышы кыр",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "idcustomsvgicon": "SVG белгисинин ID",
+    "iconcolor": "белгинин түсү",
+    "iddocumenttype": "документ түрүнүн ID"
+  },
+  "SDocumenttemplateListView": {
+    "SDocumenttemplate": "Документ шаблону",
+    "entityTitle": "Документ шаблону",
+    "nameKg": "аталышы кыр",
+    "descriptionKg": "сүрөттөмө кыр",
+    "textColor": "текст түсү",
+    "backgroundColor": "фон түсү",
+    "name": "аталышы",
+    "description": "сүрөттөмө",
+    "code": "код",
+    "idcustomsvgicon": "SVG белгисинин ID",
+    "iconcolor": "белгинин түсү",
+    "iddocumenttype": "документ түрүнүн ID"
+  },
+  "uploaded_application_documentListView": {
+    "hash_code": "Хэш-код",
+    "hash_code_date": "Хэш-код күнү",
+    "uploaded_application_document": "Документтер",
+    "doc_name": "Документ",
+    "file_name": "Тиркелген файл",
+    "status": "Статус",
+    "entityTitle": "Документтер",
+    "incoming_entityTitle": "Кирүүчү документтер",
+    "outgoing_entityTitle": "Чыгуучу документтер",
+    "file_id": "Файл",
+    "application_document_id": "Арыз",
+    "name": "Аталышы",
+    "service_document_id": "Документ",
+    "created_at": "Жүктөлгөн",
+    "updated_at": "Жаңыртылган",
+    "created_by": "Түзгөн",
+    "updated_by": "Жаңыртты",
+    "accept": "Кабыл алынган",
+    "lastUploads": "Эскилерден тиркөө",
+    "oldAttacheds": "Жүктөлгөн документтер",
+    "number": "Арыз номери",
+    "chooseDocument": "Тандоо",
+    "service_name": "Кызмат",
+    "document_number": "№",
+    "is_outcome": "Документтин түрү",
+    "is_signed": "Мен кол койгон",
+    "is_required": "Милдеттүү",
+    "required": "Милдеттүү",
+    "replace": "Алмаштыруу",
+    "upload": "Жүктөө",
+    "uploaded": "Жүктөлгөн",
+    "not_uploaded": "Жүктөлгөн жок",
+    "accepted": "Кабыл алынган",
+    "important_message": "МААНИЛҮҮ: Кийинки кадамга көтөрүлүү үчүн бардык жүктөлгөн документтерге кол коюу зарыл.",
+    "sign_selected_documents": "Тандалган документтерге кол коюу",
+    "incoming_documents": "Кирүүчү документтер"
+  },
+  "rejectPopup": {
+    "openRemarks": "Эскертүүлөрдү ачуу",
+    "remarks": "Эскертүүлөр"
+  },
+  "applicationHeader": {
+    "applicationNumber": "Арыз №{{number}}",
+    "submissionDateLabel": "Арыз берүү күнү",
+    "submitted": "Берилди: {{date}}",
+    "status": {
+      "draft": "Долбоор",
+      "underConsideration": "Каралууда",
+      "rejected": "Четке кагылган",
+      "accepted": "Кабыл алынган жана иштетилип жатат",
+      "returnWithError": "Эскертүүлөр менен кайтарылган",
+      "done": "Аяктаган",
+      "documentsReady": "Документтер даяр",
+      "unknown": "Статус белгисиз"
+    }
+  },
+  "pdfViewer": {
+    "opening": "PDF жаңы өтмөктө ачылууда..."
+  },
+  "documentStore": {
+    "unknownType": "Белгисиз документ түрү",
+    "defaultTitle": "PDF Документ",
+    "defaultFileName": "документ",
+    "error": {
+      "notFound": "Документ табылган жок",
+      "loadingError": "Документ жүктөөдө ката кетти",
+      "openNewWindow": "Жаңы терезени ачуу мүмкүн болгон жок. Файл жүктөлөт.",
+      "emptyFile": "Бош файл алынды",
+      "serverError": "Серверден файл алуу мүмкүн болгон жок",
+      "openFile": "Файлды ачуу мүмкүн болгон жок",
+      "downloadFile": "Файлды жүктөп алуу мүмкүн болгон жок",
+      "viewError": "Документти көрүүдө ката:",
+      "downloadError": "Документ жүктөөдө ката:"
+    }
+  },
+  "applicationDocumentDownloadView": {
+    "guidMissing": "URL дарегинде GUID параметри жок",
+    "invalidGuid": "GUID форматы туура эмес:"
+  },
+  "applicationProgress": {
+    "processingTitle": "Арыз иштетүү процесси",
+    "currentStep": "Учурдагы кадам",
+    "submissionDate": "Берүү күнү",
+    "deadline": "Акыркы мөөнөт",
+    "notSet": "Белгиленген жок",
+    "timeProgress": "Убакыт прогресси",
+    "remainingDays": "{{days}} күн калды",
+    "dayTooltip": "{{total}} күндөн {{elapsed}} күнү",
+    "dayProgress": "{{total}} күндөн {{elapsed}} күнү",
+    "elapsedDays": "{{days}} күн өттү"
+  },
+  "applicationTabs": {
+    "tabsLabel": "Арыз өтмөктөрү",
+    "information": "Маалымат",
+    "documents": "Документтер",
+    "contract": "Келишим",
+    "payment": "Төлөм",
+    "outputDocuments": "Чыгуу документтери",
+    "notSigned": "Кол коюлган жок"
+  },
+  "applicationView": {
+    "loadingData": "Арыз маалыматтары жүктөлүүдө...",
+    "savingChanges": "Өзгөртүүлөр сакталууда...",
+    "sendForReview": "Кароого жөнөтүү",
+    "lastUpdated": "Акыркы жаңыртуу"
+  },
+  "NotificationTemplateAddEditView": {
+    "entityTitle": "Билдирүү шаблону",
+    "contactTypeId": "Байланыш түрү",
+    "code": "Код",
+    "subject": "Аталышы",
+    "body": "Негизги бөлүгү",
+    "placeholders": "Толтуруучулар",
+    "link": "Шилтеме"
+  },
+  "NotificationTemplateListView": {
+    "entityTitle": "Билдирүү шаблону",
+    "contactTypeId": "Байланыш түрү",
+    "code": "Код",
+    "subject": "Аталышы",
+    "body": "Негизги бөлүгү",
+    "placeholders": "Толтуруучулар",
+    "link": "Шилтеме"
+  },
+  "ApplicationPaidInvoiceAddEditView": {
+    "entityTitle": "Түшкөн төлөмдөр",
+    "applicationId": "Арыз ID",
+    "customerId": "Кардар ID",
+    "date": "Күнү",
+    "paymentIdentifier": "Төлөм идентификатору",
+    "sum": "Сумма",
+    "description": "Сүрөттөмө",
+    "additional": "Кошумча"
+  },
+  "ApplicationPaidInvoiceListView": {
+    "ApplicationPaidInvoice": "Түшкөн төлөмдөр",
+    "entityTitle": "Түшкөн төлөмдөр",
+    "applicationId": "Арыз ID",
+    "customerId": "Кардар ID",
+    "date": "Күнү",
+    "paymentIdentifier": "Төлөм идентификатору",
+    "sum": "Сумма",
+    "description": "Сүрөттөмө",
+    "additional": "Кошумча",
+    "toApplicaition": "№ арызга",
+    "customerName": "Кардар"
+  },
+  "UserProfile": {
+    "personalInfo": "Жеке маалымат",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "pin": "ИНН",
+    "email": "Электрондук почта",
+    "accountInfo": "Аккаунт жөнүндө маалымат",
+    "created": "Түзүлгөн күнү",
+    "lastUpdate": "Акыркы жаңыртуу",
+    "status": "Аккаунттун статусу",
+    "approved": "Тасталган",
+    "notApproved": "Тастыкталган жок",
+    "editInfo": "Маалыматты өзгөртүү",
+    "changePassword": "Сырсөздү өзгөртүү",
+    "editPersonalInfo": "Жеке маалыматты өзгөртүү",
+    "oldPassword": "Учурдагы сырсөз",
+    "newPassword": "Жаңы сырсөз",
+    "confirmPassword": "Сырсөздү тастыктоо"
+  },
+  "HistoryTableListView": {
+    "HistoryTable": "Өзгөртүүлөрдүн тарыхы",
+    "entityTitle": "Өзгөртүүлөрдүн тарыхы",
+    "operation": "Операция",
+    "entity_type": "Таблица",
+    "created_at": "Түзүлдү",
+    "created_by": "Ким түзгөн",
+    "old_value": "Эски маани",
+    "new_value": "Жаңы маани",
+    "db_action_INSERT": "Жаңы жазууну кошуу",
+    "db_action_UPDATE": "Жазууну жаңыртуу",
+    "db_action_DELETE": "Жазууну өчүрүү",
+    "full_name": "Кызматкер",
+    "startDate": "Башталуу күнү",
+    "endDate": "Аяктоо күнү"
+  },
+  "registration": {
+    "register": "Катталуу",
+    "continue": "Улантуу",
+    "filesRequired": "Файлдарды тиркөө зарыл",
+    "companyRegistration": "Компания каттоо",
+    "personRegistration": "Колдонуучу каттоо",
+    "registrationType": "Каттоо түрү",
+    "emailRequired": "Каттоо үчүн Email зарыл",
+    "company": "Юридикалык жак",
+    "person": "Жеке адам",
+    "step1": "ИНН киргизүү",
+    "step2": "ЭСК тастыктоо",
+    "step3": "Кошумча маалымат",
+    "companyEnterInnTitle": "Компанияңыздын ИНН киргизиңиз",
+    "personEnterInnTitle": "Өзүңүздүн ИНН киргизиңиз",
+    "companyEnterInnDescription": "Компанияңыздын ИННин (14 сан) киргизиңиз. ИНН Тундук системасында катталган болушу керек.",
+    "personEnterInnDescription": "Өзүңүздүн ИННиңизди (14 сан) киргизиңиз. ИНН Тундук системасында катталган болушу керек.",
+    "inn": "ИНН",
+    "innValidationError": "ИНН 14 сандан турушу керек",
+    "innAlreadyExists": "Бул ИНН системада мурда эле катталган",
+    "digitalSignTitle": "Санариптик кол менен тастыктоо",
+    "digitalSignDescription": "Каттоонун чыныгылыгын тастыктоо үчүн, ЭСК жардамы менен операцияны тастыктоо зарыл.",
+    "clickNextToSign": "ЭСК тастыктоо үчүн 'Улантуу' басыңыз",
+    "companyInfoFromTunduk": "Тундуктан компания жөнүндө маалымат",
+    "personInfoFromTunduk": "Тундуктан жеке адам жөнүндө маалымат",
+    "companyName": "Компаниянын аталышы",
+    "legalAddress": "Юридикалык дарек",
+    "registrationDate": "Каттоо күнү",
+    "fullName": "Ф.А.А.",
+    "residentialAddress": "Жашоо дареги",
+    "birthDate": "Туулган күнү",
+    "registrationNumber": "Каттоо номери",
+    "additionalInfoTitle": "Кошумча маалымат",
+    "additionalInfoDescription": "Каттоону аяктоо үчүн кошумча маалымат бериңиз.",
+    "email": "Email",
+    "emailValidationError": "Туура email дарегин киргизиңиз",
+    "companyNameValidationError": "Компаниянын аталышы толтуруу үчүн милдеттүү",
+    "confirmationDocuments": "Тастыктоочу документтер",
+    "confirmationDocumentsDescription": "Сиз компаниянын директору экениңизди тастыктаган документтерди тиркеңиз",
+    "successTitle": "Каттоо ийгиликтүү аяктады!",
+    "companySuccessMessage": "Компанияңыз системада ийгиликтүү катталды. Эми жеке кабинетти колдоно аласыз.",
+    "personSuccessMessage": "Сиз системада ийгиликтүү каттоодон өттүңүз. Эми жеке кабинетти колдоно аласыз.",
+    "checkYourEmail": "Почтаңызды текшериңиз",
+    "emailCheckMessage": "Биз көрсөткөн email дарегиңизге жеке кабинетке кирүү маалыматтарын жөнөттүк. «Кирүүчү» жана «Спам» папкаларын текшериңиз.",
+    "accessCredentials": "Кирүү маалыматтары",
+    "credentialsMessage": "Катта жеке кабинетке кирүү үчүн логин жана сырсөз табасыз. Бул маалыматтарды коопсуз жерде сактаңыз.",
+    "verificationStatus": "Текшерүү статусу",
+    "verificationMessage": "Документтериңиз администратор тарабынан текшерилет. Текшерүү жыйынтыгы жөнүндө электрондук почта аркылуу билдирүү аласыз.",
+    "nextStepQuestion": "Кийинки кадамга өтүүгө дайынсызбы?",
+    "goToLogin": "Кирүү барагына өтүү",
+    "lastName": "Фамилиясы",
+    "firstName": "Аты",
+    "secondName": "Атасынын аты",
+    "agreementTitle": "Жеке кабинетте иштөө жөнүндө колдонуучулар келишими",
+    "iAgreeToTerms": "Таанышып чыктым жана документке кол коюуну тастыктайм"
+  },
+  "menu": {
+    "settings": "Жөндөөлөр",
+    "archiveApplications": "Арыздардын архиви",
+    "applicationsInProgress": "Иштетилип жаткан арыздар",
+    "applicationsNeedAction": "Менин катышууму талап кылган арыздар",
+    "applicationsCompleted": "Аткарылган арыздар",
+    "applicationHistory": "Арыздардын өзгөрүү тарыхы"
+  },
+  "serviceInfoPanel": {
+    "title": "Тандалган кызмат жөнүндө маалымат",
+    "daysCount": "{{count}} күн",
+    "requiredDocuments": "Зарыл документтер",
+    "requiredDocumentsCount": "{{total}} ичинен {{required}} милдеттүү",
+    "mandatoryDocumentsTitle": "МИЛДЕТТҮҮ ДОКУМЕНТТЕР:",
+    "optionalDocumentsTitle": "КОШУМЧА ДОКУМЕНТТЕР:",
+    "outputDocuments": "Сиз алган документтер",
+    "outputDocumentsCount": "{{count}} документ",
+    "notice": {
+      "title": "Көңүл буруңуз:",
+      "documentsActual": "Бардык документтер арыз берүү учурунда актуалдуу болушу керек",
+      "documentsClear": "Документтердин көчүрмөлөрү так жана окулуучу болушу керек",
+      "additionalDocuments": "Зарылчылыкка жараша кошумча документтер талап кылынышы мүмкүн",
+      "lawRequirements": "Талаптар КР мыйзамдарына ылайык белгиленген"
+    },
+    "secure_document": {
+      "error": {
+        "title": "Жүктөө катасы",
+        "subtitle": "Документти жүктөө мүмкүн болбоду"
+      }
+    }
+  },
+  "digitalSign": {
+    "enterYourInn": "Өзүңүздүн СИН киргизиңиз",
+    "inn": "СИН",
+    "pinCode": "PIN-код",
+    "pinCodeSent": "PIN код жөнөтүлдү",
+    "pinCodeSentNotification": "Сизге ЭЦК байланган электрондук почта же телефонуңузга PIN-код жөнөтүлдү",
+    "noDigitalSignature": "Санариптик колтамга жок",
+    "successfullySigned": "Ийгиликтүү колтамга коюлду",
+    "sendCode": "Код жөнөтүү",
+    "sign": "Кол коюу",
+    "cancel": "Жокко чыгаруу"
+  }
+}
