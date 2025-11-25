@@ -250,6 +250,317 @@ const downloadBlob = async (url: string, headers = {}) => {
   }
 };
 
+// Вспомогательная функция для извлечения имени файла из Content-Disposition
+const extractFileName = (contentDisposition: string | null): string => {
+  if (!contentDisposition) {
+    console.warn('Content-Disposition заголовок отсутствует');
+    return 'download';
+  }
+  
+  console.log('Content-Disposition:', contentDisposition);
+  
+  // Сначала пробуем UTF-8 версию (filename*=UTF-8''...)
+  const utf8Match = contentDisposition.match(/filename\*=UTF-8''([^;]+)/i);
+  if (utf8Match && utf8Match[1]) {
+    try {
+      const decoded = decodeURIComponent(utf8Match[1]);
+      console.log('Имя файла (UTF-8):', decoded);
+      return decoded;
+    } catch (e) {
+      console.error('Ошибка декодирования UTF-8 имени файла:', e);
+    }
+  }
+  
+  // Затем пробуем обычную версию (filename="..." или filename=...)
+  const normalMatch = contentDisposition.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/i);
+  if (normalMatch && normalMatch[1]) {
+    let filename = normalMatch[1].replace(/['"]/g, '');
+    console.log('Имя файла (обычное):', filename);
+    return filename;
+  }
+  
+  // Альтернативный формат: filename*=utf-8''...
+  const altUtf8Match = contentDisposition.match(/filename\*=utf-8''([^;]+)/i);
+  if (altUtf8Match && altUtf8Match[1]) {
+    try {
+      const decoded = decodeURIComponent(altUtf8Match[1]);
+      console.log('Имя файла (альтернативный UTF-8):', decoded);
+      return decoded;
+    } catch (e) {
+      console.error('Ошибка декодирования альтернативного UTF-8:', e);
+    }
+  }
+  
+  console.warn('Не удалось извлечь имя файла из Content-Disposition');
+  return 'download';
+};
+
+// Вспомогательная функция для определения MIME типа по имени файла
+const getMimeTypeFromFileName = (fileName: string): string => {
+  const extension = fileName.toLowerCase().split('.').pop();
+  
+  const mimeTypes: { [key: string]: string } = {
+    'pdf': 'application/pdf',
+    'png': 'image/png',
+    'jpg': 'image/jpeg',
+    'jpeg': 'image/jpeg',
+    'gif': 'image/gif',
+    'svg': 'image/svg+xml',
+    'doc': 'application/msword',
+    'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'xls': 'application/vnd.ms-excel',
+    'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    'zip': 'application/zip',
+    'rar': 'application/x-rar-compressed',
+    'txt': 'text/plain',
+  };
+  
+  return mimeTypes[extension || ''] || 'application/octet-stream';
+};
+
+// NEW: Потоковая загрузка с прогрессом для СКАЧИВАНИЯ файла
+const downloadFileStream = async (
+  url: string,
+  onProgress?: (progress: number) => void, 
+  headers = {}
+) => {
+  const token = localStorage.getItem("token");
+  const fullUrl = API_URL + url;
+
+  const requestHeaders = {
+    'Authorization': token ? `Bearer ${token}` : '',
+    'ngrok-skip-browser-warning': 'true',
+    ...headers
+  };
+
+  console.log('Запрос на скачивание файла:', fullUrl);
+
+  try {
+    const response = await fetch(fullUrl, {
+      method: 'GET',
+      headers: requestHeaders,
+      credentials: 'include'
+    });
+
+    console.log('Response status:', response.status);
+    console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
+    if (!response.ok) {
+      if (response.status === 401) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("currentUser");
+        window.location.href = "/login";
+        throw new Error('Не авторизован');
+      }
+      if (response.status === 404) {
+        throw new Error('Файл не найден');
+      }
+      if (response.status === 403) {
+        throw new Error('Доступ запрещен');
+      }
+      if (response.status === 500) {
+        throw new Error('Ошибка сервера при загрузке файла');
+      }
+      throw new Error(`Ошибка загрузки: ${response.status}`);
+    }
+
+    const contentLength = response.headers.get('Content-Length');
+    const contentDisposition = response.headers.get('Content-Disposition');
+    const contentType = response.headers.get('Content-Type');
+    
+    console.log('Content-Type:', contentType);
+    console.log('Content-Length:', contentLength);
+    console.log('Content-Disposition:', contentDisposition);
+    
+    const fileName = extractFileName(contentDisposition);
+    console.log('Извлеченное имя файла:', fileName);
+    
+    const total = contentLength ? parseInt(contentLength, 10) : 0;
+    let loaded = 0;
+
+    const reader = response.body?.getReader();
+    if (!reader) {
+      throw new Error('Не удалось получить reader из response');
+    }
+
+    const chunks: Uint8Array[] = [];
+
+    while (true) {
+      const { done, value } = await reader.read();
+      
+      if (done) break;
+      
+      chunks.push(value);
+      loaded += value.length;
+
+      if (onProgress && total > 0) {
+        const progress = Math.round((loaded / total) * 100);
+        onProgress(progress);
+      }
+    }
+
+    console.log('Загружено chunks:', chunks.length, 'Размер:', loaded);
+
+    // Определяем MIME тип
+    const mimeType = contentType || getMimeTypeFromFileName(fileName);
+    console.log('MIME тип для blob:', mimeType);
+    
+    const blob = new Blob(chunks as BlobPart[], { type: mimeType });
+    const blobUrl = window.URL.createObjectURL(blob);
+
+    console.log('Создан blob URL:', blobUrl);
+    console.log('Имя файла для скачивания:', fileName);
+
+    const link = document.createElement('a');
+    link.href = blobUrl;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+
+    setTimeout(() => {
+      window.URL.revokeObjectURL(blobUrl);
+      document.body.removeChild(link);
+    }, 100);
+
+    return {
+      success: true,
+      fileName: fileName
+    };
+  } catch (error: any) {
+    console.error('Ошибка загрузки файла:', error);
+    
+    let errorMessage = 'Не удалось загрузить файл';
+    if (error.message === 'Файл не найден') {
+      errorMessage = 'Файл не найден';
+    } else if (error.message === 'Доступ запрещен') {
+      errorMessage = 'У вас нет доступа к этому файлу';
+    } else if (error.message.includes('Ошибка сервера')) {
+      errorMessage = 'Ошибка сервера при загрузке файла';
+    }
+    
+    MainStore.openErrorDialog(errorMessage);
+    throw error;
+  }
+};
+
+// NEW: Потоковая загрузка для ПРОСМОТРА файла (возвращает blob URL и метаданные)
+const openFileStream = async (
+  url: string,
+  onProgress?: (progress: number) => void, 
+  headers = {}
+): Promise<{
+  blobUrl: string;
+  fileName: string;
+  mimeType: string;
+}> => {
+  const token = localStorage.getItem("token");
+  const fullUrl = API_URL + url;
+
+  const requestHeaders = {
+    'Authorization': token ? `Bearer ${token}` : '',
+    'ngrok-skip-browser-warning': 'true',
+    ...headers
+  };
+
+  console.log('Запрос на просмотр файла:', fullUrl);
+
+  try {
+    const response = await fetch(fullUrl, {
+      method: 'GET',
+      headers: requestHeaders,
+      credentials: 'include'
+    });
+
+    console.log('Response status:', response.status);
+    console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
+    if (!response.ok) {
+      if (response.status === 401) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("currentUser");
+        window.location.href = "/login";
+        throw new Error('Не авторизован');
+      }
+      if (response.status === 404) {
+        throw new Error('Файл не найден');
+      }
+      if (response.status === 403) {
+        throw new Error('Доступ запрещен');
+      }
+      if (response.status === 500) {
+        throw new Error('Ошибка сервера при открытии файла');
+      }
+      throw new Error(`Ошибка открытия файла: ${response.status}`);
+    }
+
+    const contentLength = response.headers.get('Content-Length');
+    const contentDisposition = response.headers.get('Content-Disposition');
+    const contentType = response.headers.get('Content-Type');
+    
+    console.log('Content-Type:', contentType);
+    console.log('Content-Length:', contentLength);
+    console.log('Content-Disposition:', contentDisposition);
+    
+    const fileName = extractFileName(contentDisposition);
+    console.log('Извлеченное имя файла:', fileName);
+    
+    const mimeType = contentType || getMimeTypeFromFileName(fileName);
+    console.log('Определенный MIME тип:', mimeType);
+    
+    const total = contentLength ? parseInt(contentLength, 10) : 0;
+    let loaded = 0;
+
+    const reader = response.body?.getReader();
+    if (!reader) {
+      throw new Error('Не удалось получить reader из response');
+    }
+
+    const chunks: Uint8Array[] = [];
+
+    while (true) {
+      const { done, value } = await reader.read();
+      
+      if (done) break;
+      
+      chunks.push(value);
+      loaded += value.length;
+
+      if (onProgress && total > 0) {
+        const progress = Math.round((loaded / total) * 100);
+        onProgress(progress);
+      }
+    }
+
+    console.log('Загружено chunks:', chunks.length, 'Размер:', loaded);
+
+    // Конвертируем chunks в Blob с правильным MIME типом (исправление TypeScript ошибки)
+    const blob = new Blob(chunks as BlobPart[], { type: mimeType });
+    const blobUrl = window.URL.createObjectURL(blob);
+
+    console.log('Создан blob URL для просмотра:', blobUrl);
+
+    return {
+      blobUrl,
+      fileName,
+      mimeType
+    };
+  } catch (error: any) {
+    console.error('Ошибка открытия файла:', error);
+    
+    let errorMessage = 'Не удалось открыть файл';
+    if (error.message === 'Файл не найден') {
+      errorMessage = 'Файл не найден';
+    } else if (error.message === 'Доступ запрещен') {
+      errorMessage = 'У вас нет доступа к этому файлу';
+    } else if (error.message.includes('Ошибка сервера')) {
+      errorMessage = 'Ошибка сервера при открытии файла';
+    }
+    
+    MainStore.openErrorDialog(errorMessage);
+    throw error;
+  }
+};
+
 const downloadFile = async (url: string, params = {}, headers = {}) => {
   const token = localStorage.getItem("token");
 
@@ -360,6 +671,8 @@ const module = {
   patch,
   downloadFile,
   downloadBlob,
+  downloadFileStream, // Для скачивания с прогрессом
+  openFileStream, // Для просмотра с прогрессом
 };
 
 export default module;

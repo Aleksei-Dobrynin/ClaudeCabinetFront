@@ -11,7 +11,7 @@ import WarningIcon from "@mui/icons-material/Warning";
 import AlertDialog from "components/AlertDialog";
 import ConfirmDialog from "components/ConfirmDialog";
 import DigitalSignDialog from "components/DigitalSignDialog";
-
+import FileDownload from "components/FileDownload";
 type MainWrapperProps = {
   children: React.ReactNode;
 };
@@ -86,6 +86,8 @@ const MainWrapper: FC<MainWrapperProps> = observer(() => {
       <AlertDialog />
       <ConfirmDialog />
       <DigitalSignDialog />
+      <FileDownload />
+      
     </AppMainWapper>
   );
 });

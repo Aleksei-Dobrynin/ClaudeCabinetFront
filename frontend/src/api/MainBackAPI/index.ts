@@ -8,6 +8,16 @@ export const downloadFile = (id: number): Promise<any> => {
   return http.get(`api/v1/AppFile/DownloadDocument?id=${id}`);
 };
 
+// NEW: Потоковая загрузка с прогрессом
+export const downloadFileV2 = (id: number, onProgress?: (progress: number) => void): Promise<any> => {
+  return http.downloadFileStream(`api/v1/AppFile/DownloadDocumentV2?id=${id}`, onProgress);
+};
+
+// NEW: Открытие файла для просмотра (потоковый метод)
+export const openFileViewV2 = (id: number, onProgress?: (progress: number) => void): Promise<any> => {
+  return http.openFileStream(`api/v1/AppFile/DownloadDocumentV2?id=${id}`, onProgress);
+};
+
 export const downloadFileBga = (id: number): Promise<any> => {
   return http.get(`${API_URL_BGA}file/DownloadDocumentFromCabinet?id=${id}`, {},);
 };

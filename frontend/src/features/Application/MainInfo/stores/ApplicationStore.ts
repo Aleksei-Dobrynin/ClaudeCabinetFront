@@ -1,4 +1,4 @@
-// src/stores/ApplicationStore.ts - Полностью исправленная версия
+// src/stores/ApplicationStore.ts - Обновленная версия с потоковой загрузкой
 import { makeAutoObservable, runInAction } from "mobx";
 import { RootStore } from "./RootStore";
 import {
@@ -18,14 +18,15 @@ import { ApiResponse } from "constants/apiMain";
 import { getApplication, getMainApplicationByGuid, reSendToBga, sendToBga, updateApplication } from "api/Application";
 import { getCustomer, updateCustomer } from "api/Customer";
 import { getUploadedApplicationDocumentsForApplication } from "api/UploadedApplicationDocument";
-import { downloadFile, downloadFileBga, getPaidInvoiceByGuid } from "api/MainBackAPI";
+import { downloadFileV2, openFileViewV2, downloadFileBga, getPaidInvoiceByGuid } from "api/MainBackAPI";
 import MainStore from "MainStore";
 import { getDistricts, getTags } from "api/ArchObject";
 import { ApplicationCreateModel } from "constants/Application";
 import dayjs from "dayjs";
 import { Customer } from "constants/Customer";
 import { PaidAmmount } from "api/MainBackAPI/models/upladed_application_document";
-import {getPaidAmmountByGuid} from "api/MainBackAPI"
+import { getPaidAmmountByGuid } from "api/MainBackAPI";
+
 export class ApplicationStore {
   rootStore: RootStore;
 
@@ -54,7 +55,12 @@ export class ApplicationStore {
   isOpenFileView: boolean = false;
   fileType: string = "";
   fileUrl: any = null;
-  paymentAmount: PaidAmmount | null = null
+  paymentAmount: PaidAmmount | null = null;
+  
+  // NEW: Прогресс загрузки
+  downloadProgress: number = 0;
+  isDownloading: boolean = false;
+
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
     makeAutoObservable(this, {
@@ -109,12 +115,12 @@ export class ApplicationStore {
     this.serviceDocId = 0;
   }
 
-async doLoad(applicationId: number) {
-  this.applicationId = applicationId;
-  await this.fetchApplication();
-  await this.fetchPaymentAmount(); // Add this line
-  await Promise.all([this.loadDistricts(), this.loadTags()]);
-}
+  async doLoad(applicationId: number) {
+    this.applicationId = applicationId;
+    await this.fetchApplication();
+    await this.fetchPaymentAmount();
+    await Promise.all([this.loadDistricts(), this.loadTags()]);
+  }
 
   async loadDistricts() {
     try {
@@ -267,37 +273,50 @@ async doLoad(applicationId: number) {
     }
   }
 
+  // NEW: Обновленный метод для просмотра файла с потоковой загрузкой
   async openFileView(idFile: number, fileName: string) {
     try {
+      runInAction(() => {
+        this.isDownloading = true;
+        this.downloadProgress = 0;
+      });
+      
       MainStore.changeLoader(true);
-      const response = await downloadFile(idFile);
-      if ((response.status === 201 || response.status === 200) && response?.data !== null) {
-        const byteCharacters = atob(response.data.file_contents);
-        const byteNumbers = new Array(byteCharacters.length);
-        for (let i = 0; i < byteCharacters.length; i++) {
-          byteNumbers[i] = byteCharacters.charCodeAt(i);
-        }
-        const byteArray = new Uint8Array(byteNumbers);
-        let mimeType = "application/pdf";
-        this.fileType = "pdf";
-        if (fileName.endsWith(".png")) {
-          mimeType = "image/png";
-          this.fileType = "png";
-        }
-        if (fileName.endsWith(".jpg") || fileName.endsWith(".jpeg")) {
-          mimeType = "image/jpeg";
-          this.fileType = "jpg";
-        }
-        const blob = new Blob([byteArray], { type: mimeType });
-        this.fileUrl = URL.createObjectURL(blob);
-        this.isOpenFileView = true;
-        return;
+
+      const result = await openFileViewV2(idFile, (progress) => {
+        runInAction(() => {
+          this.downloadProgress = progress;
+        });
+      });
+
+      if (result && result.blobUrl) {
+        runInAction(() => {
+          // Определяем тип файла по MIME типу или имени файла
+          if (result.mimeType.includes('pdf') || fileName.endsWith('.pdf')) {
+            this.fileType = 'pdf';
+          } else if (result.mimeType.includes('png') || fileName.endsWith('.png')) {
+            this.fileType = 'png';
+          } else if (result.mimeType.includes('jpeg') || result.mimeType.includes('jpg') || 
+                     fileName.endsWith('.jpg') || fileName.endsWith('.jpeg')) {
+            this.fileType = 'jpg';
+          } else {
+            this.fileType = 'unknown';
+          }
+          
+          this.fileUrl = result.blobUrl;
+          this.isOpenFileView = true;
+        });
       } else {
-        throw new Error();
+        throw new Error('Не удалось получить файл');
       }
     } catch (err) {
-      // MainStore.setSnackbar(i18n.t("message:somethingWentWrong"), "error");
+      console.error('Ошибка открытия файла:', err);
+      MainStore.openErrorDialog('Не удалось открыть файл для просмотра');
     } finally {
+      runInAction(() => {
+        this.isDownloading = false;
+        this.downloadProgress = 0;
+      });
       MainStore.changeLoader(false);
     }
   }
@@ -308,8 +327,10 @@ async doLoad(applicationId: number) {
       if ((response?.status === 200 || response?.status === 201) && response?.data) {
         runInAction(() => {
           this.paymentAmount = response.data;
-          this.application.total_paid = response.data.total_payed;
-          this.application.total_sum = response.data.total_sum;
+          if (this.application) {
+            this.application.total_paid = response.data.total_payed;
+            this.application.total_sum = response.data.total_sum;
+          }
         });
       }
     } catch (error: any) {
@@ -346,7 +367,7 @@ async doLoad(applicationId: number) {
         throw new Error();
       }
     } catch (err) {
-      // MainStore.setSnackbar(i18n.t("message:somethingWentWrong"), "error");
+      MainStore.openErrorDialog('Не удалось открыть файл');
     } finally {
       MainStore.changeLoader(false);
     }
@@ -507,66 +528,61 @@ async doLoad(applicationId: number) {
     console.log("Completion act signing not implemented yet");
   }
 
+  // NEW: Обновленный метод для скачивания файла с потоковой загрузкой
   async downloadFile(idFile: number, fileName: string) {
     try {
-      const response = await downloadFile(idFile);
-      if ((response.status === 201 || response.status === 200) && response?.data !== null) {
-        const byteCharacters = atob(response.data.file_contents);
-        const byteNumbers = new Array(byteCharacters.length);
-        for (let i = 0; i < byteCharacters.length; i++) {
-          byteNumbers[i] = byteCharacters.charCodeAt(i);
-        }
-        const byteArray = new Uint8Array(byteNumbers);
+      runInAction(() => {
+        this.isDownloading = true;
+        this.downloadProgress = 0;
+      });
 
-        const mimeType = response.data.content_type || "application/octet-stream";
-        const fileNameBack = response.data.file_download_name;
+      const result = await downloadFileV2(idFile, (progress) => {
+        runInAction(() => {
+          this.downloadProgress = progress;
+        });
+      });
 
-        let url = "";
-
-        if (
-          fileNameBack.endsWith(".jpg") ||
-          fileNameBack.endsWith(".jpeg") ||
-          fileNameBack.endsWith(".png")
-        ) {
-          const newWindow = window.open();
-          if (newWindow) {
-            const blob = new Blob([byteArray], { type: mimeType });
-            url = window.URL.createObjectURL(blob);
-            newWindow.document.write(`<img src="${url}" />`);
-            setTimeout(() => window.URL.revokeObjectURL(url), 1000);
-          } else {
-            console.error("Не удалось открыть новое окно. Возможно, оно было заблокировано.");
-          }
-        } else if (fileNameBack.endsWith(".pdf")) {
-          const newWindow = window.open();
-          if (newWindow) {
-            const blob = new Blob([byteArray], { type: "application/pdf" });
-            url = window.URL.createObjectURL(blob);
-            newWindow.location.href = url;
-            setTimeout(() => window.URL.revokeObjectURL(url), 1000);
-          } else {
-            console.error("Не удалось открыть новое окно. Возможно, оно было заблокировано.");
-          }
-        }
-
-        const blob = new Blob([byteArray], { type: mimeType });
-        url = window.URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.setAttribute("download", response.data.file_download_name || fileName);
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        window.URL.revokeObjectURL(url);
-      } else {
-        throw new Error();
+      if (result && result.success) {
+        this.rootStore.uiStore.showSnackbar(`Файл "${result.fileName}" успешно загружен`, "success");
       }
     } catch (err) {
+      console.error('Ошибка скачивания файла:', err);
       this.rootStore.uiStore.showSnackbar("Не получилось скачать файл", "error");
+    } finally {
+      runInAction(() => {
+        this.isDownloading = false;
+        this.downloadProgress = 0;
+      });
     }
   }
 
+  // Метод для закрытия просмотра файла и очистки URL
+  closeFileView() {
+    if (this.fileUrl) {
+      try {
+        window.URL.revokeObjectURL(this.fileUrl);
+      } catch (e) {
+        console.error('Ошибка при очистке blob URL:', e);
+      }
+    }
+    
+    runInAction(() => {
+      this.isOpenFileView = false;
+      this.fileUrl = null;
+      this.fileType = "";
+    });
+  }
+
   clear() {
+    // Очищаем blob URL перед очисткой
+    if (this.fileUrl) {
+      try {
+        window.URL.revokeObjectURL(this.fileUrl);
+      } catch (e) {
+        console.error('Ошибка при очистке blob URL:', e);
+      }
+    }
+    
     this.applicationId = 0;
     this.application = null;
     this.applicationMain = null;
@@ -588,5 +604,7 @@ async doLoad(applicationId: number) {
     this.isOpenFileView = false;
     this.fileType = "";
     this.fileUrl = null;
+    this.downloadProgress = 0;
+    this.isDownloading = false;
   }
 }
